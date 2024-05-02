@@ -107,6 +107,19 @@ background-color: #e9ecef !important;}
         max-width: 40vw !important;
     }
     .header-desktop-tablet { display: none !important; height: 0;}
+    
+.portfolio-item {
+    position: relative;
+    min-height: 200px;
+    overflow: hidden;
+    background-position: center center;
+    background-size: cover; /* Ensure the background image covers the entire column */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    height: 100%; /* Ensure the column's height matches the content */
+    transition: transform 0.3s ease; /* Add transition for smooth zoom effect */
+    transition: box-shadow 0.3s ease; /* Add smooth transition for hover effect */
+    border: 1px solid black;
+}
 }
 /* Tablet styles (768px to 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
@@ -117,6 +130,20 @@ background-color: #e9ecef !important;}
         max-width: 30vw !important;
     }
     .header-mobile { display: none !important; height: 0;}
+
+    
+.portfolio-item {
+    position: relative;
+    min-height: 400px;
+    overflow: hidden;
+    background-position: center center;
+    background-size: cover; /* Ensure the background image covers the entire column */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    height: 100%; /* Ensure the column's height matches the content */
+    transition: transform 0.3s ease; /* Add transition for smooth zoom effect */
+    transition: box-shadow 0.3s ease; /* Add smooth transition for hover effect */
+    border: 1px solid black;
+}
 }
 
 /* Desktop styles (992px and above) */
@@ -128,9 +155,7 @@ background-color: #e9ecef !important;}
         max-width: 20vw !important;
     }
     .header-mobile { display: none !important; height: 0;}
-}
-
-/* home cat */
+    
 .portfolio-item {
     position: relative;
     min-height: 400px;
@@ -140,7 +165,12 @@ background-color: #e9ecef !important;}
     background-repeat: no-repeat; /* Prevent the background image from repeating */
     height: 100%; /* Ensure the column's height matches the content */
     transition: transform 0.3s ease; /* Add transition for smooth zoom effect */
+    transition: box-shadow 0.3s ease; /* Add smooth transition for hover effect */
+    border: 1px solid black;
 }
+}
+
+/* home cat */
   
   .overlay {
     position: absolute;
@@ -157,27 +187,24 @@ background-color: #e9ecef !important;}
     transition: background-size 0.5s cubic-bezier(0.25, 0.1, 0.25, 1); /* Smooth transition effect with cubic-bezier easing */
   }
   
-  .overlay-content {
-    text-align: center;
-    color: #fff;
-  }
-  
   .portfolio-item:hover .overlay {
-    opacity: 0;
+    opacity: 100%;
   }
   
-  .overlay-content {
+  .overlay-content, .overlay-content:hover {
     text-align: center;
-    color: #fff;
+    color: #000;
     font-size: 14pt;
-    font-weight: 200;
+    font-weight: 500;
     letter-spacing: 3px;
   }
 
   .portfolio-item:hover {
+    color: white;
     cursor: pointer;
     border: 1px solid black !important;
     background-size: auto 130%;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.6); /* Adjust the values as needed */
   }
   
   
