@@ -89,6 +89,8 @@ a {
 .nav-item {
     padding-right: 10px;
 }
+.dropdown-item:focus, .dropdown-item:hover, .dropdown-item.active, .dropdown-item:active{
+background-color: #e9ecef !important;}
 
 /* header logo */
 /* Mobile styles (up to 767px) */
@@ -128,8 +130,11 @@ a {
     min-height: 400px;
     overflow: hidden;
     background-position: center center;
-    background-size: cover; /* Ensure image covers the background */
-  }
+    background-size: cover; /* Ensure the background image covers the entire column */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    height: 100%; /* Ensure the column's height matches the content */
+    transition: transform 0.3s ease; /* Add transition for smooth zoom effect */
+}
   
   .overlay {
     position: absolute;
@@ -142,7 +147,7 @@ a {
     align-items: center;
     justify-content: center;
     opacity: 1;
-    transition: opacity 0.3s ease;
+    transition: background-size 0.1s ease-in; /* Smooth transition effect for background size */
   }
   
   .overlay-content {
@@ -161,10 +166,11 @@ a {
     font-weight: 200;
     letter-spacing: 3px;
   }
-  
-  .portfolio-item:hover, .overlay-content:hover {
-    cursor: pointer;
+
+  .portfolio-item:hover {
+    cursor: pointer;x
     border: 1px solid black;
+    background-size: auto 130%;
   }
   
   
