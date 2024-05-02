@@ -18,7 +18,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+        rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 
     <!-- Add any other CSS files as needed -->
 
@@ -40,7 +42,7 @@
             </button>
 
             <!-- Logo -->
-            <div class="row header-mobile text-center">
+            <div class="row hide-desktop text-center">
                 <div class="col px-4 text-right">
                     <a href="../index.html" title="Home"><img src="../images/header-title.webp" alt="Designs by Darlene" class="img-custom"></a>
                 </div>
@@ -73,7 +75,19 @@
                     </li>
                 </ul>
 
-                <div class="navbar-nav ms-auto">
+                <div class="navbar-nav hide-mobile-tablet ms-auto">
+                    <li class="nav-item text-end dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            SOCIAL
+                        </a>
+                        <ul class="dropdown-menu social-menu" aria-labelledby="navbarScrollingDropdown">
+                            <li><a class="dropdown-item text-end" href="https://www.linkedin.com/in/darlene-agbayani-16b737146/in/darlene-agbayani-16b737146/" title="Linkedin">LINKEDIN</a></li>
+                            <li><a class="dropdown-item text-end" href="https://www.instagram.com/thedar2d2/thedar2d2?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" title="Instagram">INSTAGRAM</a></li>
+                        </ul>
+                    </li>
+                </div>
+                <div class="navbar-nav hide-desktop ms-auto">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -92,7 +106,7 @@
    
     <div class="container py-2">
         <!-- Logo -->
-        <div class="row header-desktop-tablet text-center">
+        <div class="row hide-mobile-tablet text-center">
             <div class="col px-4 text-right">
                 <a href="../index.html" title="Home"><img src="../images/header-title.webp" alt="Designs by Darlene" class="img-custom"></a>
             </div>

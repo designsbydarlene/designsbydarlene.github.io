@@ -19,6 +19,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
 
     <!-- Add any other CSS files as needed -->
 
@@ -40,9 +44,13 @@
             </button>
 
             <!-- Logo -->
-            <div class="row header-mobile text-center">
+            <div class="row hide-desktop text-center">
                 <div class="col px-4 text-right">
-                    <a href="./index.html" title="Home"><img src="./images/header-title.webp" alt="Designs by Darlene" class="img-custom"></a>
+                    <a href="./index.html" title="Home"><img src="./images/header-title.webp" alt="Designs by Darlene"
+                            class="img-custom"></a>
+                    <div class="row justify-content-center pt-2">
+                        <h5>ABOUT</h5>
+                    </div>
                 </div>
             </div>
 
@@ -57,12 +65,18 @@
                             PORTFOLIO
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                            <li><a class="dropdown-item" href="portfolio/web-design.html" title="Web Design">WEB DESIGN</a></li>
-                            <li><a class="dropdown-item" href="portfolio/graphic-design.html" title="Graphic Design">GRAPHIC DESIGN</a></li>
-                            <li><a class="dropdown-item" href="portfolio/ux-ui-design.html" title="UX/UI Design">UX/UI DESIGN</a></li>
-                            <li><a class="dropdown-item" href="portfolio/digital-design.html" title="Digital Design">DIGITAL DESIGN</a></li>
-                            <li><a class="dropdown-item" href="portfolio/motion-graphic.html" title="Motion Graphic">MOTION GRAPHIC</a></li>
-                            <li><a class="dropdown-item" href="portfolio/illustration.html" title="Illustrations">ILLUSTRATION</a></li>
+                            <li><a class="dropdown-item" href="portfolio/web-design.html" title="Web Design">WEB
+                                    DESIGN</a></li>
+                            <li><a class="dropdown-item" href="portfolio/graphic-design.html"
+                                    title="Graphic Design">GRAPHIC DESIGN</a></li>
+                            <li><a class="dropdown-item" href="portfolio/ux-ui-design.html" title="UX/UI Design">UX/UI
+                                    DESIGN</a></li>
+                            <li><a class="dropdown-item" href="portfolio/digital-design.html"
+                                    title="Digital Design">DIGITAL DESIGN</a></li>
+                            <li><a class="dropdown-item" href="portfolio/motion-graphic.html"
+                                    title="Motion Graphic">MOTION GRAPHIC</a></li>
+                            <li><a class="dropdown-item" href="portfolio/illustration.html"
+                                    title="Illustrations">ILLUSTRATION</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -73,15 +87,35 @@
                     </li>
                 </ul>
 
-                <div class="navbar-nav ms-auto">
+                <div class="navbar-nav hide-mobile-tablet ms-auto">
+                    <li class="nav-item text-end dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            SOCIAL
+                        </a>
+                        <ul class="dropdown-menu social-menu" aria-labelledby="navbarScrollingDropdown">
+                            <li><a class="dropdown-item text-end"
+                                    href="https://www.linkedin.com/in/darlene-agbayani-16b737146/in/darlene-agbayani-16b737146/"
+                                    title="Linkedin">LINKEDIN</a></li>
+                            <li><a class="dropdown-item text-end"
+                                    href="https://www.instagram.com/thedar2d2/thedar2d2?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                                    title="Instagram">INSTAGRAM</a></li>
+                        </ul>
+                    </li>
+                </div>
+                <div class="navbar-nav hide-desktop ms-auto">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             SOCIAL
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                            <li><a class="dropdown-item" href="https://www.linkedin.com/in/darlene-agbayani-16b737146/in/darlene-agbayani-16b737146/" title="Linkedin">LINKEDIN</a></li>
-                            <li><a class="dropdown-item" href="https://www.instagram.com/thedar2d2/thedar2d2?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" title="Instagram">INSTAGRAM</a></li>
+                            <li><a class="dropdown-item"
+                                    href="https://www.linkedin.com/in/darlene-agbayani-16b737146/in/darlene-agbayani-16b737146/"
+                                    title="Linkedin">LINKEDIN</a></li>
+                            <li><a class="dropdown-item"
+                                    href="https://www.instagram.com/thedar2d2/thedar2d2?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                                    title="Instagram">INSTAGRAM</a></li>
                         </ul>
                     </li>
                 </div>
@@ -89,17 +123,40 @@
         </div>
     </nav>
 
-    <div class="container py-2">
-        <!-- Logo -->
-        <div class="row header-desktop-tablet text-center">
-            <div class="col px-4 text-right">
-                <a href="./index.html" title="Home"><img src="images/header-title.webp" alt="Designs by Darlene" class="img-custom"></a>
+    <!-- Logo -->
+    <div class="hide-mobile-tablet text-center pt-2">
+        <div class="col px-4 text-right">
+            <a href="./index.html" title="Home"><img src="images/header-title.webp" alt="Designs by Darlene"
+                    class="img-custom"></a>
+            <div class="row justify-content-center pt-2">
+                <h5>ABOUT</h5>
             </div>
         </div>
+    </div>
 
-        <div class="row body py-5 px-4">
-            <h1>About</h1>
-            <p>Coming Soon</p>
+    <!--<div class="row body pt-5 px-5">
+            <div class="breadcrumb">
+        </div>-->
+    <div class="container pb-5">
+        <div class="row justify-content-center pb-5">
+            <div class="col-md-10 col-lg-8">
+                <div class="pt-4 border-bottom-custom mx-3"></div>
+                <div class="card">
+                    <div class="card-body">
+                <p>Hi there! I'm Darlene, a passionate web and graphic designer based in New York, NY. Originally from
+                    Honolulu, HI, I made the move to pursue my dream job in design.</p>
+                <p>My journey in web design began at the age of 12 when I became a Myspace guru, thanks Tom! Over the
+                    years, my passion for art, technology, and computers merged, leading me into the world of digital
+                    design.</p>
+                <p>I hold a Master of Science in Computer Science, where I honed my skills in UX/UI and HCI.
+                    Understanding these components has greatly influenced my approach to web design, allowing me to
+                    create intuitive and user-friendly experiences.</p>
+                <p>Aside from my academic achievements, I've had the privilege of supporting local businesses and
+                    non-profits through my freelance design work, helping them establish their online presence and reach
+                    their goals.</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="row px-4 footer">
@@ -124,13 +181,17 @@
                             <li><a href="./resume.html" title="Resume">Resume</a></li>
                             <li>
                             </li>
-                        </ul><p></p>
+                        </ul>
+                        <p></p>
                     </div>
                     <div class="col-lg-4 py-2 social-icons">
                         <p>SOCIAL</p>
-                         <a href="https://www.linkedin.com/in/darlene-agbayani-16b737146/" target="_blank" title="Linkedin"><i class="fa fa-linkedin px-1"></i></a>
-                        <a href="https://www.instagram.com/thedar2d2/" target="_blank" title="Instagram"><i class="fa fa-instagram px-1"></i></a>
-                        </ul><p></p>
+                        <a href="https://www.linkedin.com/in/darlene-agbayani-16b737146/" target="_blank"
+                            title="Linkedin"><i class="fa fa-linkedin px-1"></i></a>
+                        <a href="https://www.instagram.com/thedar2d2/" target="_blank" title="Instagram"><i
+                                class="fa fa-instagram px-1"></i></a>
+                        </ul>
+                        <p></p>
                     </div>
                 </div>
             </div>
