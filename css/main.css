@@ -110,7 +110,7 @@ background-color: #e9ecef !important;}
     
 .portfolio-item {
     position: relative;
-    min-height: 200px;
+    min-height: 150px;
     overflow: hidden;
     background-position: center center;
     background-size: cover; /* Ensure the background image covers the entire column */
