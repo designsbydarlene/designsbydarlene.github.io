@@ -164,6 +164,7 @@ a {
   
   .portfolio-item:hover, .overlay-content:hover {
     cursor: pointer;
+    border: 1px solid black;
   }
   
   
