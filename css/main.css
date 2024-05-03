@@ -139,6 +139,10 @@ background-color: #e9ecef !important;}
     }
     .hide-mobile { display: none !important; height: 0;}
     .hide-mobile-tablet { display: none !important; height: 0;}
+    .row.px-4.body-row.web-design-body {
+        top: -40px;
+        position: relative;
+    }
     
 .portfolio-item {
     position: relative;
@@ -216,7 +220,7 @@ background-color: #e9ecef !important;}
     .hide-desktop { display: none !important; height: 0;}
     .hide-desktop-tablet { display: none !important; height: 0;}
     ul.dropdown-menu.social-menu.show { left: -4em; }
-
+  
 .portfolio-item {
     position: relative;
     min-height: 400px;
