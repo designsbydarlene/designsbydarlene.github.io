@@ -140,7 +140,7 @@ background-color: #e9ecef !important;}
     .hide-mobile { display: none !important; height: 0;}
     .hide-mobile-tablet { display: none !important; height: 0;}
     .row.px-4.body-row.web-design-body {
-        top: -40px;
+        top: -50px;
         position: relative;
     }
     
