@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DesignsByDarlene - Randolph</title>
+    <title>DesignsByDarlene - Beauty Lounge Kailua</title>
     <!-- Link to your CSS stylesheets -->
     <link rel="stylesheet" href="../../css/main.css">
-    <!-- Font Awesome -->
-    <!-- Link to Font Awesome CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- Google Font (Poppins) -->
@@ -25,7 +26,6 @@
         rel="stylesheet">
 
     <!-- Add any other CSS files as needed -->
-
 </head>
 
 <body>
@@ -46,10 +46,10 @@
             <!-- Logo -->
             <div class="row hide-desktop text-center">
                 <div class="col px-4 text-right">
-                    <a href="../../index.html" title="Home"><img src="../../images/header-title.webp" alt="Designs by Darlene"
-                            class="img-custom"></a>
+                    <a href="../../index.html" title="Home"><img src="../../images/header-title.webp"
+                            alt="Designs by Darlene" class="img-custom"></a>
                     <div class="row justify-content-center pt-2">
-                        <h5>WEB DESIGN - RANDOLPH</h5>
+                        <h5>BEAUTY LOUNGE</h5>
                     </div>
                 </div>
             </div>
@@ -67,14 +67,14 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                             <li><a class="dropdown-item" href="../web-design.html" title="Web Design">WEB
                                     DESIGN</a></li>
-                            <li><a class="dropdown-item" href="../graphic-design.html"
-                                    title="Graphic Design">GRAPHIC DESIGN</a></li>
+                            <li><a class="dropdown-item" href="../graphic-design.html" title="Graphic Design">GRAPHIC
+                                    DESIGN</a></li>
                             <li><a class="dropdown-item" href="../ux-ui-design.html" title="UX/UI Design">UX/UI
                                     DESIGN</a></li>
-                            <li><a class="dropdown-item" href="../digital-design.html"
-                                    title="Digital Design">DIGITAL DESIGN</a></li>
-                            <li><a class="dropdown-item" href="../motion-graphic.html"
-                                    title="Motion Graphic">MOTION GRAPHIC</a></li>
+                            <li><a class="dropdown-item" href="../digital-design.html" title="Digital Design">DIGITAL
+                                    DESIGN</a></li>
+                            <li><a class="dropdown-item" href="../motion-graphic.html" title="Motion Graphic">MOTION
+                                    GRAPHIC</a></li>
                             <li><a class="dropdown-item" href="../illustration.html"
                                     title="Illustrations">ILLUSTRATION</a></li>
                         </ul>
@@ -129,20 +129,120 @@
             <a href="../../index.html" title="Home"><img src="../../images/header-title.webp" alt="Designs by Darlene"
                     class="img-custom"></a>
             <div class="row justify-content-center pt-2">
-                <h5>Web Design - Randolph</h5>
+                <h5>BEAUTY LOUNGE</h5>
             </div>
         </div>
     </div>
 
-    <!--<div class="row body pt-5 px-5">
-            <div class="breadcrumb">
-        </div>-->
     <div class="container pb-5">
+        <!-- Modal -->
+        <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="imageModalLabel">PREVIEW</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <h5 id="imageModalLabel" class="modal-title"></h5> <!-- Header -->
+                        <img src="../../images/web-design/beauty-lounge-kailua-bl/beauty-lounge-kailua-bl-1.webp" id="modalImage" class="img-fluid" src=""
+                            alt="Modal Image"> <!-- Image -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="row justify-content-center pb-5">
-            <div class="col-md-10 col-lg-8">
+            <div class="col-md-10 col-lg-10">
                 <div class="pt-4 border-bottom-custom mx-3"></div>
                 <div class="card px-4">
-                 TEST
+                    <div class="container mt-5">
+                        <div class="row">
+                            <!-- Left Column: Gallery -->
+                            <div class="col-md-12 col-lg-6">
+                                <div class="container px-0">
+                                    <div class="row px-2">
+                                        <div id="main-image" class="position-relative mb-3 px-0">
+                                            <img src="../../images/web-design/beauty-lounge-kailua-bl/beauty-lounge-kailua-bl-1.webp" alt="Home Page Banner"
+                                                class="gallery-img img-fluid" data-bs-toggle="modal"
+                                                data-bs-target="#imageModal">
+                                            <!-- Font Awesome zoom icon -->
+                                            <span class="zoom-icon">
+                                                <i class="fa-solid fa-magnifying-glass" data-bs-toggle="modal"
+                                                    data-bs-target="#imageModal"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div id="gallery" class="row px-0 pb-3">
+                                        <div class="col-4 pb-4">
+                                            <img src="../../images/web-design/beauty-lounge-kailua-bl/beauty-lounge-kailua-bl-1.webp" alt="Home Page Banner"
+                                                class="gallery-img img-fluid" onclick="changeMainImage(this)">
+                                        </div>
+                                        <div class="col-4 pb-4">
+                                            <img src="../../images/web-design/beauty-lounge-kailua-bl/beauty-lounge-kailua-bl-2.webp" alt="Home Page About"
+                                                class="gallery-img img-fluid" onclick="changeMainImage(this)">
+                                        </div>
+                                        <div class="col-4 pb-4">
+                                            <img src="../../images/web-design/beauty-lounge-kailua-bl/beauty-lounge-kailua-bl-3.webp" alt="Home Page Review"
+                                                class="gallery-img img-fluid" onclick="changeMainImage(this)">
+                                        </div>
+                                        <div class="col-4 pb-4">
+                                            <img src="../../images/web-design/beauty-lounge-kailua-bl/beauty-lounge-kailua-bl-4.webp" alt="Gallery"
+                                                class="gallery-img img-fluid" onclick="changeMainImage(this)">
+                                        </div>
+                                        <div class="col-4 pb-4">
+                                            <img src="../../images/web-design/beauty-lounge-kailua-bl/beauty-lounge-kailua-bl-5.webp" alt="Locations"
+                                                class="gallery-img img-fluid" onclick="changeMainImage(this)">
+                                        </div>
+                                        <div class="col-4 pb-4">
+                                            <img src="../../images/web-design/beauty-lounge-kailua-bl/beauty-lounge-kailua-bl-6.webp" alt="Products"
+                                                class="gallery-img img-fluid" onclick="changeMainImage(this)">
+                                        </div>
+                                        <div class="col-4 pb-4">
+                                            <img src="../../images/web-design/beauty-lounge-kailua-bl/beauty-lounge-kailua-bl-7.webp" alt="Services"
+                                                class="gallery-img img-fluid" onclick="changeMainImage(this)">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Bootstrap JS -->
+                                <script
+                                    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+                                <!-- Font Awesome JS -->
+                                <script
+                                    src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+
+                                
+                                <script>
+                                    function changeMainImage(element) {
+                                        var imageUrl = element.getAttribute('src');
+                                        var modalImage = document.getElementById('modalImage');
+                                        var mainImage = document.getElementById('main-image').querySelector('img');
+
+                                        modalImage.src = imageUrl;
+                                        mainImage.src = imageUrl;
+                                        mainImage.setAttribute('data-bs-toggle', 'modal');
+                                        mainImage.setAttribute('data-bs-target', '#imageModal');
+                                        document.querySelector('.zoom-icon').setAttribute('data-bs-toggle', 'modal');
+                                        document.querySelector('.zoom-icon').setAttribute('data-bs-target', '#imageModal');
+                                    }
+                                </script>
+                            </div>
+
+                            <!-- Right Column: Text Description -->
+                            <div class="col-md-12 col-lg-6">
+                                <div class="web-description">
+                                    <h3>Beauty Lounge Kailua Website Creation</h3>
+                                    <p>Project Overview: Beauty Lounge Kailua embarked on their journey to establish a robust online presence by launching their first website. Previously reliant solely on social media platforms, they sought to expand their reach and capabilities by enabling service bookings and product sales online.</p>
+                                    <p>With aspirations to evolve into an e-commerce platform, the website needed to exude a feminine and modern aesthetic to resonate with their target audience. To achieve this, I curated various design options, each reflecting the chic and contemporary vibe present in the extensive library of images provided by the client.</p>
+                                    <p>Technologies Used: HTML, CSS, JavaScript</p>
+                                    <p>Your Role: Lead Designer and Developer</p>
+                                    <p>Key Features: Feminine and modern aesthetic, service booking integration, e-commerce readiness</p>
+                                    <p><a href="#">View Live Demo</a></p>
+                                </div>
+                                <!-- Add more text descriptions as needed -->
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -185,6 +285,7 @@
             </div>
         </div>
     </div>
+    
     <!-- JavaScript import -->
     <script src="js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -192,6 +293,12 @@
         crossorigin="anonymous"></script>
 
     <!-- Add any other JavaScript files as needed -->
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap Icons -->
+    <script src="https://unpkg.com/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-icons@1.7.2/font/bootstrap-icons.js"></script>
 
 </body>
 
