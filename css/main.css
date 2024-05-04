@@ -135,14 +135,15 @@ background-color: #e9ecef !important;}
     /* Mobile-specific styles */
     /* Example: Adjust font size or padding for smaller screens */
     .img-custom {
-        max-width: 40vw !important;
+        max-width: 38vw !important;
     }
     .hide-mobile { display: none !important; height: 0;}
     .hide-mobile-tablet { display: none !important; height: 0;}
-    .row.px-4.body-row.web-design-body {
-        top: -50px;
+    .web-design-body {
+        top: -40px !important;
         position: relative;
     }
+    .card {background-color: transparent;}
     
 .portfolio-item {
     position: relative;
