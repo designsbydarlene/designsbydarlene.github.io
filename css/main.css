@@ -1,4 +1,8 @@
 /* all */
+body {
+    font-family: 'Poppins', sans-serif !important;
+
+}
 a {
     color: #000 !important;
     text-decoration: none !important;
