@@ -43,7 +43,11 @@ h6 {
     font-size: 14px;
 }
 
-/* navigation */
+/* navigation */    
+/* Custom CSS */
+    .nav-link.active {
+        text-decoration: underline; /* Change text decoration for active link */
+      }
 #nav-icon1 {
     width: 25px;
     height: 18px;

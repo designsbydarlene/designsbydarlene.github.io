@@ -26,7 +26,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
         rel="stylesheet">
 
-    <!-- Add any other CSS files as needed -->
+    <!-- Add any other CSS files as needed -->  <style>
+    /* Custom CSS */
+    .nav-link.active {
+      text-decoration: underline; /* Change text decoration for active link */
+    }
+  </style>
 </head>
 
 <body>
@@ -136,118 +141,172 @@
     </div>
 
     <div class="container pb-5 web-design-body">
-        <!-- Modal -->
-        <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="imageModalLabel">PREVIEW</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body text-center">
-                        <h5 id="imageModalLabel" class="modal-title"></h5> <!-- Header -->
-                        <img src="../../images/web-design/beauty-lounge-kailua-bl/beauty-lounge-kailua-bl-1.webp" id="modalImage" class="img-fluid" src=""
-                            alt="Modal Image"> <!-- Image -->
-                    </div>
-                </div>
-            </div>
+       <!-- start -->
+       <!-- Navigation -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container justify-content-center">
+        <div class="row justify-content-center">
+          <div class="col">
+            <a class="nav-link" id="print-tab" data-bs-toggle="tab" href="#print" role="tab" aria-controls="print" aria-selected="true" onclick="showGallery('print')">Print</a>
+          </div>
+          <div class="col">
+            <a class="nav-link" id="digital-tab" data-bs-toggle="tab" href="#digital" role="tab" aria-controls="digital" aria-selected="false" onclick="showGallery('digital')">Digital</a>
+          </div>
+          <div class="col"> 
+            <a class="nav-link" id="event-tab" data-bs-toggle="tab" href="#event" role="tab" aria-controls="event" aria-selected="false" onclick="showGallery('event')">Event</a>
+          </div>
         </div>
-
-        <div class="row justify-content-center pb-5">
-            <div class="col-md-10 col-lg-10">
-                <div class="pt-4 border-bottom-custom mx-3 hide-mobile"></div>
-                <div class="card">
-                    <div class="container mt-5">
-                        <div class="row">
-                            <!-- Left Column: Gallery -->
-                            <div class="col-md-12 col-lg-6">
-                                <div class="container px-0">
-                                    <div class="row px-2">
-                                        <div id="main-image" class="position-relative mb-3 px-0">
-                                            <img src="../../images/web-design/beauty-lounge-kailua-bl/beauty-lounge-kailua-bl-1.webp" alt="Home Page Banner"
-                                                class="gallery-img img-fluid" data-bs-toggle="modal"
-                                                data-bs-target="#imageModal">
-                                            <!-- Font Awesome zoom icon -->
-                                            <span class="zoom-icon">
-                                                <i class="fa-solid fa-magnifying-glass" data-bs-toggle="modal"
-                                                    data-bs-target="#imageModal"></i>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div id="gallery" class="row px-0 pb-3">
-                                        <div class="col-4 pb-4">
-                                            <img src="../../images/web-design/beauty-lounge-kailua-bl/beauty-lounge-kailua-bl-1.webp" alt="Home Page Banner"
-                                                class="gallery-img img-fluid" onclick="changeMainImage(this)">
-                                        </div>
-                                        <div class="col-4 pb-4">
-                                            <img src="../../images/web-design/beauty-lounge-kailua-bl/beauty-lounge-kailua-bl-2.webp" alt="Home Page About"
-                                                class="gallery-img img-fluid" onclick="changeMainImage(this)">
-                                        </div>
-                                        <div class="col-4 pb-4">
-                                            <img src="../../images/web-design/beauty-lounge-kailua-bl/beauty-lounge-kailua-bl-3.webp" alt="Home Page Review"
-                                                class="gallery-img img-fluid" onclick="changeMainImage(this)">
-                                        </div>
-                                        <div class="col-4 pb-4">
-                                            <img src="../../images/web-design/beauty-lounge-kailua-bl/beauty-lounge-kailua-bl-4.webp" alt="Gallery"
-                                                class="gallery-img img-fluid" onclick="changeMainImage(this)">
-                                        </div>
-                                        <div class="col-4 pb-4">
-                                            <img src="../../images/web-design/beauty-lounge-kailua-bl/beauty-lounge-kailua-bl-5.webp" alt="Locations"
-                                                class="gallery-img img-fluid" onclick="changeMainImage(this)">
-                                        </div>
-                                        <div class="col-4 pb-4">
-                                            <img src="../../images/web-design/beauty-lounge-kailua-bl/beauty-lounge-kailua-bl-6.webp" alt="Products"
-                                                class="gallery-img img-fluid" onclick="changeMainImage(this)">
-                                        </div>
-                                        <div class="col-4 pb-4">
-                                            <img src="../../images/web-design/beauty-lounge-kailua-bl/beauty-lounge-kailua-bl-7.webp" alt="Services"
-                                                class="gallery-img img-fluid" onclick="changeMainImage(this)">
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Bootstrap JS -->
-                                <script
-                                    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-                                <!-- Font Awesome JS -->
-                                <script
-                                    src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
-
-                                
-                                <script>
-                                    function changeMainImage(element) {
-                                        var imageUrl = element.getAttribute('src');
-                                        var modalImage = document.getElementById('modalImage');
-                                        var mainImage = document.getElementById('main-image').querySelector('img');
-
-                                        modalImage.src = imageUrl;
-                                        mainImage.src = imageUrl;
-                                        mainImage.setAttribute('data-bs-toggle', 'modal');
-                                        mainImage.setAttribute('data-bs-target', '#imageModal');
-                                        document.querySelector('.zoom-icon').setAttribute('data-bs-toggle', 'modal');
-                                        document.querySelector('.zoom-icon').setAttribute('data-bs-target', '#imageModal');
-                                    }
-                                </script>
-                            </div>
-
-                            <!-- Right Column: Text Description -->
-                            <div class="col-md-12 col-lg-6">
-                                <div class="web-description">
-                                    <h3>Beauty Lounge Kailua Website Creation</h3>
-                                    <p>Project Overview: Beauty Lounge Kailua embarked on their journey to establish a robust online presence by launching their first website. Previously reliant solely on social media platforms, they sought to expand their reach and capabilities by enabling service bookings and product sales online.</p>
-                                    <p>With aspirations to evolve into an e-commerce platform, the website needed to exude a feminine and modern aesthetic to resonate with their target audience. To achieve this, I curated various design options, each reflecting the chic and contemporary vibe present in the extensive library of images provided by the client.</p>
-                                    <p>Technologies Used: HTML, CSS, JavaScript</p>
-                                    <p>Your Role: Web Designer</p>
-                                    <p>Key Features: Feminine and modern aesthetic, service booking integration, e-commerce readiness</p>
-                                    
-                                    <p><a href="https://designsbydarlene.github.io/beauty-lounge-kailua/index.html" title="Live Demo">View Live Demo</a></p>
-                                </div>
-                                <!-- Add more text descriptions as needed -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      </div>
+  </nav>
+  
+  <!-- Image Gallery -->
+  <div class="container mt-5">
+    <div class="tab-content" id="myTabContent">
+      <!-- Print Gallery -->
+      <div class="tab-pane fade show active" id="print" role="tabpanel" aria-labelledby="print-tab">
+        <div class="row border-bottom-custom"><h4>PRINT</h4></div>
+        <div class="row pt-3" id="print-gallery">
+          <div class="col-md-4 mb-4">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#printModal" onclick="updateModal('printModal', 'print1.jpg')">
+              <img src="print1.jpg" class="img-fluid" alt="Print Design 1">
+            </a>
+          </div>
+          <!-- Add more images here -->
         </div>
+      </div>
+  
+      <!-- Digital Gallery -->
+      <div class="tab-pane fade" id="digital" role="tabpanel" aria-labelledby="digital-tab">
+        <div class="row border-bottom-custom"><h4>DIGITAL</h4></div>
+        <div class="row pt-3" id="digital-gallery">
+            <div class="col-md-4 mb-4">
+                
+              <a href="#" data-bs-toggle="modal" data-bs-target="#digitalModal" onclick="updateModal('digitalModal', '../images/cat-1.webp', 'Print Design 1')">
+                <img src="../images/cat-1.webp" class="img-fluid" alt="Digital Design 1">
+              </a>
+            </div>
+            <div class="col-md-4 mb-4">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#digitalModal" onclick="updateModal('digitalModal', '../images/cat-2.webp', 'Print Design 2')">
+                <img src="../images/cat-2.webp" class="img-fluid" alt="Digital Design 1">
+              </a>
+            </div>
+            <div class="col-md-4 mb-4">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#digitalModal" onclick="updateModal('digitalModal', '../images/cat-3.webp', 'Print Design 3')">
+                <img src="../images/cat-3.webp" class="img-fluid" alt="Digital Design 1">
+              </a>
+            </div>
+          <!-- Add more images here -->
+        </div>
+      </div>
+  
+      <!-- Event Gallery -->
+      <div class="tab-pane fade" id="event" role="tabpanel" aria-labelledby="event-tab">
+        <div class="row border-bottom-custom"><h4>EVENT</h4></div>
+        <div class="row pt-3" id="event-gallery">
+          <div class="col-md-4 mb-4">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#eventModal" onclick="updateModal('eventModal', 'event1.jpg')">
+              <img src="event1.jpg" class="img-fluid" alt="Event Design 1">
+            </a>
+          </div>
+          <!-- Add more images here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modals -->
+<div class="modal fade" id="printModal" tabindex="-1" aria-labelledby="printModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="printModalLabel">Print Design</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img id="printModalImage" class="img-fluid" alt="Print Design">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="digitalModal" tabindex="-1" aria-labelledby="digitalModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="digitalModalLabel">Digital Design</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img id="digitalModalImage" class="img-fluid" alt="Digital Design">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="eventModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="eventModalLabel">Event Design</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img id="eventModalImage" class="img-fluid" alt="Event Design">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    function updateModal(modalId, imageSrc, altText) {
+    document.getElementById(modalId + "Image").src = imageSrc;
+    document.getElementById(modalId + "Label").innerText = altText;
+  }
+    function showGallery(type) {
+      document.querySelectorAll('.tab-pane').forEach(function(tab) {
+        tab.classList.remove('show', 'active');
+      });
+      document.getElementById(type).classList.add('show', 'active');
+    }
+    function showGallery(type) {
+    document.querySelectorAll('.tab-pane').forEach(function(tab) {
+      tab.classList.remove('show', 'active');
+    });
+} function showGallery(type) {
+    // Remove 'active' class from all links
+    document.querySelectorAll('.nav-link').forEach(function(link) {
+      link.classList.remove('active');
+    });
+    // Add 'active' class to the clicked link
+    document.getElementById(type + '-tab').classList.add('active');
+    
+    // Hide all tab panes
+    document.querySelectorAll('.tab-pane').forEach(function(tab) {
+      tab.classList.remove('show', 'active');
+    });
+    // Show the corresponding tab pane
+    document.getElementById(type).classList.add('show', 'active');
+  }
+    function showGallery(type) {
+    // Remove 'active' class from all links
+    document.querySelectorAll('.nav-link').forEach(function(link) {
+      link.classList.remove('active');
+    });
+    // Add 'active' class to the parent div of the clicked link
+    document.getElementById(type + '-tab').parentNode.classList.add('active');
+    
+    // Hide all tab panes
+    document.querySelectorAll('.tab-pane').forEach(function(tab) {
+      tab.classList.remove('show', 'active');
+    });
+    // Show the corresponding tab pane
+    document.getElementById(type).classList.add('show', 'active');
+  }
+  </script>
+       <!-- end -->
 
         <div class="row px-4 footer">
             <div class="container py-2">
@@ -263,12 +322,12 @@
                     <div class="col-lg-4 py-2">
                         <p>SITE MAP</p>
                         <ul style="list-style:none; padding:0; margin:0;">
-                            <li><a href="../../index.html" title="Home">Home</a></li>
+                            <li><a href="../index.html" title="Home">Home</a></li>
                             <li>
                                 <a href="#">Portfolio</a>
                             </li>
-                            <li><a href="../../about.html" title="About">About</a></li>
-                            <li><a href="../../resume.html" title="Resume">Resume</a></li>
+                            <li><a href="#" title="About">About</a></li>
+                            <li><a href="../resume.html" title="Resume">Resume</a></li>
                             <li>
                             </li>
                         </ul>
