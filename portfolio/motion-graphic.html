@@ -2,163 +2,433 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DesignsByDarlene - Motion Graphic</title>
-    <!-- Link to your CSS stylesheets -->
-    <link rel="stylesheet" href="../css/main.css">
-    <!-- Font Awesome -->
-    <!-- Link to Font Awesome CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- Google Font (Poppins) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DesignsByDarlene - Motion Graphic</title>
+  <!-- Link to your CSS stylesheets -->
+  <link rel="stylesheet" href="../css/main.css">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- Add any other CSS files as needed -->
+  <!-- Custom CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- Google Font (Poppins) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+    rel="stylesheet">
 
+  <!-- Add any other CSS files as needed -->
+  <style>
+    /* Add this style block */
+    #digital-gallery .col-md-3 {
+      min-height: 200px;
+      /* Set the desired fixed height */
+    }
+  </style>
 </head>
 
 <body>
-    <!-- Your portfolio content goes here -->
-    <!-- Navigation -->
-   
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <div class="container py-4">
-            <button class="navbar-toggler" id="navbarToggleBtn" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <div id="nav-icon1">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </button>
-
-            <!-- Logo -->
-            <div class="row hide-desktop text-center">
-                <div class="col px-4 text-right">
-                    <a href="../index.html" title="Home"><img src="../images/header-title.webp" alt="Designs by Darlene" class="img-custom"></a>
-                </div>
-            </div>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../index.html" title="Home">HOME</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            PORTFOLIO
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                            <li><a class="dropdown-item" href="./web-design.html" title="Web Design">WEB DESIGN</a></li>
-                            <li><a class="dropdown-item" href="./graphic-design.html" title="Graphic Design">GRAPHIC DESIGN</a></li>
-                            <li><a class="dropdown-item" href="./ux-ui-design.html" title="UX/UI Design">UX/UI DESIGN</a></li>
-                            <li><a class="dropdown-item" href="./digital-design.html" title="Digital Design">DIGITAL DESIGN</a></li>
-                            <li><a class="dropdown-item" href="./motion-graphic.html" title="Motion Graphic">MOTION GRAPHIC</a></li>
-                            <li><a class="dropdown-item" href="./illustration.html" title="Illustrations">ILLUSTRATION</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../about.html" title="About">ABOUT</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../resume.html" title="Resume">RESUME</a>
-                    </li>
-                </ul>
-
-                <div class="navbar-nav hide-mobile-tablet ms-auto">
-                    <li class="nav-item text-end dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            SOCIAL
-                        </a>
-                        <ul class="dropdown-menu social-menu" aria-labelledby="navbarScrollingDropdown">
-                            <li><a class="dropdown-item text-end" href="https://www.linkedin.com/in/darlene-agbayani-16b737146/in/darlene-agbayani-16b737146/" title="Linkedin">LINKEDIN</a></li>
-                            <li><a class="dropdown-item text-end" href="https://www.instagram.com/thedar2d2/thedar2d2?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" title="Instagram">INSTAGRAM</a></li>
-                        </ul>
-                    </li>
-                </div>
-                <div class="navbar-nav hide-desktop ms-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            SOCIAL
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                            <li><a class="dropdown-item" href="https://www.linkedin.com/in/darlene-agbayani-16b737146/in/darlene-agbayani-16b737146/" title="Linkedin">LINKEDIN</a></li>
-                            <li><a class="dropdown-item" href="https://www.instagram.com/thedar2d2/thedar2d2?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" title="Instagram">INSTAGRAM</a></li>
-                        </ul>
-                    </li>
-                </div>
-            </div>
+  <!-- Your portfolio content goes here -->
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container py-4">
+      <button class="navbar-toggler" id="navbarToggleBtn" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <div id="nav-icon1">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
+      </button>
+
+      <!-- Logo -->
+      <div class="row hide-desktop text-center">
+        <div class="col px-4 text-right">
+          <a href="../index.html" title="Home"><img src="../images/header-title.webp" alt="Designs by Darlene"
+              class="img-custom"></a>
+          <div class="row justify-content-center pt-2">
+            <h5>MOTION GRAPHIC</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../index.html" title="Home">HOME</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              PORTFOLIO
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a class="dropdown-item" href="./web-design.html" title="Web Design">WEB
+                  DESIGN</a></li>
+              <li><a class="dropdown-item" href="./graphic-design.html" title="Graphic Design">GRAPHIC
+                  DESIGN</a></li>
+              <li><a class="dropdown-item" href="./ux-ui-design.html" title="UX/UI Design">UX/UI
+                  DESIGN</a></li>
+              <li><a class="dropdown-item" href="./digital-design.html" title="Digital Design">DIGITAL
+                  DESIGN</a></li>
+              <li><a class="dropdown-item" href="./motion-graphic.html" title="Motion Graphic">MOTION
+                  GRAPHIC</a></li>
+              <li><a class="dropdown-item" href="./illustration.html" title="Illustrations">ILLUSTRATION</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../about.html" title="About">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../resume.html" title="Resume">RESUME</a>
+          </li>
+        </ul>
+
+        <div class="navbar-nav hide-mobile-tablet ms-auto">
+          <li class="nav-item text-end dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              SOCIAL
+            </a>
+            <ul class="dropdown-menu social-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a class="dropdown-item text-end"
+                  href="https://www.linkedin.com/in/darlene-agbayani-16b737146/in/darlene-agbayani-16b737146/"
+                  title="Linkedin">LINKEDIN</a></li>
+              <li><a class="dropdown-item text-end"
+                  href="https://www.instagram.com/thedar2d2/thedar2d2?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                  title="Instagram">INSTAGRAM</a></li>
+            </ul>
+          </li>
+        </div>
+        <div class="navbar-nav hide-desktop ms-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              SOCIAL
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a class="dropdown-item"
+                  href="https://www.linkedin.com/in/darlene-agbayani-16b737146/in/darlene-agbayani-16b737146/"
+                  title="Linkedin">LINKEDIN</a></li>
+              <li><a class="dropdown-item"
+                  href="https://www.instagram.com/thedar2d2/thedar2d2?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                  title="Instagram">INSTAGRAM</a></li>
+            </ul>
+          </li>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Logo -->
+  <div class="hide-mobile-tablet text-center pt-2">
+    <div class="col px-4 text-right">
+      <a href="../index.html" title="Home"><img src="../images/header-title.webp" alt="Designs by Darlene"
+          class="img-custom"></a>
+      <div class="row justify-content-center pt-2">
+        <h5>MOTION GRAPHIC</h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="container pb-5">
+    <!-- start -->
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container justify-content-center">
+        <div class="row justify-content-center">
+          <div class="col-4">
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <a class="nav-link" id="print-tab" data-bs-toggle="tab" href="#print" role="tab" aria-controls="print"
+                aria-selected="true" onclick="showGallery('print')">GIF</a>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <a class="nav-link" id="digital-tab" data-bs-toggle="tab" href="#digital" role="tab"
+                aria-controls="digital" aria-selected="false" onclick="showGallery('digital')">VIDEO</a>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <a class="nav-link" id="event-tab" data-bs-toggle="tab" href="#event" role="tab" aria-controls="event"
+                aria-selected="false" onclick="showGallery('event')">SLIDES</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </nav>
 
-    
-    <div class="container py-2">
-        <!-- Logo -->
-        <div class="row hide-mobile-tablet text-center">
-            <div class="col px-4 text-right">
-                <a href="../index.html" title="Home"><img src="../images/header-title.webp" alt="Designs by Darlene" class="img-custom"></a>
+    <!-- Image Gallery -->
+    <div class="container px-2 pb-5">
+      <div class="tab-content" id="myTabContent">
+        <!-- Print Gallery -->
+        <div class="tab-pane fade show active" id="print" role="tabpanel" aria-labelledby="print-tab">
+          <div class="border-bottom-custom"></div>
+          <div class="row pt-2">
+            <h4>GIF</h4>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-6 py-2">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#printModal"
+                    onclick="updateModal('printModal', '../images/motion-graphic/gif/gif-1.gif', 'Laptop Loading')"
+                    title="Laptop Loading">
+                    <div class="portfolio-item-graphic" alt="Laptop Loading"
+                        style="background-image: url('../images/motion-graphic/gif/gif-1.gif');">
+                        <div class="overlay">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 py-2">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#printModal"
+                    onclick="updateModal('printModal', '../images/motion-graphic/gif/gif-2.gif', 'Waikiki Beach')"
+                    title="Waikiki Beach">
+                    <div class="portfolio-item-graphic" alt="Waikiki Beach"
+                        style="background-image: url('../images/motion-graphic/gif/gif-2.gif');">
+                        <div class="overlay">
+                        </div>
+                    </div>
+                </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Digital Gallery -->
+        <div class="tab-pane fade" id="digital" role="tabpanel" aria-labelledby="digital-tab">
+          <div class="border-bottom-custom"></div>
+          <div class="row pt-2">
+            <h4>VIDEO</h4>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-6 py-2">
+                <a href="#" class="video-link" data-bs-toggle="modal" data-bs-target="#videoModal" data-video-src="https://www.youtube.com/embed/l_06yqXJYCM?si=WWuY1u-n5hm8qKIB" title="Blue Christmas E-Card">
+                    <div class="portfolio-item-graphic" alt="Blue Cloud Background" style="background-image: url('../images/motion-graphic/video/video-1.webp');">
+                        <div class="overlay"></div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 py-2">
+                <a href="#" class="video-link" data-bs-toggle="modal" data-bs-target="#videoModal" data-video-src="https://www.youtube.com/embed/1nkHN-Ks27s?si=h9XPB6XQ7saxXGOj" title="Green Christmas E-Card">
+                    <div class="portfolio-item-graphic" alt="Blue Cloud Background" style="background-image: url('../images/motion-graphic/video/video-2.webp');">
+                        <div class="overlay"></div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 py-2">
+                <a href="#" class="video-link" data-bs-toggle="modal" data-bs-target="#videoModal" data-video-src="https://www.youtube.com/embed/UZxahTGkBM8?si=owcUVwLbT0WHNht8" title="Beige Christmas E-Card">
+                    <div class="portfolio-item-graphic" alt="Blue Cloud Background" style="background-image: url('../images/motion-graphic/video/video-3.webp');">
+                        <div class="overlay"></div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 py-2">
+                <a href="#" class="video-link" data-bs-toggle="modal" data-bs-target="#videoModal" data-video-src="https://www.youtube.com/embed/5QTHwqVZVSg?si=2kBcF6xDqtjI26rP" title="Project Presentation">
+                    <div class="portfolio-item-graphic" alt="Blue Cloud Background" style="background-image: url('../images/motion-graphic/video/video-4.webp');">
+                        <div class="overlay"></div>
+                    </div>
+                </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event Gallery -->
+        <div class="tab-pane fade" id="event" role="tabpanel" aria-labelledby="event-tab">
+          <div class="border-bottom-custom"></div>
+          <div class="row pt-2">
+            <h4>SLIDE</h4>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-6 py-2">
+                <a href="../images/motion-graphic/slide/slide-1.pdf" target="_blank" title="Career Fair Presentation">
+                    <div class="portfolio-item-graphic" alt="Career Fair Presentation" style="background-image: url('../images/motion-graphic/slide/slide-1.webp');">
+                        <div class="overlay"></div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 py-2">
+                <a href="../images/motion-graphic/slide/slide-2.pdf" target="_blank" title="Education Client Presentation">
+                    <div class="portfolio-item-graphic" alt="Education Client Presentation" style="background-image: url('../images/motion-graphic/slide/slide-2.webp');">
+                        <div class="overlay"></div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 py-2">
+                <a href="../images/motion-graphic/slide/slide-3.pdf" target="_blank" title="Company Presentation">
+                    <div class="portfolio-item-graphic" alt="Company Presentation" style="background-image: url('../images/motion-graphic/slide/slide-3.webp');">
+                        <div class="overlay"></div>
+                    </div>
+                </a>
             </div>
         </div>
+      </div>
+    </div>
 
-        <div class="row body py-5 px-4">
-            <h1>Motion Graphic</h1>
-            <p>Coming Soon</p>
+    <!-- Modals -->
+    <div class="modal fade" id="printModal" tabindex="-1" aria-labelledby="printModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="printModalLabel">Print Design</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img id="printModalImage" class="img-fluid" alt="Print Design">
+          </div>
         </div>
+      </div>
+    </div>
 
-        <div class="row px-4 footer">
-            <div class="container py-2">
-                <div class="row border-bottom-custom"></div>
-                <div class="row">
-                    <div class="col-lg-4 py-2">
-                        <p>CONTACT</p>
-                        <p><a href="mailto:agbayani.darlene@gmail.com" alt="Email">agbayani.darlene@gmail.com</a><br>
-                            <a href="tel:8084995911" alt="Phone">808.499.5911</a><br>
-                            New York, NY
-                        </p>
-                    </div>
-                    <div class="col-lg-4 py-2">
-                        <p>SITE MAP</p>
-                        <ul style="list-style:none; padding:0; margin:0;">
-                            <li><a href="../index.html" title="Home">Home</a></li>
-                            <li>
-                                <a href="#">Portfolio</a>
-                            </li>
-                            <li><a href="../about.html" title="About">About</a></li>
-                            <li><a href="../resume.html" title="Resume">Resume</a></li>
-                            <li>
-                            </li>
-                        </ul><p></p>
-                    </div>
-                    <div class="col-lg-4 py-2 social-icons">
-                        <p>SOCIAL</p>
-                         <a href="https://www.linkedin.com/in/darlene-agbayani-16b737146/" target="_blank" title="Linkedin"><i class="fa fa-linkedin px-1"></i></a>
-                        <a href="https://www.instagram.com/thedar2d2/" target="_blank" title="Instagram"><i class="fa fa-instagram px-1"></i></a>
-                        </ul><p></p>
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="videoModalLabel">Blue Cloud Background</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Embedded YouTube video player -->
+                    <div class="video-container">
+                        <iframe id="videoFrame" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- JavaScript import -->
-    <script src="../js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+    
+    <div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="eventModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="eventModalLabel">Event Design</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img id="eventModalImage" class="img-fluid" alt="Event Design">
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <!-- Add any other JavaScript files as needed -->
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      function updateModal(modalId, imageSrc, altText) {
+        document.getElementById(modalId + "Image").src = imageSrc;
+        document.getElementById(modalId + "Label").innerText = altText;
+      }
+      function showGallery(type) {
+        document.querySelectorAll('.tab-pane').forEach(function (tab) {
+          tab.classList.remove('show', 'active');
+        });
+        document.getElementById(type).classList.add('show', 'active');
+      }
+      function showGallery(type) {
+        document.querySelectorAll('.tab-pane').forEach(function (tab) {
+          tab.classList.remove('show', 'active');
+        });
+      } function showGallery(type) {
+        // Remove 'active' class from all links
+        document.querySelectorAll('.nav-link').forEach(function (link) {
+          link.classList.remove('active');
+        });
+        // Add 'active' class to the clicked link
+        document.getElementById(type + '-tab').classList.add('active');
+
+        // Hide all tab panes
+        document.querySelectorAll('.tab-pane').forEach(function (tab) {
+          tab.classList.remove('show', 'active');
+        });
+        // Show the corresponding tab pane
+        document.getElementById(type).classList.add('show', 'active');
+      }
+      function showGallery(type) {
+        // Remove 'active' class from all links
+        document.querySelectorAll('.nav-link').forEach(function (link) {
+          link.classList.remove('active');
+        });
+        // Add 'active' class to the parent div of the clicked link
+        document.getElementById(type + '-tab').parentNode.classList.add('active');
+
+        // Hide all tab panes
+        document.querySelectorAll('.tab-pane').forEach(function (tab) {
+          tab.classList.remove('show', 'active');
+        });
+        // Show the corresponding tab pane
+        document.getElementById(type).classList.add('show', 'active');
+      }
+      document.querySelectorAll('.video-link').forEach(item => {
+    item.addEventListener('click', event => {
+        const videoSrc = item.getAttribute('data-video-src');
+        document.getElementById('videoFrame').src = videoSrc;
+    });
+});
+    </script>
+    <!-- end -->
+</div>
+    <div class="row px-4 footer">
+      <div class="container py-2">
+        <div class="row border-bottom-custom"></div>
+        <div class="row">
+          <div class="col-lg-4 py-2">
+            <p>CONTACT</p>
+            <p><a href="mailto:agbayani.darlene@gmail.com" alt="Email">agbayani.darlene@gmail.com</a><br>
+              <a href="tel:8084995911" alt="Phone">808.499.5911</a><br>
+              New York, NY
+            </p>
+          </div>
+          <div class="col-lg-4 py-2">
+            <p>SITE MAP</p>
+            <ul style="list-style:none; padding:0; margin:0;">
+              <li><a href="../index.html" title="Home">Home</a></li>
+              <li>
+                <a href="#">Portfolio</a>
+              </li>
+              <li><a href="#" title="About">About</a></li>
+              <li><a href="../resume.html" title="Resume">Resume</a></li>
+              <li>
+              </li>
+            </ul>
+            <p></p>
+          </div>
+          <div class="col-lg-4 py-2 social-icons">
+            <p>SOCIAL</p>
+            <a href="https://www.linkedin.com/in/darlene-agbayani-16b737146/" target="_blank" title="Linkedin"><i
+                class="fab fa-linkedin px-1"></i></a>
+            <a href="https://www.instagram.com/thedar2d2/" target="_blank" title="Instagram"><i
+                class="fab fa-instagram px-1"></i></a>
+            </ul>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- JavaScript import -->
+  <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <!-- Add any other JavaScript files as needed -->
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Bootstrap Icons -->
+  <script src="https://unpkg.com/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://unpkg.com/bootstrap-icons@1.7.2/font/bootstrap-icons.js"></script>
 
 </body>
 

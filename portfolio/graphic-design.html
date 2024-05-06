@@ -2,363 +2,661 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DesignsByDarlene - Graphic Design</title>
-    <!-- Link to your CSS stylesheets -->
-    <link rel="stylesheet" href="../css/main.css">
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   
-    <!-- Custom CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- Google Font (Poppins) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
-        rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DesignsByDarlene - Graphic Design</title>
+  <!-- Link to your CSS stylesheets -->
+  <link rel="stylesheet" href="../css/main.css">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- Add any other CSS files as needed -->  <style>
-    /* Custom CSS */
-    .nav-link.active {
-      text-decoration: underline; /* Change text decoration for active link */
+  <!-- Custom CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- Google Font (Poppins) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+    rel="stylesheet">
+
+  <!-- Add any other CSS files as needed -->
+  <style>
+    /* Add this style block */
+    #digital-gallery .col-md-3 {
+      min-height: 200px;
+      /* Set the desired fixed height */
     }
   </style>
 </head>
 
 <body>
-    <!-- Your portfolio content goes here -->
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <div class="container py-4">
-            <button class="navbar-toggler" id="navbarToggleBtn" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <div id="nav-icon1">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </button>
-
-            <!-- Logo -->
-            <div class="row hide-desktop text-center">
-                <div class="col px-4 text-right">
-                    <a href="../index.html" title="Home"><img src="../images/header-title.webp"
-                            alt="Designs by Darlene" class="img-custom"></a>
-                    <div class="row justify-content-center pt-2">
-                        <h5>GRAPHIC DESIGN</h5>
-                    </div>
-                </div>
-            </div>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../index.html" title="Home">HOME</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            PORTFOLIO
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                            <li><a class="dropdown-item" href="./web-design.html" title="Web Design">WEB
-                                    DESIGN</a></li>
-                            <li><a class="dropdown-item" href="./graphic-design.html" title="Graphic Design">GRAPHIC
-                                    DESIGN</a></li>
-                            <li><a class="dropdown-item" href="./ux-ui-design.html" title="UX/UI Design">UX/UI
-                                    DESIGN</a></li>
-                            <li><a class="dropdown-item" href="./digital-design.html" title="Digital Design">DIGITAL
-                                    DESIGN</a></li>
-                            <li><a class="dropdown-item" href="./motion-graphic.html" title="Motion Graphic">MOTION
-                                    GRAPHIC</a></li>
-                            <li><a class="dropdown-item" href="./illustration.html"
-                                    title="Illustrations">ILLUSTRATION</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../about.html" title="About">ABOUT</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../resume.html" title="Resume">RESUME</a>
-                    </li>
-                </ul>
-
-                <div class="navbar-nav hide-mobile-tablet ms-auto">
-                    <li class="nav-item text-end dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            SOCIAL
-                        </a>
-                        <ul class="dropdown-menu social-menu" aria-labelledby="navbarScrollingDropdown">
-                            <li><a class="dropdown-item text-end"
-                                    href="https://www.linkedin.com/in/darlene-agbayani-16b737146/in/darlene-agbayani-16b737146/"
-                                    title="Linkedin">LINKEDIN</a></li>
-                            <li><a class="dropdown-item text-end"
-                                    href="https://www.instagram.com/thedar2d2/thedar2d2?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                                    title="Instagram">INSTAGRAM</a></li>
-                        </ul>
-                    </li>
-                </div>
-                <div class="navbar-nav hide-desktop ms-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            SOCIAL
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                            <li><a class="dropdown-item"
-                                    href="https://www.linkedin.com/in/darlene-agbayani-16b737146/in/darlene-agbayani-16b737146/"
-                                    title="Linkedin">LINKEDIN</a></li>
-                            <li><a class="dropdown-item"
-                                    href="https://www.instagram.com/thedar2d2/thedar2d2?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                                    title="Instagram">INSTAGRAM</a></li>
-                        </ul>
-                    </li>
-                </div>
-            </div>
+  <!-- Your portfolio content goes here -->
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container py-4">
+      <button class="navbar-toggler" id="navbarToggleBtn" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <div id="nav-icon1">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
+      </button>
+
+      <!-- Logo -->
+      <div class="row hide-desktop text-center">
+        <div class="col px-4 text-right">
+          <a href="../index.html" title="Home"><img src="../images/header-title.webp" alt="Designs by Darlene"
+              class="img-custom"></a>
+          <div class="row justify-content-center pt-2">
+            <h5>GRAPHIC DESIGN</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../index.html" title="Home">HOME</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              PORTFOLIO
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a class="dropdown-item" href="./web-design.html" title="Web Design">WEB
+                  DESIGN</a></li>
+              <li><a class="dropdown-item" href="./graphic-design.html" title="Graphic Design">GRAPHIC
+                  DESIGN</a></li>
+              <li><a class="dropdown-item" href="./ux-ui-design.html" title="UX/UI Design">UX/UI
+                  DESIGN</a></li>
+              <li><a class="dropdown-item" href="./digital-design.html" title="Digital Design">DIGITAL
+                  DESIGN</a></li>
+              <li><a class="dropdown-item" href="./motion-graphic.html" title="Motion Graphic">MOTION
+                  GRAPHIC</a></li>
+              <li><a class="dropdown-item" href="./illustration.html" title="Illustrations">ILLUSTRATION</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../about.html" title="About">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../resume.html" title="Resume">RESUME</a>
+          </li>
+        </ul>
+
+        <div class="navbar-nav hide-mobile-tablet ms-auto">
+          <li class="nav-item text-end dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              SOCIAL
+            </a>
+            <ul class="dropdown-menu social-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a class="dropdown-item text-end"
+                  href="https://www.linkedin.com/in/darlene-agbayani-16b737146/in/darlene-agbayani-16b737146/"
+                  title="Linkedin">LINKEDIN</a></li>
+              <li><a class="dropdown-item text-end"
+                  href="https://www.instagram.com/thedar2d2/thedar2d2?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                  title="Instagram">INSTAGRAM</a></li>
+            </ul>
+          </li>
+        </div>
+        <div class="navbar-nav hide-desktop ms-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              SOCIAL
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a class="dropdown-item"
+                  href="https://www.linkedin.com/in/darlene-agbayani-16b737146/in/darlene-agbayani-16b737146/"
+                  title="Linkedin">LINKEDIN</a></li>
+              <li><a class="dropdown-item"
+                  href="https://www.instagram.com/thedar2d2/thedar2d2?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                  title="Instagram">INSTAGRAM</a></li>
+            </ul>
+          </li>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Logo -->
+  <div class="hide-mobile-tablet text-center pt-2">
+    <div class="col px-4 text-right">
+      <a href="../index.html" title="Home"><img src="../images/header-title.webp" alt="Designs by Darlene"
+          class="img-custom"></a>
+      <div class="row justify-content-center pt-2">
+        <h5>GRAPHIC DESIGN</h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="container pb-5">
+    <!-- start -->
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container justify-content-center">
+        <div class="row justify-content-center">
+          <div class="col-4">
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <a class="nav-link" id="print-tab" data-bs-toggle="tab" href="#print" role="tab" aria-controls="print"
+                aria-selected="true" onclick="showGallery('print')">PRINT</a>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <a class="nav-link" id="digital-tab" data-bs-toggle="tab" href="#digital" role="tab"
+                aria-controls="digital" aria-selected="false" onclick="showGallery('digital')">DIGITAL</a>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <a class="nav-link" id="event-tab" data-bs-toggle="tab" href="#event" role="tab" aria-controls="event"
+                aria-selected="false" onclick="showGallery('event')">EVENT</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </nav>
 
-    <!-- Logo -->
-    <div class="hide-mobile-tablet text-center pt-2">
-        <div class="col px-4 text-right">
-            <a href="../index.html" title="Home"><img src="../images/header-title.webp" alt="Designs by Darlene"
-                    class="img-custom"></a>
-            <div class="row justify-content-center pt-2">
-                <h5>GRAPHIC DESIGN</h5>
-            </div>
-        </div>
-    </div>
-
-    <div class="container pb-5 web-design-body">
-       <!-- start -->
-       <!-- Navigation -->
-<nav class="navbar navbar-expand-lg">
-    <div class="container justify-content-center">
-        <div class="row justify-content-center">
-          <div class="col">
-            <a class="nav-link" id="print-tab" data-bs-toggle="tab" href="#print" role="tab" aria-controls="print" aria-selected="true" onclick="showGallery('print')">Print</a>
+    <!-- Image Gallery -->
+    <div class="container px-2 pb-5">
+      <div class="tab-content" id="myTabContent">
+        <!-- Print Gallery -->
+        <div class="tab-pane fade show active" id="print" role="tabpanel" aria-labelledby="print-tab">
+          <div class="border-bottom-custom"></div>
+          <div class="row pt-2">
+            <h4>PRINT</h4>
           </div>
-          <div class="col">
-            <a class="nav-link" id="digital-tab" data-bs-toggle="tab" href="#digital" role="tab" aria-controls="digital" aria-selected="false" onclick="showGallery('digital')">Digital</a>
-          </div>
-          <div class="col"> 
-            <a class="nav-link" id="event-tab" data-bs-toggle="tab" href="#event" role="tab" aria-controls="event" aria-selected="false" onclick="showGallery('event')">Event</a>
-          </div>
-        </div>
-      </div>
-  </nav>
-  
-  <!-- Image Gallery -->
-  <div class="container mt-5">
-    <div class="tab-content" id="myTabContent">
-      <!-- Print Gallery -->
-      <div class="tab-pane fade show active" id="print" role="tabpanel" aria-labelledby="print-tab">
-        <div class="row border-bottom-custom"><h4>PRINT</h4></div>
-        <div class="row pt-3" id="print-gallery">
-          <div class="col-md-4 mb-4">
-            <a href="#" data-bs-toggle="modal" data-bs-target="#printModal" onclick="updateModal('printModal', 'print1.jpg')">
-              <img src="print1.jpg" class="img-fluid" alt="Print Design 1">
-            </a>
-          </div>
-          <!-- Add more images here -->
-        </div>
-      </div>
-  
-      <!-- Digital Gallery -->
-      <div class="tab-pane fade" id="digital" role="tabpanel" aria-labelledby="digital-tab">
-        <div class="row border-bottom-custom"><h4>DIGITAL</h4></div>
-        <div class="row pt-3" id="digital-gallery">
-            <div class="col-md-4 mb-4">
-                
-              <a href="#" data-bs-toggle="modal" data-bs-target="#digitalModal" onclick="updateModal('digitalModal', '../images/cat-1.webp', 'Print Design 1')">
-                <img src="../images/cat-1.webp" class="img-fluid" alt="Digital Design 1">
-              </a>
-            </div>
-            <div class="col-md-4 mb-4">
-              <a href="#" data-bs-toggle="modal" data-bs-target="#digitalModal" onclick="updateModal('digitalModal', '../images/cat-2.webp', 'Print Design 2')">
-                <img src="../images/cat-2.webp" class="img-fluid" alt="Digital Design 1">
-              </a>
-            </div>
-            <div class="col-md-4 mb-4">
-              <a href="#" data-bs-toggle="modal" data-bs-target="#digitalModal" onclick="updateModal('digitalModal', '../images/cat-3.webp', 'Print Design 3')">
-                <img src="../images/cat-3.webp" class="img-fluid" alt="Digital Design 1">
-              </a>
-            </div>
-          <!-- Add more images here -->
-        </div>
-      </div>
-  
-      <!-- Event Gallery -->
-      <div class="tab-pane fade" id="event" role="tabpanel" aria-labelledby="event-tab">
-        <div class="row border-bottom-custom"><h4>EVENT</h4></div>
-        <div class="row pt-3" id="event-gallery">
-          <div class="col-md-4 mb-4">
-            <a href="#" data-bs-toggle="modal" data-bs-target="#eventModal" onclick="updateModal('eventModal', 'event1.jpg')">
-              <img src="event1.jpg" class="img-fluid" alt="Event Design 1">
-            </a>
-          </div>
-          <!-- Add more images here -->
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modals -->
-<div class="modal fade" id="printModal" tabindex="-1" aria-labelledby="printModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="printModalLabel">Print Design</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <img id="printModalImage" class="img-fluid" alt="Print Design">
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="modal fade" id="digitalModal" tabindex="-1" aria-labelledby="digitalModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="digitalModalLabel">Digital Design</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <img id="digitalModalImage" class="img-fluid" alt="Digital Design">
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="eventModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="eventModalLabel">Event Design</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <img id="eventModalImage" class="img-fluid" alt="Event Design">
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Bootstrap Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  
-  <script>
-    function updateModal(modalId, imageSrc, altText) {
-    document.getElementById(modalId + "Image").src = imageSrc;
-    document.getElementById(modalId + "Label").innerText = altText;
-  }
-    function showGallery(type) {
-      document.querySelectorAll('.tab-pane').forEach(function(tab) {
-        tab.classList.remove('show', 'active');
-      });
-      document.getElementById(type).classList.add('show', 'active');
-    }
-    function showGallery(type) {
-    document.querySelectorAll('.tab-pane').forEach(function(tab) {
-      tab.classList.remove('show', 'active');
-    });
-} function showGallery(type) {
-    // Remove 'active' class from all links
-    document.querySelectorAll('.nav-link').forEach(function(link) {
-      link.classList.remove('active');
-    });
-    // Add 'active' class to the clicked link
-    document.getElementById(type + '-tab').classList.add('active');
-    
-    // Hide all tab panes
-    document.querySelectorAll('.tab-pane').forEach(function(tab) {
-      tab.classList.remove('show', 'active');
-    });
-    // Show the corresponding tab pane
-    document.getElementById(type).classList.add('show', 'active');
-  }
-    function showGallery(type) {
-    // Remove 'active' class from all links
-    document.querySelectorAll('.nav-link').forEach(function(link) {
-      link.classList.remove('active');
-    });
-    // Add 'active' class to the parent div of the clicked link
-    document.getElementById(type + '-tab').parentNode.classList.add('active');
-    
-    // Hide all tab panes
-    document.querySelectorAll('.tab-pane').forEach(function(tab) {
-      tab.classList.remove('show', 'active');
-    });
-    // Show the corresponding tab pane
-    document.getElementById(type).classList.add('show', 'active');
-  }
-  </script>
-       <!-- end -->
-
-        <div class="row px-4 footer">
-            <div class="container py-2">
-                <div class="row border-bottom-custom"></div>
-                <div class="row">
-                    <div class="col-lg-4 py-2">
-                        <p>CONTACT</p>
-                        <p><a href="mailto:agbayani.darlene@gmail.com" alt="Email">agbayani.darlene@gmail.com</a><br>
-                            <a href="tel:8084995911" alt="Phone">808.499.5911</a><br>
-                            New York, NY
-                        </p>
-                    </div>
-                    <div class="col-lg-4 py-2">
-                        <p>SITE MAP</p>
-                        <ul style="list-style:none; padding:0; margin:0;">
-                            <li><a href="../index.html" title="Home">Home</a></li>
-                            <li>
-                                <a href="#">Portfolio</a>
-                            </li>
-                            <li><a href="#" title="About">About</a></li>
-                            <li><a href="../resume.html" title="Resume">Resume</a></li>
-                            <li>
-                            </li>
-                        </ul>
-                        <p></p>
-                    </div><div class="col-lg-4 py-2 social-icons">
-                        <p>SOCIAL</p>
-                        <a href="https://www.linkedin.com/in/darlene-agbayani-16b737146/" target="_blank"
-                            title="Linkedin"><i class="fab fa-linkedin px-1"></i></a>
-                        <a href="https://www.instagram.com/thedar2d2/" target="_blank" title="Instagram"><i
-                                class="fab fa-instagram px-1"></i></a>
-                        </ul>
-                        <p></p>
-                    </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-6 py-2">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#printModal"
+                onclick="updateModal('printModal', '../images/graphic-design/print-design/print-design-1.webp', 'Baby Shower Invitation')"
+                title="Baby Shower Invitation">
+                <div class="portfolio-item-graphic" alt="Baby Shower Invitation"
+                  style="background-image: url('../images/graphic-design/print-design/print-design-1.webp');">
+                  <div class="overlay">
+                  </div>
                 </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-md-6 py-2">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#printModal"
+                onclick="updateModal('printModal', '../images/graphic-design/print-design/print-design-2.webp', 'Education Solutions Flyer')"
+                title="Education Solutions Flyer">
+                <div class="portfolio-item-graphic" alt="Education Solutions Flyer"
+                  style="background-image: url('../images/graphic-design/print-design/print-design-2.webp');">
+                  <div class="overlay">
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-md-6 py-2">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#printModal"
+                onclick="updateModal('printModal', '../images/graphic-design/print-design/print-design-3.webp', 'Technology Service Flyer')"
+                title="Technology Service Flyer">
+                <div class="portfolio-item-graphic" alt="Technology Service Flyer"
+                  style="background-image: url('../images/graphic-design/print-design/print-design-3.webp');">
+                  <div class="overlay">
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-md-6 py-2">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#printModal"
+                onclick="updateModal('printModal', '../images/graphic-design/print-design/print-design-4.webp', 'Technology Service Flyer')"
+                title="Technology Service Flyer">
+                <div class="portfolio-item-graphic" alt="Technology Service Flyer"
+                  style="background-image: url('../images/graphic-design/print-design/print-design-4.webp');">
+                  <div class="overlay">
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-md-6 py-2">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#printModal"
+                onclick="updateModal('printModal', '../images/graphic-design/print-design/print-design-5.webp', 'Hardware Flyer')"
+                title="Hardware Flyer">
+                <div class="portfolio-item-graphic" alt="Hardware Flyer"
+                  style="background-image: url('../images/graphic-design/print-design/print-design-5.webp');">
+                  <div class="overlay">
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-md-6 py-2">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#printModal"
+                onclick="updateModal('printModal', '../images/graphic-design/print-design/print-design-6.webp', 'Technology Newsletter')"
+                title="Technology Newsletter">
+                <div class="portfolio-item-graphic" alt="Technology Newsletter"
+                  style="background-image: url('../images/graphic-design/print-design/print-design-6.webp');">
+                  <div class="overlay">
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-md-6 py-2">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#printModal"
+                onclick="updateModal('printModal', '../images/graphic-design/print-design/print-design-7.webp', 'Christmas Card')"
+                title="Christmas Card">
+                <div class="portfolio-item-graphic" alt="Christmas Card"
+                  style="background-image: url('../images/graphic-design/print-design/print-design-7.webp');">
+                  <div class="overlay">
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-md-6 py-2">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#printModal"
+                onclick="updateModal('printModal', '../images/graphic-design/print-design/print-design-8.webp', 'Technology Service Flyer')"
+                title="Technology Service Flyer">
+                <div class="portfolio-item-graphic" alt="Technology Service Flyer"
+                  style="background-image: url('../images/graphic-design/print-design/print-design-8.webp');">
+                  <div class="overlay">
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-md-6 py-2">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#printModal"
+                onclick="updateModal('printModal', '../images/graphic-design/print-design/print-design-9.webp', 'Tri-Fold Front')"
+                title="Tri-Fold Front">
+                <div class="portfolio-item-graphic" alt="Tri-Fold Front"
+                  style="background-image: url('../images/graphic-design/print-design/print-design-9.webp');">
+                  <div class="overlay">
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-md-6 py-2">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#printModal"
+                onclick="updateModal('printModal', '../images/graphic-design/print-design/print-design-10.webp', 'Tri-Fold Back')"
+                title="Tri-Fold Back">
+                <div class="portfolio-item-graphic" alt="Tri-Fold Back"
+                  style="background-image: url('../images/graphic-design/print-design/print-design-10.webp');">
+                  <div class="overlay">
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Digital Gallery -->
+        <div class="tab-pane fade" id="digital" role="tabpanel" aria-labelledby="digital-tab">
+          <div class="border-bottom-custom"></div>
+          <div class="row pt-2">
+            <h4>DIGITAL</h4>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-6 py-2">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#digitalModal"
+                onclick="updateModal('digitalModal', '../images/graphic-design/digital-design/digital-design-2.webp', 'Blue Cloud Background')"
+                title="Blue Cloud Background">
+                <div class="portfolio-item-graphic" alt="Blue Cloud Background"
+                  style="background-image: url('../images/graphic-design/digital-design/digital-design-2.webp');">
+                  <div class="overlay">
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-md-6 py-2">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#digitalModal"
+                onclick="updateModal('digitalModal', '../images/graphic-design/digital-design/digital-design-3.webp', 'Black Cloud Background')"
+                title="Black Cloud Background">
+                <div class="portfolio-item-graphic" alt="Black Cloud Background"
+                  style="background-image: url('../images/graphic-design/digital-design/digital-design-3.webp');">
+                  <div class="overlay">
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-md-6 py-2">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#digitalModal"
+                onclick="updateModal('digitalModal', '../images/graphic-design/digital-design/digital-design-4.webp', 'Red Fog Background')"
+                title="Red Fog Background">
+                <div class="portfolio-item-graphic" alt="Red Fog Background"
+                  style="background-image: url('../images/graphic-design/digital-design/digital-design-4.webp');">
+                  <div class="overlay">
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-md-6 py-2">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#digitalModal"
+                onclick="updateModal('digitalModal', '../images/graphic-design/digital-design/digital-design-5.webp', 'Technology Solutions Facebook Banner')"
+                title="Technology Solutions Facebook Banner">
+                <div class="portfolio-item-graphic" alt="Technology Solutions Facebook Banner"
+                  style="background-image: url('../images/graphic-design/digital-design/digital-design-5.webp');">
+                  <div class="overlay">
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-md-6 py-2">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#digitalModal"
+                onclick="updateModal('digitalModal', '../images/graphic-design/digital-design/digital-design-6.webp', 'Red Watercolor Background')"
+                title="Red Watercolor Background">
+                <div class="portfolio-item-graphic" alt="Red Watercolor Background"
+                  style="background-image: url('../images/graphic-design/digital-design/digital-design-6.webp');">
+                  <div class="overlay">
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-md-6 py-2">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#digitalModal"
+                onclick="updateModal('digitalModal', '../images/graphic-design/digital-design/digital-design-7.webp', 'Racecar Driver')"
+                title="Racecar Driver">
+                <div class="portfolio-item-graphic" alt="Racecar Driver"
+                  style="background-image: url('../images/graphic-design/digital-design/digital-design-7.webp'); background-size: contain; background-position: left center;">
+                  <div class="overlay">
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-md-6 py-2">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#digitalModal"
+                onclick="updateModal('digitalModal', '../images/graphic-design/digital-design/digital-design-8.webp', 'Racetrack Lights')"
+                title="Racetrack Lights">
+                <div class="portfolio-item-graphic" alt="Racetrack Lights"
+                  style="background-image: url('../images/graphic-design/digital-design/digital-design-8.webp');background-size: contain; background-position: left center;">
+                  <div class="overlay">
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-md-6 py-2">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#digitalModal"
+                onclick="updateModal('digitalModal', '../images/graphic-design/digital-design/digital-design-9.webp', 'Racecar Tire')"
+                title="Racecar Tire">
+                <div class="portfolio-item-graphic" alt="Racecar Tire"
+                  style="background-image: url('../images/graphic-design/digital-design/digital-design-9.webp');">
+                  <div class="overlay">
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-md-6 py-2">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#digitalModal"
+                onclick="updateModal('digitalModal', '../images/graphic-design/digital-design/digital-design-10.webp', 'Refrigerator Icon')"
+                title="Refrigerator Icon">
+                <div class="portfolio-item-graphic" alt="Refrigerator Icon"
+                  style="background-image: url('../images/graphic-design/digital-design/digital-design-10.webp');">
+                  <div class="overlay">
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-md-6 py-2">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#digitalModal"
+                onclick="updateModal('digitalModal', '../images/graphic-design/digital-design/digital-design-11.webp', 'Washer Icon')"
+                title="Washer Icon">
+                <div class="portfolio-item-graphic" alt="Washer Icon"
+                  style="background-image: url('../images/graphic-design/digital-design/digital-design-11.webp');">
+                  <div class="overlay">
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-md-6 py-2">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#digitalModal"
+                onclick="updateModal('digitalModal', '../images/graphic-design/digital-design/digital-design-12.webp', 'Microwave Icon')"
+                title="Microwave Icon">
+                <div class="portfolio-item-graphic" alt="Microwave Icon"
+                  style="background-image: url('../images/graphic-design/digital-design/digital-design-12.webp');">
+                  <div class="overlay">
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-md-6 py-2">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#digitalModal"
+                onclick="updateModal('digitalModal', '../images/graphic-design/digital-design/digital-design-13.webp', 'Grill Icon')"
+                title="Grill Icon">
+                <div class="portfolio-item-graphic" alt="Baby Shower Invitation"
+                  style="background-image: url('../images/graphic-design/digital-design/digital-design-13.webp');">
+                  <div class="overlay">
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-md-6 py-2">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#digitalModal"
+                onclick="updateModal('digitalModal', '../images/graphic-design/digital-design/digital-design-14.webp', 'Bobs Appliance Logo Round')"
+                title="Bobs Appliance Logo Round">
+                <div class="portfolio-item-graphic" alt="Bobs Appliance Logo Round"
+                  style="background-image: url('../images/graphic-design/digital-design/digital-design-14.webp');">
+                  <div class="overlay">
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-md-6 py-2">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#digitalModal"
+                onclick="updateModal('digitalModal', '../images/graphic-design/digital-design/digital-design-15.webp', 'Green Wave Background')"
+                title="Green Wave Background">
+                <div class="portfolio-item-graphic" alt="Green Wave Background"
+                  style="background-image: url('../images/graphic-design/digital-design/digital-design-15.webp');">
+                  <div class="overlay">
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-md-6 py-2">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#digitalModal"
+                onclick="updateModal('digitalModal', '../images/graphic-design/digital-design/digital-design-16.webp', 'Bobs Appliance Logo Rectangle')"
+                title="Bobs Appliance Logo Rectangle">
+                <div class="portfolio-item-graphic" alt="Bobs Appliance Logo Rectangle"
+                  style="background-image: url('../images/graphic-design/digital-design/digital-design-16.webp');">
+                  <div class="overlay">
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-md-6 py-2">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#digitalModal"
+                onclick="updateModal('digitalModal', '../images/graphic-design/digital-design/digital-design-17.webp', 'Careers')"
+                title="Careers">
+                <div class="portfolio-item-graphic" alt="Careers"
+                  style="background-image: url('../images/graphic-design/digital-design/digital-design-17.webp');">
+                  <div class="overlay">
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event Gallery -->
+        <div class="tab-pane fade" id="event" role="tabpanel" aria-labelledby="event-tab">
+          <div class="border-bottom-custom"></div>
+          <div class="row pt-2">
+            <h4>EVENT</h4>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-6 py-2">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#eventModal"
+                onclick="updateModal('eventModal', '../images/graphic-design/event-design/event-design-1.webp', 'Career Fair Flyer')"
+                title="Career Fair Flyer">
+                <div class="portfolio-item-graphic" alt="Career Fair Flyer"
+                  style="background-image: url('../images/graphic-design/event-design/event-design-1.webp');">
+                  <div class="overlay">
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-md-6 py-2">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#eventModal"
+                onclick="updateModal('eventModal', '../images/graphic-design/event-design/event-design-2.webp', 'Career Fair Flyer')"
+                title="Career Fair Flyer">
+                <div class="portfolio-item-graphic" alt="Career Fair Flyer"
+                  style="background-image: url('../images/graphic-design/event-design/event-design-2.webp');">
+                  <div class="overlay">
+                  </div>
+                </div>
+              </a>
             </div>
         </div>
+      </div>
     </div>
-    
-    <!-- JavaScript import -->
-    <script src="js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
 
-    <!-- Add any other JavaScript files as needed -->
-    <!-- Bootstrap JS -->
+    <!-- Modals -->
+    <div class="modal fade" id="printModal" tabindex="-1" aria-labelledby="printModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="printModalLabel">Print Design</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img id="printModalImage" class="img-fluid" alt="Print Design">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="digitalModal" tabindex="-1" aria-labelledby="digitalModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="digitalModalLabel">Digital Design</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img id="digitalModalImage" class="img-fluid" alt="Digital Design">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="eventModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="eventModalLabel">Event Design</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img id="eventModalImage" class="img-fluid" alt="Event Design">
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+    <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Bootstrap Icons -->
-    <script src="https://unpkg.com/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://unpkg.com/bootstrap-icons@1.7.2/font/bootstrap-icons.js"></script>
+    <script>
+      function updateModal(modalId, imageSrc, altText) {
+        document.getElementById(modalId + "Image").src = imageSrc;
+        document.getElementById(modalId + "Label").innerText = altText;
+      }
+      function showGallery(type) {
+        document.querySelectorAll('.tab-pane').forEach(function (tab) {
+          tab.classList.remove('show', 'active');
+        });
+        document.getElementById(type).classList.add('show', 'active');
+      }
+      function showGallery(type) {
+        document.querySelectorAll('.tab-pane').forEach(function (tab) {
+          tab.classList.remove('show', 'active');
+        });
+      } function showGallery(type) {
+        // Remove 'active' class from all links
+        document.querySelectorAll('.nav-link').forEach(function (link) {
+          link.classList.remove('active');
+        });
+        // Add 'active' class to the clicked link
+        document.getElementById(type + '-tab').classList.add('active');
+
+        // Hide all tab panes
+        document.querySelectorAll('.tab-pane').forEach(function (tab) {
+          tab.classList.remove('show', 'active');
+        });
+        // Show the corresponding tab pane
+        document.getElementById(type).classList.add('show', 'active');
+      }
+      function showGallery(type) {
+        // Remove 'active' class from all links
+        document.querySelectorAll('.nav-link').forEach(function (link) {
+          link.classList.remove('active');
+        });
+        // Add 'active' class to the parent div of the clicked link
+        document.getElementById(type + '-tab').parentNode.classList.add('active');
+
+        // Hide all tab panes
+        document.querySelectorAll('.tab-pane').forEach(function (tab) {
+          tab.classList.remove('show', 'active');
+        });
+        // Show the corresponding tab pane
+        document.getElementById(type).classList.add('show', 'active');
+      }
+    </script>
+    <!-- end -->
+
+    <div class="row px-4 footer">
+      <div class="container py-2">
+        <div class="row border-bottom-custom"></div>
+        <div class="row">
+          <div class="col-lg-4 py-2">
+            <p>CONTACT</p>
+            <p><a href="mailto:agbayani.darlene@gmail.com" alt="Email">agbayani.darlene@gmail.com</a><br>
+              <a href="tel:8084995911" alt="Phone">808.499.5911</a><br>
+              New York, NY
+            </p>
+          </div>
+          <div class="col-lg-4 py-2">
+            <p>SITE MAP</p>
+            <ul style="list-style:none; padding:0; margin:0;">
+              <li><a href="../index.html" title="Home">Home</a></li>
+              <li>
+                <a href="#">Portfolio</a>
+              </li>
+              <li><a href="#" title="About">About</a></li>
+              <li><a href="../resume.html" title="Resume">Resume</a></li>
+              <li>
+              </li>
+            </ul>
+            <p></p>
+          </div>
+          <div class="col-lg-4 py-2 social-icons">
+            <p>SOCIAL</p>
+            <a href="https://www.linkedin.com/in/darlene-agbayani-16b737146/" target="_blank" title="Linkedin"><i
+                class="fab fa-linkedin px-1"></i></a>
+            <a href="https://www.instagram.com/thedar2d2/" target="_blank" title="Instagram"><i
+                class="fab fa-instagram px-1"></i></a>
+            </ul>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- JavaScript import -->
+  <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <!-- Add any other JavaScript files as needed -->
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Bootstrap Icons -->
+  <script src="https://unpkg.com/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://unpkg.com/bootstrap-icons@1.7.2/font/bootstrap-icons.js"></script>
 
 </body>
 
