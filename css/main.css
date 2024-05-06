@@ -376,7 +376,7 @@ a:focus {
 
     .portfolio-item {
         position: relative;
-        min-height: 400px;
+        min-height: 200px;
         overflow: hidden;
         background-position: center center;
         background-size: cover;
