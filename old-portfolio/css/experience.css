@@ -1,0 +1,97 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* #Background
+================================================== */
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #212112; /*
+	background-image: url('../img/index/background.jpg'); */
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/experience/background.jpg');
+  background-position: center center;
+  background-repeat: no-repeat !important;
+  background-size: cover;
+  background-color: #0a0a0a !important;
+  background-attachment: fixed !important;
+  overflow-x: hidden !important;
+  overflow-y: visible;
+  transition: all 200ms linear;
+}
+
+/* font
+================================================== */
+.experience-font {
+	font-weight: 400;
+}
+.list-unstyled {
+	font-size: 10pt;
+}
+/* experience-section1
+================================================== */
+.experience-section1 {
+  background-color: #0a0a0a;
+}
+
+.fa-rotate-90 {
+    position: absolute;
+    top: 10%;
+    left: 0%;
+	float:inherit;
+}
+
+/* accordion
+================================================== */
+.accordion-toggle.collapsed {
+	color: #fff;
+	text-decoration: none;
+}
+#accordion .panel {
+  border-radius: 0;
+  border: 0;
+  margin-top: 0px;
+}
+#accordion a {
+  display: block;
+  border-bottom: none;
+  text-decoration: none;
+}
+#accordion .panel-heading a.collapsed:hover,
+#accordion .panel-heading a.collapsed:focus {
+  background-color: transparent;
+  color: #fff;
+  transition: all 0.2s ease-in;
+}
+#accordion .panel-heading a.collapsed:hover::before,
+#accordion .panel-heading a.collapsed:focus::before {
+  color: fff;
+}
+#accordion .panel-heading {
+  padding: 0;
+  border-radius: 0px;
+  text-align: left;
+}
+#accordion .panel-heading a:not(.collapsed) {
+  color: #fff;
+  background-color: transparent;
+  transition: all 0.2s ease-in;
+}
+
+/* Add Indicator fontawesome icon to the left */
+#accordion .panel-heading .accordion-toggle::before {
+  font-family: 'FontAwesome';
+  content: '\f077';
+  float: right;
+  color: #fff;
+  font-weight: lighter;
+  transform: rotate(0deg);
+  transition: all 0.2s ease-in;
+}
+#accordion .panel-heading .accordion-toggle.collapsed::before {
+  color: #fff;
+  transform: rotate(-180deg);
+  transition: all 0.2s ease-in;
+}
+

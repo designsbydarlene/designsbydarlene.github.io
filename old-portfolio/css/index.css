@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* #Primary
+================================================== */
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #212112; /*
+	background-image: url('../img/index/background.jpg'); */
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/index/background.jpg');
+  background-position: center center;
+  background-repeat: repeat;
+  background-size: cover;
+  background-color: #fff;
+  overflow-x: hidden;
+	over-flow-y: scroll;
+  transition: all 200ms linear;
+}
+
+.full-height-welcome {
+	height: 100vh !important;
+}
+/* images
+================================================== */
+.profile {
+  width: 200px;
+}
+.welcome-image {
+	height: 100% !important;
+	padding: 0px !important;
+	overflow-y: hidden !important;
+	display: block;
+}
+
+/* font
+================================================== */
+.welcome-font {
+	font-weight: 100;
+}
+.black-text, .black-text:hover {
+    color: #000 !important;
+    text-decoration: none;
+}
