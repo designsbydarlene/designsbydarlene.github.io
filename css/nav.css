@@ -46,7 +46,7 @@ header {
 .location {
     position: absolute;
     /* Position location to avoid affecting centering */
-    left: 25px;
+    left: 50px;
     /* Aligns it to the left */
     text-align: left;
 }
@@ -218,7 +218,7 @@ body.open-menu header {
 
 }
 
-body.open-menu .location p {
+body.open-menu .location h6 {
     color: var(--primary);
     /* Update location text to primary color */
 }
@@ -264,6 +264,7 @@ header {
 }
 
 .open-menu .header-row {
+    color: var(--primary);
     height: 65px;
 }
 }

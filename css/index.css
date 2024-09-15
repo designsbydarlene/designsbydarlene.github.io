@@ -7,7 +7,7 @@ main {
 .cat-scroll-container {
     margin: 30px;
     padding: 10px;
-    width: calc(100% - 60px); /* Full width minus margin */
+    width: calc(100% - 80px); /* Full width minus margin */
     scroll-behavior: auto; /* Smooth scroll effect */   
     display: flex;
     overflow-x: auto; /* Allow horizontal scrolling */
@@ -41,7 +41,7 @@ main {
         box-sizing: border-box;
         position: relative;
         overflow: hidden;
-        margin-right: 100px; /* Space between columns */
+        margin-right: 40px; /* Space between columns */
     }
 }
 
@@ -150,3 +150,9 @@ main {
 }
 
 .border-right  { border-right: .5px solid var(--darkgray);}
+
+.font-30 { font-size: 30px; padding-bottom:10px;}
+.font-40 { transform: scaleY(.8); font-weight: 900; /* SemiBold */
+    font-style: bold; /* Italic */  font-family: 'Picaflor', serif; font-size:22pt; padding: 5px 0px 10px; line-height: 20pt; letter-spacing: 0px;}
+.font-50 { font-size: 42pt; padding-bottom:10px; line-height: 42pt; font-weight: bold;}
+.mr-20 { padding-right: 20px;}
