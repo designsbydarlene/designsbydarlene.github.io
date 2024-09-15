@@ -2,15 +2,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const scrollContainer = document.querySelector('.cat-scroll-container');
 
     if (scrollContainer) {
-        // Horizontal scrolling with mouse wheel
-        scrollContainer.addEventListener('wheel', (event) => {
-            event.preventDefault();
-            scrollContainer.scrollLeft += event.deltaY; // Scroll horizontally using mouse wheel
-        });
-
-        // Touch scrolling for mobile
+        // Variables for drag functionality
         let startX, isDragging = false;
 
+        // Touch dragging for mobile
         scrollContainer.addEventListener('touchstart', (event) => {
             startX = event.touches[0].clientX;
             isDragging = true; // Start dragging
@@ -38,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         scrollContainer.addEventListener('mousemove', (event) => {
-            if (!isDragging) return;
+            if (!isDragging) return; // Prevent dragging if not clicked
             const distanceX = mouseStartX - event.clientX;
             scrollContainer.scrollLeft += distanceX;
             mouseStartX = event.clientX;
@@ -46,6 +41,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         scrollContainer.addEventListener('mouseup', () => {
             isDragging = false; // End dragging
+            scrollContainer.style.cursor = 'grab'; // Change cursor back
+        });
+
+        scrollContainer.addEventListener('mouseleave', () => {
+            isDragging = false; // End dragging if mouse leaves the container
             scrollContainer.style.cursor = 'grab'; // Change cursor back
         });
 
@@ -58,6 +58,8 @@ document.addEventListener('DOMContentLoaded', function() {
         scrollContainer.style.cursor = 'grab';
     }
 });
+
+// Image hover effect
 document.addEventListener('DOMContentLoaded', function () {
     const images = document.querySelectorAll('.cat-image');
 

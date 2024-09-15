@@ -69,8 +69,17 @@ main {
     .cat-column {
         flex: 0 0 50%; /* 2 columns */
     }
+    .image-container {
+        width: auto;    /* Set the original width */
+        max-height: 100px;    /* Allow height to adjust based on content */
+        overflow: hidden; /* Hide overflow */
+        position: relative; /* Set position for scaling */
+        text-align: left; /* Center align text */
+        border: 1px solid var(--darkgray);
+    }
+    
 }
-
+@media (min-width: 769px) {
 .image-container {
     width: auto;    /* Set the original width */
     max-height: 200px;    /* Allow height to adjust based on content */
@@ -79,7 +88,7 @@ main {
     text-align: left; /* Center align text */
     border: 1px solid var(--darkgray);
 }
-
+}
 .scale-image {
     width: auto;     /* Make the image fill the container */
     object-fit: cover;
