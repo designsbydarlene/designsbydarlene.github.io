@@ -62,7 +62,7 @@ h1, h2, h3, h3, h5, h6 {
     letter-spacing: 0px;
     font-stretch: expanded;
 }
-.font-30 { font-size: 35px; padding-bottom:10px;}
+.font-30 { font-size: 30px; padding-bottom:10px;}
 .font-40 { transform: scaleY(.8); font-weight: 900; /* SemiBold */
     font-style: bold; /* Italic */  font-family: 'Picaflor', serif; font-size:22pt; padding: 5px 0px 10px; line-height: 20pt; letter-spacing: 0px;}
 .font-50 { font-size: 42pt; padding-bottom:10px; line-height: 42pt; font-weight: bold;}

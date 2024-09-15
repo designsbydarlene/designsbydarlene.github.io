@@ -248,4 +248,22 @@ body.open-menu .hamburger span {
          margin-left: auto;
         margin-right: auto;
     }
+    
+}
+
+
+/* Responsive Styles */
+@media (min-width: 769px) and (max-width:1024px) {
+.logo {
+    padding: 10px 0px 0px 0px;       
+     margin-left: auto;
+    margin-right: auto;
+}
+header {
+    height: 65px;
+}
+
+.open-menu .header-row {
+    height: 65px;
+}
 }

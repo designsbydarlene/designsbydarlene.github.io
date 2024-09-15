@@ -108,7 +108,7 @@ main {
 /* Responsive styles */
 @media (max-width: 1024px) { /* Tablet */
     .cat-column {
-        flex: 0 0 calc(50% - 20px); /* 2 columns with margin */
+        flex: 0 0 calc(33% - 20px); /* 2 columns with margin */
         margin-right: 20px; /* Space between columns */
         margin-bottom: 20px; /* Space below columns */
     }
