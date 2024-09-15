@@ -70,32 +70,28 @@ main {
         flex: 0 0 50%; /* 2 columns */
     }
 }
+
 .image-container {
-    width: 100%;         /* Set the original width */
-    height: 200px;        /* Set a fixed height */
-    overflow: hidden;     /* Hide overflow */
-    position: relative;   /* Set position for scaling */
-    text-align: center;   /* Center align text */
+    width: auto;    /* Set the original width */
+    max-height: 200px;    /* Allow height to adjust based on content */
+    overflow: hidden; /* Hide overflow */
+    position: relative; /* Set position for scaling */
+    text-align: left; /* Center align text */
+    border: 1px solid var(--darkgray);
 }
 
 .scale-image {
-    width: 100%;              /* Make the image fill the container */
-    height: auto;             /* Maintain aspect ratio */
-    position: absolute;       /* Position absolutely within the container */
-    top: 50%;                 /* Align the image to the vertical center */
-    left: 50%;                /* Align the image to the horizontal center */
-    transform: translate(-50%, -50%); /* Center the image */
-    object-fit: cover;        /* Cover the container */
-    object-position: center;   /* Center the image */
+    width: auto;     /* Make the image fill the container */
+    object-fit: cover;
+    object-position: center;
     transition: transform 0.3s ease; /* Smooth scaling transition */
 }
 
 .image-container:hover .scale-image {
-    transform: translate(-50%, -50%) scale(1.2); /* Scale up and remain centered */
+    transform: scale(1.2); /* Scale up on hover */
 }
 
 .text-content {
     padding-top: 10px; /* Space between image and text */
 }
-
 .cat-p { font-size: 18px; }
