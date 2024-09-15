@@ -1,3 +1,5 @@
+/* Dynamically Load HTML */
+crossorigin="use-credentials" 
 function loadNav() {
     const xhr = new XMLHttpRequest();
     xhr.open('GET', 'nav.html', true); // Ensure 'nav.html' path is correct

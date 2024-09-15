@@ -1,4 +1,5 @@
 /* Fullscreen nav */
+crossorigin="use-credentials"
 const hamburgerIcon = document.getElementById('hamburger-icon');
     const fullscreenMenu = document.getElementById('fullscreen-menu');
 
@@ -15,18 +16,3 @@ const hamburgerIcon = document.getElementById('hamburger-icon');
         }
     });
     
-/* Dynamically Load Nav */
-// Function to load an HTML file into a specified element
-function loadNav() {
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', 'nav.html', true); // 'nav.html' is the external navigation file
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            document.getElementById('nav-placeholder').innerHTML = xhr.responseText;
-        }
-    };
-    xhr.send();
-}
-
-// Call the function to load the navigation
-loadNav();
