@@ -3,13 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 header {
-    background-color: var(--primary);
+    background-color: rgba(221, 219, 211, 0);
+    /* Change to desired overlay color with 0.5 opacity */
     width: 100%;
     padding: 10px 0;
     position: relative;
-    border-bottom: .5px solid var(--darkgray);    
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    border-bottom: .5px solid var(--darkgray);
+    height: 95px;
 }
 
 .header-row {
@@ -73,6 +76,10 @@ header {
     transition: all 0.3s ease;
 }
 
+.hamburger:hover {
+    transform: scale(1.2); /* Scale up the hamburger on hover */
+}
+
 .hamburger span {
     transform-origin: center;
     /* Ensure rotation is around the center */
@@ -120,7 +127,7 @@ header {
     }
 
     .hamburger.open span:nth-child(3) {
-        transform: rotate(-45deg) translate(3px, -7px);
+        transform: rotate(-45deg) translate(4px, -8px);
         /* Adjusted translate to center */
     }
 }
@@ -132,21 +139,35 @@ header {
 }
 
 .fullscreen-menu {
-    display: none;
     position: fixed;
-    top: 0;
+    bottom: 0;
+    /* Start from the bottom */
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: var(--darkgray);
-    /* Change to dark gray */
-    z-index: -10;
-    /* Menu stays behind the header by default */
+    z-index: -9;
+    /* Ensure it comes in front of other elements */
+    transform: translateY(100%);
+    /* Start the menu off-screen */
+    transition: transform 1s ease;
+    /* Smooth transition for sliding effect */
+    pointer-events: none;
+    /* Disable interactions when off-screen */
+    opacity: 0;
+    /* Start with opacity 0 */
+
 }
 
 .fullscreen-menu.open-menu {
+    transform: translateY(0);
+    /* Move to the original position */
+    opacity: 1;
+    /* Make it fully opaque */
+    pointer-events: auto;
+    /* Enable interactions when on-screen */
     display: block;
-    z-index: -10;
+    z-index: -9;
     /* When opened, it comes into view */
 }
 
@@ -172,11 +193,17 @@ header {
     font-family: "Bodoni Moda", serif;
     text-transform: uppercase;
     font-weight: 900;
-    letter-spacing: -.5px;
+    letter-spacing: -2px; /* Initial letter spacing */
     text-decoration: none;
-    font-size: 40px;
-    color: var(--primary);
-    /* Primary color for menu links */
+    font-size: 50px;
+    color: var(--primary); /* Primary color for menu links */
+    display: inline-block; /* Ensure the anchor is treated as a block */
+    overflow: hidden; /* Prevent overflow */
+    transition: letter-spacing 0.3s ease; /* Smooth transition for letter spacing */
+}
+
+.fullscreen-menu a:hover {
+    letter-spacing: 3px; /* Increase letter spacing on hover */
 }
 
 .fullscreen-menu a.active {
@@ -188,7 +215,6 @@ header {
 body.open-menu header {
     background-color: var(--midgray) !important;
     /* Change background to light gray */
-    border-bottom: .5px solid var(--primary);
 }
 
 body.open-menu .location p {
@@ -217,7 +243,7 @@ body.open-menu .hamburger span {
     }
 
     .logo {
-        padding-top: 20px 0px 20px;
+        padding-top: 20px 0px;
         margin-left: auto;
         margin-right: auto;
     }

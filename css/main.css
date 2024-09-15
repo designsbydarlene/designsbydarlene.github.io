@@ -1,17 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 :root {
-    --primary: #dddbd3; /* neutral brown */
+    --primary: #cac8c6; /* neutral brown */
     --darkgray: #333333; /* dark gray */
 --midgray: #454545; /* light gray */
     --lightgray: #666666; /* light gray */
 }
 
 body {
-    background: var(--primary);
-    font-family: 'Libre Baskerville', serif;
-    color: var(--darkgray);
+    font-family: 'Libre Bakersville', serif;
+}
+body::before {
+content: '';
+position: absolute; /* Position it to cover the entire body */
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-image: url('https://images.unsplash.com/photo-1616410731303-6affae095a0a?q=80&w=1402&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Add your image path here */
+background-size: cover; /* Ensure the image covers the entire area */
+background-position: center; /* Center the image */
+z-index: -12; /* Place it behind the content */
 }
 
+body::after {
+content: '';
+position: absolute; /* Position it to cover the entire body */
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgb(202, 200, 198, 0.5); /* Change to desired overlay color with 0.5 opacity */
+z-index: -11; /* Place it behind the content */
+}
 h1, h2, h3, h4, h5, h6 {
     font-family: "Bodoni Moda", serif;
     text-transform: uppercase;
