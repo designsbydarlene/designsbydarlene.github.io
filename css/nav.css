@@ -46,7 +46,7 @@ header {
 .location {
     position: absolute;
     /* Position location to avoid affecting centering */
-    left: 50px;
+    left: 25px;
     /* Aligns it to the left */
     text-align: left;
 }
