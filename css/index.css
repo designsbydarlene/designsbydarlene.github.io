@@ -84,11 +84,15 @@ main {
     width: auto;     /* Make the image fill the container */
     object-fit: cover;
     object-position: center;
-    transition: transform 0.3s ease; /* Smooth scaling transition */
+    transition: transform 0.3s ease; /* Smooth scaling transition */    
+    will-change: transform;
+    backface-visibility: hidden;
+
+
 }
 
 .image-container:hover .scale-image {
-    transform: scale(1.2); /* Scale up on hover */
+    transform: scale(1.1); /* Scale up on hover */
 }
 
 .text-content {
