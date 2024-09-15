@@ -40,3 +40,6 @@ h1, h2, h3, h3, h5, h6 {
     letter-spacing: -.5px;
 }
 .font-30 { font-size: 30px; padding-bottom:10px;}
+.font-40 { font-size: 25px; padding-bottom:; line-height: 45px;}
+.font-50 { font-size: 50px; padding-bottom:10px; line-height: 50px;}
+.mr-20 { padding-right: 20px;}
