@@ -46,18 +46,19 @@ header {
 .location {
     position: absolute;
     /* Position location to avoid affecting centering */
-    left: 20px;
+    left: 50px;
     /* Aligns it to the left */
     text-align: left;
 }
 
-.location p {
+.location h6 {
     margin: 0;
     font-size: 16px;
     font-weight: bold;
     color: var(--darkgray);
     /* Default text color */
     transition: color 0.3s ease;
+    transform: scaleX(1.4);
 }
 
 .logo {
