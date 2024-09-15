@@ -1,0 +1,218 @@
+header {
+    background-color: var(--primary);
+    width: 100%;
+    padding: 10px 0;
+    position: relative;
+    box-shadow: 3px 1px 6px var(--lightgray);
+    /* Default shadow */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header-row {
+    display: flex;
+    justify-content: center;
+    /* Centers the items in the row */
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+.location {
+    position: absolute;
+    /* Position location to avoid affecting centering */
+    left: 20px;
+    /* Aligns it to the left */
+    text-align: left;
+}
+
+.location p {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--darkgray);
+    /* Default text color */
+    transition: color 0.3s ease;
+}
+
+.logo {
+    text-align: center;
+    /* Keeps the logo centered */
+}
+
+.logo img {
+    max-height: 30px;
+    transition: filter 0.3s ease;
+}
+
+.hamburger-menu {
+    cursor: pointer;
+    position: absolute;
+    /* Position hamburger to avoid affecting centering */
+    right: 15px;
+    /* Aligns it to the right */
+    display: flex;
+    justify-content: flex-end;
+    /* Aligns hamburger to the right */
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 20px;
+    /* Width of the hamburger icon */
+    height: 20px;
+    /* Height of the hamburger icon */
+    transition: all 0.3s ease;
+}
+
+.hamburger span {
+    transform-origin: center;
+    /* Ensure rotation is around the center */
+    display: block;
+    /* Ensure spans are block elements */
+    width: 100%;
+    /* Make spans full width */
+    height: 2px;
+    /* Set height of each span */
+    background-color: var(--darkgray);
+    /* Default color */
+    transition: all 0.3s ease;
+}
+
+@media(max-width:767px) {
+
+    /* Hamburger Open (Turning into Close Icon) */
+    .hamburger.open span:nth-child(1) {
+        transform: rotate(45deg) translate(3px, 8px);
+        /* Adjusted translate to center */
+    }
+
+    .hamburger.open span:nth-child(2) {
+        opacity: 0;
+        /* Hide the middle bar */
+    }
+
+    .hamburger.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(2px, -7px);
+        /* Adjusted translate to center */
+    }
+}
+
+@media(min-width:768px) {
+
+    /* Hamburger Open (Turning into Close Icon) */
+    .hamburger.open span:nth-child(1) {
+        transform: rotate(45deg) translate(2px, 6px);
+        /* Adjusted translate to center */
+    }
+
+    .hamburger.open span:nth-child(2) {
+        opacity: 0;
+        /* Hide the middle bar */
+    }
+
+    .hamburger.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(3px, -7px);
+        /* Adjusted translate to center */
+    }
+}
+
+/* Update the hamburger color when the menu is open */
+.open-menu .hamburger span {
+    background-color: var(--primary);
+    /* Change hamburger to primary color */
+}
+
+.fullscreen-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--darkgray);
+    /* Change to dark gray */
+    z-index: -10;
+    /* Menu stays behind the header by default */
+}
+
+.fullscreen-menu.open-menu {
+    display: block;
+    z-index: -10;
+    /* When opened, it comes into view */
+}
+
+.fullscreen-menu .menu-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.fullscreen-menu ul {
+    list-style-type: none;
+    text-align: center;
+    margin-top: -50px;
+}
+
+.fullscreen-menu li {
+    margin: 20px 0;
+}
+
+.fullscreen-menu a {
+    font-family: "Bodoni Moda", serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: -.5px;
+    text-decoration: none;
+    font-size: 40px;
+    color: var(--primary);
+    /* Primary color for menu links */
+}
+
+.fullscreen-menu a.active {
+    color: var(--lightgray);
+    /* Primary color for menu links */
+}
+
+/* Header changes when menu is open */
+body.open-menu header {
+    background-color: var(--midgray) !important;
+    /* Change background to light gray */
+}
+
+body.open-menu .location p {
+    color: var(--primary);
+    /* Update location text to primary color */
+}
+
+body.open-menu .logo img {
+    content: url('https://designsbydarlene.github.io/images/logo/logo-inverted.png');
+    /* Update logo */
+}
+
+body.open-menu .hamburger span {
+    background-color: var(--primary);
+    /* Change hamburger to primary color */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .location {
+        display: none;
+    }
+
+    .header-row {
+        justify-content: space-between;
+    }
+
+    .logo {
+        padding-top: 5px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

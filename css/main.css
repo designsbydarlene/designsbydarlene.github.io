@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+:root {
+    --primary: #cac8c6; /* neutral brown */
+    --darkgray: #333333; /* dark gray */
+--midgray: #454545; /* light gray */
+    --lightgray: #666666; /* light gray */
+}
+
+body {
+    background: var(--primary);
+    font-family: 'Libre Baskerville', serif;
+    color: var(--darkgray);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Bodoni Moda", serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: -.5px;
+}
