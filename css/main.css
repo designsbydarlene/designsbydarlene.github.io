@@ -1,14 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&Playfair+Display:ital,wght@0,400..900;1,400..900');
+@font-face {
+    font-family: 'Picaflor';
+    src: url('../font/Picaflor-48pt.woff2') format('woff2'),
+         url('../font/Picaflor-48pt.woff') format('woff');
+    font-weight: 900; /* Bold weight */
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Picaflor-36';
+    src: url('../font/Picaflor-24pt.woff2') format('woff2'),
+         url('../font/Picaflor-24pt.woff') format('woff');
+    font-weight: 900; /* Bold weight */
+    font-style: normal;
+}@font-face {
+    font-family: 'Instrument';
+    src: url('../font/InstrumentSerif-Regular.ttf') format('ttf'),
+         url('../font/InstrumentSerif-Regular.woff2') format('woff2');
+    font-weight: 400; /* Bold weight */
+    font-style: normal;
+}
+
 :root {
     --primary: #cac8c6; /* neutral brown */
     --darkgray: #333333; /* dark gray */
+    --black: #202020; /* dark gray */
 --midgray: #454545; /* light gray */
     --lightgray: #666666; /* light gray */
 }
 
 body {
-    font-family: 'Libre Bakersville', serif;
-    color: var(--darkgray);
+    font-family: 'Instrument', serif;
+    color: var(--black);
 }
 body::before {
 content: '';
@@ -34,12 +56,14 @@ background-color: rgb(202, 200, 198, 0.5); /* Change to desired overlay color wi
 z-index: -11; /* Place it behind the content */
 }
 h1, h2, h3, h3, h5, h6 {
-    font-family: "Bodoni Moda", serif;
+    font-family: "Picaflor", serif;
     text-transform: uppercase;
     font-weight: 900;
-    letter-spacing: -.5px;
+    letter-spacing: 0px;
+    font-stretch: expanded;
 }
-.font-30 { font-size: 30px; padding-bottom:10px;}
-.font-40 { font-size: 25px; padding-bottom:; line-height: 45px;}
-.font-50 { font-size: 50px; padding-bottom:10px; line-height: 50px;}
+.font-30 { font-size: 35px; padding-bottom:10px;}
+.font-40 { transform: scaleY(.8); font-weight: 900; /* SemiBold */
+    font-style: bold; /* Italic */  font-family: 'Picaflor', serif; font-size:22pt; padding: 5px 0px 10px; line-height: 20pt; letter-spacing: 0px;}
+.font-50 { font-size: 42pt; padding-bottom:10px; line-height: 50pt; font-weight: bold;}
 .mr-20 { padding-right: 20px;}
