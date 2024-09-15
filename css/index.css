@@ -1,4 +1,97 @@
 main {
     position: relative;
-    z-index: -10;
+    z-index: inherit; /* Place above the fullscreen menu when it's hidden */
+    overflow-y: auto; /* Ensure scroll is enabled on main content */
 }
+
+.cat-scroll-container {
+    margin: 30px;
+    padding: 10px;
+    width: calc(100% - 60px); /* Full width minus margin */
+    scroll-behavior: auto; /* Smooth scroll effect */   
+    display: flex;
+    overflow-x: auto; /* Allow horizontal scrolling */
+    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling for mobile Safari */
+}
+
+/* Hide scrollbar in WebKit browsers (Chrome, Safari) */
+.cat-scroll-container::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar */
+}
+
+/* Hide scrollbar for Firefox */
+.cat-scroll-container {
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
+}
+
+.cat-column {
+    flex: 0 0 25%; /* 4 columns on desktop */
+    box-sizing: border-box;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+    width: 200px; /* Set a fixed width for each column */
+    height: auto; /* Set a fixed height for each column */
+    margin-right: 20px; /* Space between columns */
+}
+
+.cat-column a {
+    color: var(--darkgray);
+    display: flex;
+    flex-direction: column; /* Stack text below the image */
+    text-decoration: none;
+    height: 100%; /* Full height of the column */
+}
+
+.cat-image {
+    width: 100%; /* Full width of the column */
+    height: 100%; /* Fixed height for the image */
+    background-size: cover; /* Ensure the image covers the div */
+    background-position: center; /* Center the background image */
+    transition: transform 0.8s ease; /* Smooth transition for scaling */
+    overflow: hidden; /* Prevent the image from growing larger */
+}
+
+.cat-image:hover {
+    transform: scale(1.1); /* Scale up the image for zoom effect */
+    overflow: hidden; /* Ensure it stays within the bounds of the container */
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) { /* Tablet */
+    .cat-column {
+        flex: 0 0 33.33%; /* 3 columns */
+    }
+}
+
+@media (max-width: 768px) { /* Mobile */
+    .cat-column {
+        flex: 0 0 50%; /* 2 columns */
+    }
+}
+
+.image-container {
+    width: 100%;    /* Set the original width */
+    max-height: 200px;    /* Allow height to adjust based on content */
+    overflow: hidden; /* Hide overflow */
+    position: relative; /* Set position for scaling */
+    text-align: left; /* Center align text */
+    border: 1px solid var(--darkgray);
+}
+
+.scale-image {
+    width: 100%;     /* Make the image fill the container */
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.3s ease; /* Smooth scaling transition */
+}
+
+.image-container:hover .scale-image {
+    transform: scale(1.2); /* Scale up on hover */
+}
+
+.text-content {
+    padding-top: 10px; /* Space between image and text */
+}
+.cat-p { font-size: 18px; }

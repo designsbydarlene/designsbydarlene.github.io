@@ -8,6 +8,7 @@
 
 body {
     font-family: 'Libre Bakersville', serif;
+    color: var(--darkgray);
 }
 body::before {
 content: '';
