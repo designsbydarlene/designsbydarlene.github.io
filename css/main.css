@@ -8,8 +8,8 @@
 }
 @font-face {
     font-family: 'Picaflor-36';
-    src: url('../font/Sprat-CondensedMedium.woff2') format('woff2'),
-         url('../font/Sprat-CondensedMedium.woff') format('woff');
+    src: url('../font/Picaflor-24pt.woff2') format('woff2'),
+         url('../font/Picaflor-24pt.woff') format('woff');
     font-weight: 900; /* Bold weight */
     font-style: normal;
 }@font-face {
@@ -52,11 +52,11 @@ top: 0;
 left: 0;
 right: 0;
 bottom: 0;
-background-color: rgba(186, 176, 166, 0.666); /* Change to desired overlay color with 0.5 opacity */
+background-color: rgba(183, 177, 171, 0.666); /* Change to desired overlay color with 0.5 opacity */
 z-index: -11; /* Place it behind the content */
 }
 h1, h2, h3, h3, h5, h6 {
-    font-family: "Picaflor-36", serif;
+    font-family: "Picaflor", serif;
     text-transform: uppercase;
     font-weight: 900;
     letter-spacing: 0px;
@@ -64,6 +64,6 @@ h1, h2, h3, h3, h5, h6 {
 }
 .font-30 { font-size: 35px; padding-bottom:10px;}
 .font-40 { transform: scaleY(.8); font-weight: 900; /* SemiBold */
-    font-style: bold; /* Italic */  font-family: 'Picaflor-36', serif; font-size:22pt; padding: 5px 0px 10px; line-height: 20pt; letter-spacing: 0px;}
+    font-style: bold; /* Italic */  font-family: 'Picaflor', serif; font-size:22pt; padding: 5px 0px 10px; line-height: 20pt; letter-spacing: 0px;}
 .font-50 { font-size: 42pt; padding-bottom:10px; line-height: 50pt; font-weight: bold;}
 .mr-20 { padding-right: 20px;}
