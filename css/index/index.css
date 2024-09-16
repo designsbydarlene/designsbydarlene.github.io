@@ -1,8 +1,11 @@
-
-main {    z-index: inherit;
-
-    flex: 1; /* Allow main to fill the available space */
-    display: flex; /* Use flex to allow for potential layout changes */
-    flex-direction: column; /* Stack children vertically */
-    overflow: auto; /* Allow scrolling if content exceeds viewport */
+main {
+    z-index: inherit;
+    flex: 1;
+    /* Allow main to fill the available space */
+    display: flex;
+    /* Use flex to allow for potential layout changes */
+    flex-direction: column;
+    /* Stack children vertically */
+    overflow: auto;
+    /* Allow scrolling if content exceeds viewport */
 }

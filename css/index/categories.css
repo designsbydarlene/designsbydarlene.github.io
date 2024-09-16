@@ -3,7 +3,7 @@
 .categories-row {
     display: flex;
     justify-content: flex-start; /* Align items to the start */
-    margin: 0 0px; /* Margin for the row */
+    margin: 0px; /* Margin for the row */
     background-color: var(--black); /* Column background */
     overflow-x: auto; /* Allow horizontal scrolling */
     white-space: nowrap; /* Prevent wrapping of columns */

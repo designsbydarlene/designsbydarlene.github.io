@@ -31,20 +31,18 @@ body {
     font-family: 'Instrument', serif;
     color: var(--black);
     margin: 0; /* Reset default margin */
-    height: 100vh; /* Full height of the viewport */
-    display: flex; /* Use flex to allow main to expand */
-    flex-direction: column; /* Stack children vertically */
+    overflow-x: hidden; /* Prevent horizontal scroll on mobile */
 }
 
 body::before {
     content: '';
-    position: fixed; /* Fixed position to cover the viewport */
+    position: fixed; /* Change to fixed to ensure it covers the viewport during scroll */
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('https://images.unsplash.com/photo-1616410731303-6affae095a0a?q=80&w=1402&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Background image */
-    background-size: cover; /* Cover the entire area */
+    background-image: url('https://images.unsplash.com/photo-1616410731303-6affae095a0a?q=80&w=1402&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Add your image path here */
+    background-size: cover; /* Ensure the image covers the entire area */
     background-repeat: no-repeat; /* Prevent repeating */
     background-position: center; /* Center the image */
     z-index: -12; /* Place it behind the content */
@@ -52,12 +50,12 @@ body::before {
 
 body::after {
     content: '';
-    position: fixed; /* Fixed for full coverage */
+    position: fixed; /* Change to fixed for full viewport coverage */
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(183, 177, 171, 0.666); /* Overlay color */
+    background-color: rgba(183, 177, 171, 0.666); /* Change to desired overlay color with 0.5 opacity */
     z-index: -11; /* Place it behind the content */
 }
 
