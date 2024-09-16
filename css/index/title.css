@@ -25,7 +25,7 @@
 .title-left-row,
 .title-right-row {
     max-width: 100%;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 .digital {
@@ -35,6 +35,7 @@
 .artist {
     font-size: calc(30vw/15.5 * 6);
     line-height: calc((30vw/15.5 * 6) - 20px);
+    padding-bottom: 10px;
 }
 .ux-ui-designer { 
     font-size: calc(70vw/75 * 13.5);
@@ -79,8 +80,15 @@
     /* Maintain aspect ratio and cover */
 }
 
+@media (max-width: 768px) {
+    .about-text {
+        font-size: 16px;
+    }
+}
+@media (min-width: 769px) and (max-width:1039px) {
 .about-text {
     font-size: 18px;
+}
 }
 @media (min-width: 1040px) {
 .about-text {
