@@ -1,3 +1,24 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const categoriesContainer = document.getElementById('categories');
+    if (categoriesContainer) {
+        fetch('./index/categories.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(html => {
+                categoriesContainer.innerHTML = html; // Insert the fetched HTML
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+            });
+    } else {
+        console.error('Categories container not found');
+    }
+});
+
 // JavaScript to enable drag and scroll functionality
 const categoriesRow = document.getElementById('categoriesRow');
 
@@ -29,3 +50,4 @@ categoriesRow.addEventListener('mousemove', (e) => {
     const walk = (x - startX) * 2; // scroll-fast
     categoriesRow.scrollLeft = scrollLeft - walk;
 });
+

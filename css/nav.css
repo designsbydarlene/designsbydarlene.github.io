@@ -191,12 +191,12 @@ header {
 }
 
 .fullscreen-menu a {
-    font-family: "Bodoni Moda", serif;
+    font-family: "Picaflor-36", serif;
     text-transform: uppercase;
     font-weight: 900;
     letter-spacing: -2px; /* Initial letter spacing */
     text-decoration: none;
-    font-size: 50px;
+    font-size: 80px;
     color: var(--primary); /* Primary color for menu links */
     display: inline-block; /* Ensure the anchor is treated as a block */
     overflow: hidden; /* Prevent overflow */
