@@ -1,84 +1,103 @@
-main {
+
+  main {
     position: relative;
-    z-index: inherit; /* Place above the fullscreen menu when it's hidden */
-    overflow-y: auto; /* Ensure scroll is enabled on main content */
+    z-index: inherit;
+    /* Place above the fullscreen menu when it's hidden */
+    overflow-y: auto;
+    /* Ensure scroll is enabled on main content */
 }
 
+/*******************************************
+************** Recent Works ****************/
+
+/* Container styling */
 .cat-scroll-container {
     margin: 30px;
     padding: 10px;
-    width: calc(100% - 80px); /* Full width minus margin */
-    scroll-behavior: auto; /* Smooth scroll effect */   
+    width: calc(100% - 80px);
+    /* Full width minus margin */
+    scroll-behavior: auto;
+    /* Smooth scroll effect */
     display: flex;
-    overflow-x: auto; /* Allow horizontal scrolling */
-    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling for mobile Safari */
+    overflow-x: auto;
+    /* Allow horizontal scrolling */
+    -webkit-overflow-scrolling: touch;
+    /* Enable smooth scrolling for mobile Safari */
 }
 
 .cat-scroll-container-header {
     margin: 30px 30px 0px;
     padding: 10px;
-    width: calc(100% - 60px); /* Full width minus margin */
-    scroll-behavior: auto; /* Smooth scroll effect */   
+    width: calc(100% - 60px);
+    /* Full width minus margin */
+    scroll-behavior: auto;
+    /* Smooth scroll effect */
     display: flex;
-    overflow-x: auto; /* Allow horizontal scrolling */
-    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling for mobile Safari */
+    overflow-x: auto;
+    /* Allow horizontal scrolling */
+    -webkit-overflow-scrolling: touch;
+    /* Enable smooth scrolling for mobile Safari */
 }
 
+/* Scrollbar styling */
 /* Hide scrollbar in WebKit browsers (Chrome, Safari) */
 .cat-scroll-container::-webkit-scrollbar {
-    display: none; /* Hide the scrollbar */
+    display: none;
+    /* Hide the scrollbar */
 }
 
 /* Hide scrollbar for Firefox */
 .cat-scroll-container {
-    scrollbar-width: none; /* Hide scrollbar in Firefox */
-    -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
+    scrollbar-width: none;
+    /* Hide scrollbar in Firefox */
+    -ms-overflow-style: none;
+    /* Hide scrollbar in IE and Edge */
 }
 
-@media (min-width: 1025px) {
-    .cat-column {
-        flex: 0 0 calc(33% - 40px); /* 3 columns on desktop */
-        box-sizing: border-box;
-        position: relative;
-        overflow: hidden;
-        margin-right: 40px; /* Space between columns */
-    }
-}
-
-.cat-column a {
-    color: var(--black);
-    display: flex;
-    flex-direction: column; /* Stack text below the image */
-    text-decoration: none;
-    height: 100%; /* Full height of the column */
-}
-
+/* Image styling */
 /* Image Container for Aspect Ratio */
 .image-container {
-    position: relative; /* For absolute positioning of image */
-    overflow: hidden; /* Prevent overflow of image */
-    width: calc(100% - 15px); /* Full width of the column */
-    padding-top: 40%; /* 5:2 aspect ratio */
+    position: relative;
+    /* For absolute positioning of image */
+    overflow: hidden;
+    /* Prevent overflow of image */
+    width: calc(100% - 15px);
+    /* Full width of the column */
+    padding-top: 40%;
+    /* 5:2 aspect ratio */
     border: 1px solid var(--darkgray);
 }
 
 /* Scaling Image */
 .scale-image {
-    position: absolute; /* Position the image absolutely */
-    top: 0; /* Align to the top of the container */
-    left: 0; /* Align to the left of the container */
-    width: calc(100% + 1px); /* Full width of the container */
-    height: 100%; /* Full height of the container */
-    object-fit: cover; /* Ensure the image covers the container */
-    object-position: top center; /* Center the image */
-    transition: transform 0.3s ease; /* Smooth scaling transition */
-    will-change: transform; /* Optimize for performance */
-    backface-visibility: hidden; /* Prevent backface visibility issues */
+    position: absolute;
+    /* Position the image absolutely */
+    top: 0;
+    /* Align to the top of the container */
+    left: 0;
+    /* Align to the left of the container */
+    width: calc(100% + 1px);
+    /* Full width of the container */
+    height: 100%;
+    /* Full height of the container */
+    object-fit: cover;
+    /* Ensure the image covers the container */
+    object-position: top center;
+    /* Center the image */
+    transition: transform 0.3s ease;
+    /* Smooth scaling transition */
+    will-change: transform;
+    /* Optimize for performance */
+    backface-visibility: hidden;
+    /* Prevent backface visibility issues */
+    opacity: .9;
 }
 
 .image-container:hover .scale-image {
-    transform: scale(1.1); /* Scale up on hover */
+    transform: scale(1.1);
+    /* Scale up on hover */
 }
+
 /* Color overlay styling using ::before */
 .image-container::after {
     content: '';
@@ -87,8 +106,9 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(202, 200, 198, 0.0001); /* Adjust the color and opacity */
-    z-index: 1; /* Color overlay is on top of the main image */
+    background-color: rgba(202, 200, 198, 0.009);
+    /* Adjust the color and opacity */
+    /* Color overlay is on top of the main image */
 }
 
 /* Image overlay styling using ::after */
@@ -100,36 +120,29 @@ main {
     width: 100%;
     height: 100%;
     background-image: url('https://images.unsplash.com/photo-1616410731303-6affae095a0a?q=80&w=1402&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-    background-size: cover; /* Ensure the overlay image covers the entire container */
+    background-size: cover;
+    /* Ensure the overlay image covers the entire container */
     background-position: center;
-    opacity: 0.00001; /* Adjust the opacity of the overlay image */
-    z-index: 2; /* Image overlay on top of the color overlay */
-}
-/* Responsive styles */
-@media (max-width: 1024px) { /* Tablet */
-    .cat-column {
-        flex: 0 0 calc(33% - 20px); /* 2 columns with margin */
-        margin-right: 20px; /* Space between columns */
-        margin-bottom: 20px; /* Space below columns */
-    }
-    .cat-column:last-child {
-        margin-right: 0; /* Remove right margin for the last column */
-    }
+    opacity: 0.1;
+    /* Adjust the opacity of the overlay image */
+    z-index: 1;
+    /* Image overlay on top of the color overlay */
 }
 
-@media (max-width: 768px) { /* Mobile */
-    .cat-scroll-container {
-        margin: 0px 30px 30px;
-    }
-    .cat-column {
-        flex: 0 0 100%; /* 1 column */
-        margin-bottom: 20px; /* Space below each column */
-    }
+/* Text/Link content styling */
+.cat-column a {
+    color: var(--black);
+    display: flex;
+    flex-direction: column;
+    /* Stack text below the image */
+    text-decoration: none;
+    height: 100%;
+    /* Full height of the column */
 }
 
-/* Text content styling */
 .text-content {
-    padding-top: 10px; /* Space between image and text */
+    padding-top: 10px;
+    /* Space between image and text */
 }
 
 .cat-p {
@@ -137,22 +150,212 @@ main {
     letter-spacing: .5px;
 }
 
-/* Hide elements for mobile and desktop/tablet */
-@media (max-width: 768px) { /* Mobile devices */
-    .hide-mobile {
-        display: none; /* Hide the element */
+.font-40 {
+    transform: scaleY(.8);
+    font-weight: 900;
+    /* SemiBold */
+    font-style: bold;
+    /* Italic */
+    font-family: 'Picaflor', serif;
+    font-size: 22pt;
+    padding: 5px 0px 10px;
+    line-height: 20pt;
+    letter-spacing: 0px;
+}
+
+/* Margin and padding */
+.mr-20 {
+    padding-right: 20px;
+}
+
+/* Responsive styles */
+@media (min-width: 1025px) { /* Larger Desktop */
+    .cat-column-first {
+        flex: 0 0 calc(33% - 40px);
+        /* 3 columns on desktop */
+        box-sizing: border-box;
+        position: relative;
+        overflow: hidden;
+        margin: auto 40px auto 0px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .cat-column {
+        flex: 0 0 calc(33% - 40px);
+        /* 3 columns on desktop */
+        box-sizing: border-box;
+        position: relative;
+        overflow: hidden;
+        margin-right: 40px;
+        /* Space between columns */
     }
 }
-@media (min-width: 769px) { /* Desktop and tablet devices */
+
+@media (min-width: 1201px) { /* Small Desktop, Desktop */
+    .font-50 {
+        font-size: 42pt;
+        padding-bottom: 10px;
+        line-height: 42pt;
+        font-weight: bold;
+    }
+
+    .font-30 {
+        font-size: 40px;
+        padding-bottom: 10px;
+    }
+}
+
+@media (min-width: 769px) { /* Desktop, Tablet */
+
+    /* Desktop and tablet devices */
     .hide-desktop-tablet {
-        display: none; /* Hide the element */
+        display: none;
+        /* Hide the element */
+    }
+
+    .border-left {
+        border-left: .5px solid var(--darkgray);
+        padding-left: 20px;
+    }
+
+    .border-right {
+        border-right: .5px solid var(--darkgray);
+        padding-left: 20px;
     }
 }
 
-.border-right  { border-right: .5px solid var(--darkgray);}
+@media (min-width: 769px) and (max-width: 1200px) { /* Tablet, Small Desktop */
+    .cat-column-first {
+        margin: auto 40px auto 0px;
+        text-align: center;
+        justify-content: center;
+    }
 
-.font-30 { font-size: 30px; padding-bottom:10px;}
-.font-40 { transform: scaleY(.8); font-weight: 900; /* SemiBold */
-    font-style: bold; /* Italic */  font-family: 'Picaflor', serif; font-size:22pt; padding: 5px 0px 10px; line-height: 20pt; letter-spacing: 0px;}
-.font-50 { font-size: 42pt; padding-bottom:10px; line-height: 42pt; font-weight: bold;}
-.mr-20 { padding-right: 20px;}
+    .font-50 {
+        font-size: 36pt;
+        white-space: nowrap;
+        padding-bottom: 10px;
+        line-height: 32pt;
+        font-weight: bold;
+    }
+
+    .font-30 {
+        font-size: 26px;
+        padding-bottom: 10px;
+    }
+}
+
+@media (max-width: 1024px) { /* Tablet, Mobile  */
+    /* Tablet */
+    .cat-column {
+        flex: 0 0 calc(33% - 20px);
+        /* 2 columns with margin */
+        margin-right: 20px;
+        /* Space between columns */
+        margin-bottom: 20px;
+        /* Space below columns */
+    }
+
+    .cat-column-first {
+        flex: 0 0 calc(33% - 20px);
+        /* 2 columns with margin */
+        margin: 20px;
+        /* Space between columns */
+        margin-bottom: 20px;
+        /* Space below columns */
+    }
+
+    .cat-column:last-child {
+        margin-right: 0;
+        /* Remove right margin for the last column */
+    }
+}
+
+@media (max-width: 768px) { /* Mobile */
+
+    /* Mobile */
+    .cat-scroll-container {
+        margin: 0px 30px 30px;
+    }
+
+    .cat-column {
+        flex: 0 0 100%;
+        /* 1 column */
+        margin-bottom: 2px;
+        /* Space below each column */
+    }
+}
+
+/* Hide elements for mobile  */
+@media (max-width: 768px) { /* Mobile */
+
+    /* Mobile devices */
+    .hide-mobile {
+        display: none;
+        /* Hide the element */
+    }
+}
+
+
+@media (max-width: 768px) { /* Mobile */
+    .font-50 {
+        font-size: 42pt;
+        padding-bottom: 10px;
+        line-height: 42pt;
+        font-weight: bold;
+    }
+
+    .font-30 {
+        font-size: 30px;
+        padding-bottom: 10px;
+    }
+}
+
+
+/*******************************************
+*************** Categories ****************/
+/* Ensure the body has a background set via pseudo-elements as in your setup */
+
+.categories-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 30px; /* Margin for the row */
+    background-color: var(--black); /* Column background */
+    flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
+}
+
+.categories-column {
+    flex: 1 1 25%; /* Default to 4 equal width columns */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px; /* Adjust height as needed */
+    background-color: var(--black); /* Column color */
+    position: relative;
+    overflow: hidden; /* Hide overflow */
+}
+
+.categories-cutout {
+    font-size: 48px; /* Adjust font size as needed */
+    color: transparent; /* Make text transparent */
+    background: url('https://images.unsplash.com/photo-1616410731303-6affae095a0a?q=80&w=1402&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center; /* Use background of the body */
+    background-size: cover; /* Cover the text */
+    -webkit-background-clip: text; /* For Safari */
+    background-clip: text; /* Standard */
+    z-index: 1; /* Ensure text is above other elements */
+}
+
+
+/* Media Queries */
+@media (max-width: 991px) {
+    .categories-column {
+        flex: 1 1 25%; /* Two columns on tablet */
+    }
+}
+
+@media (max-width: 767px) {
+    .categories-column {
+        flex: 1 1 100%; /* Full width for mobile */
+    }
+}

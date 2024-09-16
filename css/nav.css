@@ -24,7 +24,7 @@ header {
     margin: 0 auto;
     padding: 0 20px;
     position: relative;    
-    z-index: 2;
+    z-index: 5;
 
 }
 
@@ -37,7 +37,7 @@ header {
     margin: 0 auto;
     padding: 0 20px;
     position: relative;    
-    z-index: 2;
+    z-index: 5;
     background-color: var(--midgray);
     top: -10px;
     height: 95px;
@@ -165,12 +165,11 @@ header {
     width: 100%;
     height: 100%;
     background-color: var(--darkgray); /* Change to dark gray */
-    z-index: 1; /* Menu stays behind the header by default */
 }
 
 .fullscreen-menu.open-menu {    
     display: block;
-            z-index: 1; /* When opened, it comes into view */
+    z-index: 4; /* When opened, it comes into view */
     }
 
 .fullscreen-menu .menu-content {
