@@ -1,8 +1,8 @@
 
-  main {
-    position: relative;
-    z-index: inherit;
-    /* Place above the fullscreen menu when it's hidden */
-    overflow-y: auto;
-    /* Ensure scroll is enabled on main content */
+main {    z-index: inherit;
+
+    flex: 1; /* Allow main to fill the available space */
+    display: flex; /* Use flex to allow for potential layout changes */
+    flex-direction: column; /* Stack children vertically */
+    overflow: auto; /* Allow scrolling if content exceeds viewport */
 }
