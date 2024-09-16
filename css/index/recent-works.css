@@ -6,7 +6,7 @@
 .cat-scroll-container {
     margin: 30px;
     padding: 10px;
-    width: calc(100% - 80px);
+    width: calc(100% - 60px);
     /* Full width minus margin */
     scroll-behavior: auto;
     /* Smooth scroll effect */

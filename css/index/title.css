@@ -1,0 +1,96 @@
+.title-container {
+    display: flex;
+    flex-direction: row;
+    /* Ensure the columns are in a row */
+    max-width: calc(100% - 60px);
+    margin: 40px 30px;
+}
+
+.title-left-column {
+    flex: 0 0 30%;
+    /* 30% width on desktop and tablet */
+    padding: 10px;
+}
+
+.title-right-column {
+    flex: 0 0 70%;
+    /* 70% width on desktop and tablet */
+    padding: 10px;
+    margin: 0 40px;
+}
+
+.title-left-row,
+.title-right-row {
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.top-font {
+    font-size: 170px;
+    line-height: 150px;
+    margin:0;
+}
+.top-font-2 {
+    font-size: 120px;
+    line-height: 120px;
+    margin:0;
+}
+.font-larger {
+    font-size: 180px;
+    line-height: 150px;
+    letter-spacing: 2px; /* Fine-tuning the width by adjusting the spacing */
+}
+
+.title-image-border {
+    border: 0.5px solid var(--black);
+    width: 100%;
+    aspect-ratio: 5 / 3;
+    /* 5:3 aspect ratio */
+    object-fit: cover;
+    /* Maintain aspect ratio and cover */
+}
+
+.title-image-aspect-ratio {
+    width: 100%;
+    aspect-ratio: 6 / 4;
+    /* 6:4 aspect ratio */
+    object-fit: cover;
+    /* Maintain aspect ratio and cover */
+}
+
+@media (max-width: 768px) { /* Tablet and mobile view */
+    .title-left-row h1,
+    .title-right-row h1 {
+        font-size: 50px;
+        line-height: 40px;
+    }
+    .title-container {
+        display: flex;
+        flex-direction: row; /* Keep columns in a row */
+        overflow-x: auto; /* Allow horizontal scroll */
+        white-space: nowrap; /* Prevent wrapping */
+        scroll-snap-type: x mandatory; /* Optional: smooth snapping on mobile */
+    }
+
+    .title-left-column {
+        flex: 0 0 80%; /* Left column takes up 80% of mobile screen */
+        max-width: 80%; /* Ensure left column maxes at 80% */
+        padding: 10px;
+    }
+
+    .title-right-column {
+        flex: 0 0 20%; /* Right column shows 20% initially */
+        max-width: 20%; /* Restrict right column to 20% on mobile */
+        padding: 10px;
+        display: inline-block;
+    }
+
+    .title-container::-webkit-scrollbar {
+        display: none; /* Hide scroll bar for a cleaner look */
+    }
+
+    .title-container {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+}
