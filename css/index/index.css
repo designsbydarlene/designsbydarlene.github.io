@@ -1,0 +1,8 @@
+
+  main {
+    position: relative;
+    z-index: inherit;
+    /* Place above the fullscreen menu when it's hidden */
+    overflow-y: auto;
+    /* Ensure scroll is enabled on main content */
+}

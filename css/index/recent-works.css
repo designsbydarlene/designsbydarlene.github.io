@@ -1,12 +1,4 @@
 
-  main {
-    position: relative;
-    z-index: inherit;
-    /* Place above the fullscreen menu when it's hidden */
-    overflow-y: auto;
-    /* Ensure scroll is enabled on main content */
-}
-
 /*******************************************
 ************** Recent Works ****************/
 
@@ -312,50 +304,3 @@
     }
 }
 
-
-/*******************************************
-*************** Categories ****************/
-/* Ensure the body has a background set via pseudo-elements as in your setup */
-
-.categories-row {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 30px; /* Margin for the row */
-    background-color: var(--black); /* Column background */
-    flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
-}
-
-.categories-column {
-    flex: 1 1 25%; /* Default to 4 equal width columns */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200px; /* Adjust height as needed */
-    background-color: var(--black); /* Column color */
-    position: relative;
-    overflow: hidden; /* Hide overflow */
-}
-
-.categories-cutout {
-    font-size: 48px; /* Adjust font size as needed */
-    color: transparent; /* Make text transparent */
-    background: url('https://images.unsplash.com/photo-1616410731303-6affae095a0a?q=80&w=1402&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center; /* Use background of the body */
-    background-size: cover; /* Cover the text */
-    -webkit-background-clip: text; /* For Safari */
-    background-clip: text; /* Standard */
-    z-index: 1; /* Ensure text is above other elements */
-}
-
-
-/* Media Queries */
-@media (max-width: 991px) {
-    .categories-column {
-        flex: 1 1 25%; /* Two columns on tablet */
-    }
-}
-
-@media (max-width: 767px) {
-    .categories-column {
-        flex: 1 1 100%; /* Full width for mobile */
-    }
-}
