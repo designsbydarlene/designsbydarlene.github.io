@@ -58,17 +58,16 @@ header {
     color: var(--darkgray);
     /* Default text color */
     transition: color 0.3s ease;
-    transform: scaleX(1.4);
 }
 
 .logo {
-    padding: 20px 0px;    
+    padding: 10px 0px;    
     text-align: center;
     /* Keeps the logo centered */
 }
 
 .logo img {
-    max-height: 30px;
+    max-height: 50px;
     transition: filter 0.3s ease;
 }
 
@@ -138,6 +137,7 @@ header {
         transform: rotate(45deg) translate(1px, 5px);
         /* Adjusted translate to center */
     }
+
 
     .hamburger.open span:nth-child(2) {
         opacity: 0;
@@ -216,6 +216,9 @@ body.open-menu header {
     background-color: var(--midgray) !important; /* Change background to light gray */
 
 }
+body.open-menu {
+    overflow-y:hidden;
+}
 
 body.open-menu .location h6 {
     color: var(--primary);
@@ -223,7 +226,7 @@ body.open-menu .location h6 {
 }
 
 body.open-menu .logo img {
-    content: url('https://designsbydarlene.github.io/images/logo/logo-inverted.png');
+    content: url('../images/logo/logo-inverted.png');
     /* Update logo */
 }
 
@@ -243,7 +246,7 @@ body.open-menu .hamburger span {
     }
 
     .logo {
-        padding: 20px 0px;       
+        padding: 25px 0px 15px;       
          margin-left: auto;
         margin-right: auto;
     }
@@ -252,6 +255,12 @@ body.open-menu .hamburger span {
 
 
 /* Responsive Styles */
+
+@media  (max-width:1024px) {
+.logo img {
+    max-height: 30px;
+}
+}
 @media (min-width: 769px) and (max-width:1024px) {
 .logo {
     padding: 10px 0px 0px 0px;       

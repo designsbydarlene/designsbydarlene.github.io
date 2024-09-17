@@ -16,9 +16,9 @@
 }
 
 .cat-scroll-container-header {
-    margin: 20px 25px 20px;
+    margin: 20px 15px 20px;
     padding: 10px 0px;
-    width: calc(100% - 50px);
+    width: calc(100% - 30px);
     /* Full width minus margin */
     scroll-behavior: auto;
     /* Smooth scroll effect */
@@ -140,15 +140,15 @@
 }
 
 .font-40 {
-    transform: scaleY(.8);
+    transform: scaleY(1.4);
     font-weight: 900;
     /* SemiBold */
     font-style: bold;
     /* Italic */
-    font-family: 'Picaflor', serif;
-    font-size: 22pt;
-    padding: 5px 0px 10px;
-    line-height: 20pt;
+    font-family: 'Aostora', serif;
+    font-size: 15pt;
+    padding: 10px 0px;
+    line-height: 15pt;
     letter-spacing: 0px;
 }
 
@@ -202,14 +202,15 @@
 
 @media (min-width: 1201px) { /* Small Desktop, Desktop */
     .font-50 {
-        font-size: 42pt;
-        padding-bottom: 10px;
-        line-height: 42pt;
+        font-size: 25pt;
+        padding-bottom: ;
+        line-height: 40pt;
         font-weight: bold;
     }
 
     .font-30 {
         font-size: 40px;
+        line-height: 45px;
         padding-bottom: 10px;
     }
 }
@@ -238,10 +239,10 @@
         justify-content: center;
     }
     .font-50 {
-        font-size: 36pt;
+        font-size: 25pt;
         white-space: nowrap;
-        padding-bottom: 10px;
-        line-height: 32pt;
+        padding-bottom: ;
+        line-height: 40pt;
         font-weight: bold;
     }
 
@@ -286,13 +287,13 @@
 
     /* Mobile */
     .cat-scroll-container {
-        margin: 0px 25px 20px 0pxß;
+        margin: 0px 15px 10px;
     }
     .cat-column {
         flex: 0 0 100%;
         margin-bottom: 2px;
         max-width: calc(100vw - 30px);
-        margin: 0px 20px 20px 0px;
+        margin: 0px 15px 20px 0px;
         padding: 0;
     }
 }
@@ -311,15 +312,16 @@
 @media (max-width: 768px) { /* Mobile */
     .font-50 {
         font-size: 50pt;
-        padding-bottom: 10px;
-        line-height: 42pt;
+        padding-bottom: 20px;
+        line-height: 40pt;
         font-weight: bold;
+        padding-top: 30px;
     }
 
     .font-30 {
         font-size: 30px;
-        line-height: 30px;
-        padding-bottom: 10px;
+        line-height: 35px;
+        padding: 10px 0px 10px;
     }
 }
 

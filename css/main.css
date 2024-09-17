@@ -15,7 +15,14 @@
 }@font-face {
     font-family: 'Instrument';
     src: url('../font/InstrumentSerif-Regular.ttf') format('ttf'),
+         url('../font/InstrumentSerif-Regular.woff') format('woff'),
          url('../font/InstrumentSerif-Regular.woff2') format('woff2');
+    font-weight: 400; /* Bold weight */
+    font-style: normal;
+}@font-face {
+    font-family: 'Aostora';
+    src: url('../font/BalenySerifFree-Regular.woff') format('woff'),
+         url('../font/BalenySerifFree-Regular.woff2') format('woff2');
     font-weight: 400; /* Bold weight */
     font-style: normal;
 }
@@ -25,7 +32,8 @@
     --darkgray: #333333; /* dark gray */
     --black: #202020; /* dark gray */
 --midgray: #454545; /* light gray */
-    --lightgray: #666666; /* light gray */
+--lightgray: #666666; /* light gray */
+--lightergray: #999999; /* light gray */
 }
 body {
     font-family: 'Instrument', serif;
@@ -60,9 +68,29 @@ body::after {
 }
 
 h1, h2, h3, h3, h5, h6 {
-    font-family: "Picaflor", serif;
+    font-family: "Aostora", serif;
     text-transform: uppercase;
     font-weight: 900;
     letter-spacing: 0px;
     font-stretch: expanded;
+    transform: scaleY(1.5);
+}
+
+@media (max-width: 768px) {
+    .hide-mobile {
+        display: none; /* Or flex/inline depending on the context */
+    }
+}
+
+/* Hide on tablet (min-width: 768px and max-width: 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hide-tablet {
+        display: none; /* Or flex/inline depending on the context */
+    }
+}
+
+@media (min-width: 1025px) {
+    .hide-desktop {
+        display: none; /* Or flex/inline depending on the context */
+    }
 }
