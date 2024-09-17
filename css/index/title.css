@@ -25,14 +25,15 @@
     box-sizing: border-box; /* Ensure padding doesn't cause overflow */
 
 }
-
-.text-column-about{
-    text-align: left; /* Justifies the text */
-    width: calc(100% - 60px);
-    margin: 0px 20px 0px 35px;
+@media (min-width: 769px) {
+    .text-column-about {
+        text-align: left;
+        width: calc(100% - 30px);
+        margin: 10px;
+    }
 }
 .about-text {
-    padding: 00px 0px 0px;}
+    padding: 20px 0px 0px;}
 
 .title-left-row {
     max-width: 100%;
@@ -86,7 +87,6 @@
     text-align: justify;
 }
 .title-image-border {
-    border: 0.5px solid var(--black);
     max-width: 100%;
     aspect-ratio: 5 / 6;
     /* 5:3 aspect ratio */
@@ -103,9 +103,8 @@
 }
 
 .title-right-img {
-    margin: 20px;
     max-width: 100%;
-    aspect-ratio: 6 / 3;
+    aspect-ratio: 6 / 4;
     /* 6:4 aspect ratio */
     object-fit: cover;
     border: 0.5px solid var(--black);
@@ -148,7 +147,6 @@
 
 .title-right-img-2 {
     border: 0.5px solid var(--black);
-    margin: 20px;
     max-width: 100%;
     aspect-ratio: 6 / 7;
     /* 6:4 aspect ratio */
@@ -200,7 +198,7 @@
 .title-image-aspect-ratio {
     max-width: 100%;
     /* 6:4 aspect ratio */
-    aspect-ratio: 6 / 10;
+    aspect-ratio: 6 / 4;
 
     object-fit: cover;
     /* Maintain aspect ratio and cover */
@@ -208,8 +206,8 @@
 
 .title-right-img {
     max-width: 100%;
-    aspect-ratio: 6 / 8;
-    object-fit: cover;
+    aspect-ratio: 6 / 4;
+    object-fit: contain;
     border: 0.5px solid var(--black);
     position: relative;
     overflow: hidden;
@@ -351,9 +349,10 @@ text-align: justify;
 }
 @media (max-width: 768px) { /* Tablet and mobile view */
     
-    .text-column-about{
-        text-align: left; /* Justifies the text */
-        max-width:calc(100% - 60px);
+    .text-column-about{        
+        text-align: left;
+        max-width: 100%;
+        padding: 20px 10px;
     }
     .title-container {
         max-width: 100vw;
@@ -384,8 +383,12 @@ text-align: justify;
     }
 }
 @media (max-width:768px) {
+    .title-right-img-2 { margin: 20px 20px 0px;}
+    .title-left-row {
+       padding: 10px 0px;
+    }
 .title-right-row {
-    padding: 0px 0px 0px 30px ;
+    padding: 10px 0px 0px 20px;
 }
 }
 @media (min-width:769px) {
@@ -396,4 +399,255 @@ text-align: justify;
     padding-left: ;
     text-align: justify;
 }
+}
+
+
+.wrap {
+    display: inline; /* Allow the text to flow naturally */
+    vertical-align: top; /* Align the text with the top of the letter */
+    max-width: calc(100% - 60px); /* Prevent text overflow */
+    
+}
+
+@media (max-width:768px) {
+.cutout-letter {
+    font-size: 120px; /* Large H1-sized font */
+    line-height: .8; /* Allow the letter to span multiple lines */
+    color: transparent; /* Transparent text color */
+    background-color: var(--black); /* Ensure the background color is black */
+    background: url('https://images.unsplash.com/photo-1616410731303-6affae095a0a?q=80&w=1402&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center;
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin-right:; /* Space between the letter and the rest of the text */
+    padding: 5px 10px 25px;
+    display: inline-block;
+    float: left; /* Float the large letter to the left */
+    font-family: 'Picaflor-36',serif;
+}
+}
+@media (min-width:769px) {
+.cutout-letter {
+    font-size: 120px; /* Large H1-sized font */
+    line-height: .8; /* Allow the letter to span multiple lines */
+    color: transparent; /* Transparent text color */
+    background-color: var(--black); /* Ensure the background color is black */
+    background: url('https://images.unsplash.com/photo-1616410731303-6affae095a0a?q=80&w=1402&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center;
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin-right:; /* Space between the letter and the rest of the text */
+    padding: 5px 10px 15px;
+    display: inline-block;
+    float: left; /* Float the large letter to the left */
+    font-family: 'Picaflor-36',serif;
+}
+}
+.letter {
+    background-color: var(--black);
+    position: relative;
+    top: 10px;
+    float: left;
+    margin-right: 15px;
+    display: inline-block;
+}
+
+/* Adjust this for responsive behavior if needed */
+
+@media (min-width: 1800px) {
+.storybook-text {
+    font-size: 35px;
+    line-height:45px;
+    display: inline-block; /* Make the container inline-block for better wrapping behavior */
+    align-items: flex-start;
+    margin-left: 20px;
+}
+}
+@media (min-width: 769px) and (max-width: 889px) {
+    .cutout-letter {
+        font-size: 75px; /* Large H1-sized font */
+        line-height: .8; /* Allow the letter to span multiple lines */
+        color: transparent; /* Transparent text color */
+        background-color: var(--black); /* Ensure the background color is black */
+        background: url('https://images.unsplash.com/photo-1616410731303-6affae095a0a?q=80&w=1402&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center;
+        background-size: cover;
+        -webkit-background-clip: text;
+        background-clip: text;
+        margin-right:; /* Space between the letter and the rest of the text */
+        padding: 5px 10px 20px;
+        display: inline-block;
+        float: left; /* Float the large letter to the left */
+        font-family: 'Picaflor-36',serif;
+    }
+.storybook-text {
+    font-size: .8rem;
+    line-height:1rem;
+    display: inline-block; /* Make the container inline-block for better wrapping behavior */
+    align-items: flex-start;
+    margin-left: 10px;
+}
+.letter { top: 5px; }
+}
+@media (min-width: 890px) and (max-width: 999px) {
+    .cutout-letter {
+        font-size: 80px; /* Large H1-sized font */
+        line-height: .8; /* Allow the letter to span multiple lines */
+        color: transparent; /* Transparent text color */
+        background-color: var(--black); /* Ensure the background color is black */
+        background: url('https://images.unsplash.com/photo-1616410731303-6affae095a0a?q=80&w=1402&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center;
+        background-size: cover;
+        -webkit-background-clip: text;
+        background-clip: text;
+        margin-right:; /* Space between the letter and the rest of the text */
+        padding: 5px 10px 20px;
+        display: inline-block;
+        float: left; /* Float the large letter to the left */
+        font-family: 'Picaflor-36',serif;
+    }
+.storybook-text {
+    font-size: .9rem;
+    line-height:1.2rem;
+    display: inline-block; /* Make the container inline-block for better wrapping behavior */
+    align-items: flex-start;
+    margin-left: 10px;
+}
+.letter { top: 5px; }
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+    .cutout-letter {
+        font-size: 80px; /* Large H1-sized font */
+        line-height: .8; /* Allow the letter to span multiple lines */
+        color: transparent; /* Transparent text color */
+        background-color: var(--black); /* Ensure the background color is black */
+        background: url('https://images.unsplash.com/photo-1616410731303-6affae095a0a?q=80&w=1402&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center;
+        background-size: cover;
+        -webkit-background-clip: text;
+        background-clip: text;
+        margin-right:; /* Space between the letter and the rest of the text */
+        padding: 5px 10px 20px;
+        display: inline-block;
+        float: left; /* Float the large letter to the left */
+        font-family: 'Picaflor-36',serif;
+    }
+.storybook-text {
+    font-size: 1rem;
+    line-height:1.3rem;
+    display: inline-block; /* Make the container inline-block for better wrapping behavior */
+    align-items: flex-start;
+    margin-left: 10px;
+}
+.letter { top: 5px; }
+}
+@media (min-width: 1201px) and (max-width: 1365px) {
+    .cutout-letter {
+        font-size: 90px; /* Large H1-sized font */
+        line-height: .8; /* Allow the letter to span multiple lines */
+        color: transparent; /* Transparent text color */
+        background-color: var(--black); /* Ensure the background color is black */
+        background: url('https://images.unsplash.com/photo-1616410731303-6affae095a0a?q=80&w=1402&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center;
+        background-size: cover;
+        -webkit-background-clip: text;
+        background-clip: text;
+        margin-right:; /* Space between the letter and the rest of the text */
+        padding: 5px 10px 20px;
+        display: inline-block;
+        float: left; /* Float the large letter to the left */
+        font-family: 'Picaflor-36',serif;
+    }
+.storybook-text {
+    font-size: 1.1rem;
+    line-height:1.5rem;
+    display: inline-block; /* Make the container inline-block for better wrapping behavior */
+    align-items: flex-start;
+    margin-left: 10px;
+}
+}
+@media (min-width: 1366px) and (max-width: 1534px) {
+    .cutout-letter {
+        font-size: 115px; /* Large H1-sized font */
+        line-height: .8; /* Allow the letter to span multiple lines */
+        color: transparent; /* Transparent text color */
+        background-color: var(--black); /* Ensure the background color is black */
+        background: url('https://images.unsplash.com/photo-1616410731303-6affae095a0a?q=80&w=1402&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center;
+        background-size: cover;
+        -webkit-background-clip: text;
+        background-clip: text;
+        margin-right:; /* Space between the letter and the rest of the text */
+        padding: 5px 10px 20px;
+        display: inline-block;
+        float: left; /* Float the large letter to the left */
+        font-family: 'Picaflor-36',serif;
+    }
+.storybook-text {
+    font-size: 1.4rem;
+    line-height:1.8rem;
+    display: inline-block; /* Make the container inline-block for better wrapping behavior */
+    align-items: flex-start;
+    margin-left: 10px;
+}
+}
+@media (min-width: 1535px) and (max-width: 1599px) {
+    .cutout-letter {
+        font-size: 100px; /* Large H1-sized font */
+        line-height: .8; /* Allow the letter to span multiple lines */
+        color: transparent; /* Transparent text color */
+        background-color: var(--black); /* Ensure the background color is black */
+        background: url('https://images.unsplash.com/photo-1616410731303-6affae095a0a?q=80&w=1402&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center;
+        background-size: cover;
+        -webkit-background-clip: text;
+        background-clip: text;
+        margin-right:; /* Space between the letter and the rest of the text */
+        padding: 5px 10px 20px;
+        display: inline-block;
+        float: left; /* Float the large letter to the left */
+        font-family: 'Picaflor-36',serif;
+    }
+.storybook-text {
+    font-size: 1.5rem;
+    line-height:2rem;
+    display: inline-block; /* Make the container inline-block for better wrapping behavior */
+    align-items: flex-start;
+    margin-left: 10px;
+}
+}
+@media (min-width: 1600px) and (max-width: 1799px) {
+    .cutout-letter {
+        font-size: 100px; /* Large H1-sized font */
+        line-height: .8; /* Allow the letter to span multiple lines */
+        color: transparent; /* Transparent text color */
+        background-color: var(--black); /* Ensure the background color is black */
+        background: url('https://images.unsplash.com/photo-1616410731303-6affae095a0a?q=80&w=1402&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center;
+        background-size: cover;
+        -webkit-background-clip: text;
+        background-clip: text;
+        margin-right:; /* Space between the letter and the rest of the text */
+        padding: 5px 10px 20px;
+        display: inline-block;
+        float: left; /* Float the large letter to the left */
+        font-family: 'Picaflor-36',serif;
+    }
+.storybook-text {
+    font-size: 32px;
+    line-height:40px;
+    display: inline-block; /* Make the container inline-block for better wrapping behavior */
+    align-items: flex-start;
+    margin-left: 10px;
+}
+}
+@media (max-width: 768px) {
+.storybook-text {
+    font-size: 25px;
+    line-height:35px;
+    display: inline-block; /* Make the container inline-block for better wrapping behavior */
+    align-items: flex-start;
+    margin-left: 10px;
+}
+.letter { 
+    top: 10px;
+}
+.story-text {
+        text-indent: -60px;
+        padding-left: 60px;
+    }
 }

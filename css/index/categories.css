@@ -95,3 +95,61 @@
         width: calc(100% - 100px); /* Full width for mobile */
     }
 }
+
+.wrap {
+    display: inline; /* Allow the text to flow naturally */
+    vertical-align: top; /* Align the text with the top of the letter */
+    max-width: calc(100% - 60px); /* Prevent text overflow */
+}
+
+.storybook-text {
+    display: inline-block; /* Make the container inline-block for better wrapping behavior */
+    align-items: flex-start;
+    margin-left: 10px;
+}
+
+.cutout-letter {
+    font-size: 100px; /* Large H1-sized font */
+    line-height: .8; /* Allow the letter to span multiple lines */
+    color: transparent; /* Transparent text color */
+    background-color: var(--black); /* Ensure the background color is black */
+    background: url('https://images.unsplash.com/photo-1616410731303-6affae095a0a?q=80&w=1402&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center;
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin-right:; /* Space between the letter and the rest of the text */
+    padding: 5px 10px;
+    display: inline-block;
+    float: left; /* Float the large letter to the left */
+}
+.letter {
+    background-color: var(--black);
+    position: relative;
+    top: 8px;
+    float: left;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.story-text {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+    text-indent: -80px; /* Negative indent to start wrapping under the letter */
+    padding-left: 80px; /* Padding to make room for the letter */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+/* Adjust this for responsive behavior if needed */
+@media (max-width: 767px) {
+    .cutout-letter {
+        font-size: 70px;
+    }
+
+    .story-text {
+        text-indent: -60px;
+        padding-left: 60px;
+    }
+}
