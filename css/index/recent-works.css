@@ -4,7 +4,7 @@
 
 /* Container styling */
 .cat-scroll-container {
-    margin: 30px 0px 15px;
+    margin: 30px;
     /* Full width minus margin */
     scroll-behavior: auto;
     /* Smooth scroll effect */
@@ -16,9 +16,9 @@
 }
 
 .cat-scroll-container-header {
-    margin: 20px 25px 0px;
+    margin: 20px 25px 20px;
     padding: 10px 0px;
-    width: calc(100% - 30px);
+    width: calc(100% - 50px);
     /* Full width minus margin */
     scroll-behavior: auto;
     /* Smooth scroll effect */
@@ -51,7 +51,6 @@
     /* For absolute positioning of image */
     overflow: hidden;
     /* Prevent overflow of image */
-    width: calc(100% - 15px);
     /* Full width of the column */
     padding-top: 40%;
     /* 5:2 aspect ratio */
@@ -172,15 +171,13 @@
         padding: 0px 10px;
     }
     .cat-column:first-child {
-        flex: 0 0 calc(33% - 40px);
-        /* 3 columns on desktop */
-        box-sizing: border-box;
-        position: relative;
-        overflow: hidden;
-        margin-right: 40px;
-        padding: 0px 10px;
-        /* Space between columns */
-    }
+            flex: 0 0 calc(33% - 20px);
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+            margin-right: 40px;
+            padding: 0px 20px;
+        }
     .cat-column {
         flex: 0 0 calc(33% - 40px);
         /* 3 columns on desktop */
@@ -289,13 +286,14 @@
 
     /* Mobile */
     .cat-scroll-container {
-        margin: 0px 15px 20px;
+        margin: 0px 25px 20px 0pxß;
     }
     .cat-column {
         flex: 0 0 100%;
         margin-bottom: 2px;
-        min-width: 100vw;
-        padding: 0px 10px;
+        max-width: calc(100vw - 30px);
+        margin: 0px 20px 20px 0px;
+        padding: 0;
     }
 }
 
@@ -312,7 +310,7 @@
 
 @media (max-width: 768px) { /* Mobile */
     .font-50 {
-        font-size: 42pt;
+        font-size: 50pt;
         padding-bottom: 10px;
         line-height: 42pt;
         font-weight: bold;
@@ -320,6 +318,7 @@
 
     .font-30 {
         font-size: 30px;
+        line-height: 30px;
         padding-bottom: 10px;
     }
 }
