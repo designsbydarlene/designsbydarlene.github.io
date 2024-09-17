@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: row;
     /* Ensure the columns are in a row */
-    max-width: calc(100vw - 60px);
-    margin: 40px 30px;
+    max-width: calc(100vw - 30px);
+    margin: 40px 15px;
 }
 
 .title-left-column {
@@ -20,7 +20,7 @@
 
 .text-column-about{
     text-align: justify; /* Justifies the text */
-    width:93%;
+    width: 100%;
 }
 .title-left-row,
 .title-right-row {
@@ -29,38 +29,45 @@
 }
 
 .digital {
-    font-size: calc(30vw/20 * 7);
-    line-height: calc((30vw/20 * 7) - 20px);
+    font-size: calc(30vw/20 * 7.5);
+    line-height: calc((30vw/20 * 7.5) - 20px);
+    text-align: justify;
 }
 .artist {
-    font-size: calc(30vw/15.5 * 6);
-    line-height: calc((30vw/15.5 * 6) - 20px);
+    font-size: calc(30vw/15.5 * 6.4);
+    line-height: calc((30vw/15.5 * 6.4) - 20px);
     padding-bottom: 10px;
+    text-align: justify;
 }
 .ux-ui-designer { 
-    font-size: calc(70vw/75 * 13.5);
-    line-height: calc((70vw/75 * 13.5) - 15px);
+    font-size: calc(70vw/75 * 13.55);
+    line-height: calc((70vw/75 * 13.55) - 15px);
     white-space: nowrap;
+    text-align: justify;
 }
 .web-designer { 
-    font-size: calc(70vw/75 * 14);
-    line-height: calc((70vw/75 * 14) - 15px);
+    font-size: calc(70vw/75 * 14.15);
+    line-height: calc((70vw/75 * 14.15) - 15px);
     white-space: nowrap;
+    text-align: justify;
 }
 .graphic-designer { 
-    font-size: calc(70vw/75 * 10.75);
-    line-height: calc((70vw/75 * 10.75) - 15px);
+    font-size: calc(70vw/75 * 10.85);
+    line-height: calc((70vw/75 * 10.85) - 15px);
     white-space: nowrap;
+    text-align: justify;
 }
 .motion-designer { 
-    font-size: calc(70vw/75 * 11.5);
-    line-height: calc((70vw/75 * 11.5) - 15px);
+    font-size: calc(70vw/75 * 11.6);
+    line-height: calc((70vw/75 * 11.6) - 15px);
     white-space: nowrap;
+    text-align: justify;
 }
 .wordpress-designer { 
-    font-size: calc(70vw/75 * 9.18);
-    line-height: calc((70vw/75 * 9.18) - 15px);
+    font-size: calc(70vw/75 * 9.28);
+    line-height: calc((70vw/75 * 9.28) - 15px);
     white-space: nowrap;
+    text-align: justify;
 }
 .title-image-border {
     border: 0.5px solid var(--black);
@@ -82,8 +89,17 @@
 
 @media (max-width: 768px) {
     .about-text {
-        font-size: 16px;
+        font-size: 20px;
     }
+    
+.title-image-aspect-ratio {
+    max-width: 100%;
+    aspect-ratio: 6 / 10;
+    /* 6:4 aspect ratio */
+    object-fit: cover;
+    border: 0.5px solid var(--black);
+    /* Maintain aspect ratio and cover */
+}
 }
 @media (min-width: 769px) and (max-width:1039px) {
 .about-text {
@@ -105,46 +121,103 @@
     font-size: 35px;
 }
 }
+@media (max-width:659px) {
+.digital {
+    font-size: calc(80vw / 20 * 7);
+    line-height: calc(80vw / 20 * 7);
+    text-align: justify;
+}
+.artist {
+    font-size: calc(80vw / 19 * 7.4);
+    line-height: calc((80vw / 19 * 7.4) - 20px);
+    text-align: justify;
+}
+
+.ux-ui-designer { 
+font-size: calc(80vw / 71 * 15.3);
+line-height: calc((80vw / 71 * 15.3) - 5px);
+white-space: nowrap;
+text-align: justify;
+}
+.web-designer { 
+font-size: calc(80vw/70 * 15.9);
+line-height: calc((80vw/70 * 15.9) - 5px);
+white-space: nowrap;
+text-align: justify;
+}
+.graphic-designer { 
+font-size: calc(80vw/70 * 12.2);
+line-height: calc((80vw/70 * 12.2) - 5px);
+white-space: nowrap;
+text-align: justify;
+}
+.motion-designer { 
+font-size: calc(80vw/70 * 13.1);
+line-height: calc((80vw/70 * 13.1) - 5px);
+white-space: nowrap;
+text-align: justify;
+}
+.wordpress-designer { 
+font-size: calc(80vw/70 * 10.5);
+line-height: calc((80vw/70 * 10.5) - 5px);
+white-space: nowrap;
+text-align: justify;
+}
+}
+@media (min-width: 660px) and (max-width:768px) {
+
+    .digital {
+        font-size: calc(70vw / 20 * 8.4);
+        line-height: calc((70vw / 20 * 8.4) - 20px);
+    }
+    .artist {
+        font-size: calc(70vw / 15.5 * 7.2);
+        line-height: calc((70vw / 15.5 * 7.2) - 20px);
+    }
+
+.ux-ui-designer { 
+    font-size: calc(80vw/70* 16);
+    line-height: calc((80vw/70 * 16) - 5px);
+    white-space: nowrap;
+    text-align: justify;
+}
+.web-designer { 
+    font-size: calc(80vw/70 * 16.8);
+    line-height: calc((80vw/70 * 16.8) - 5px);
+    white-space: nowrap;
+    text-align: justify;
+}
+.graphic-designer { 
+    font-size: calc(80vw/70 * 12.8);
+    line-height: calc((80vw/70 * 12.8) - 5px);
+    white-space: nowrap;
+    text-align: justify;
+}
+.motion-designer { 
+    font-size: calc(80vw/70 * 13.7);
+    line-height: calc((80vw/70 * 13.7) - 5px);
+    white-space: nowrap;
+    text-align: justify;
+}
+.wordpress-designer { 
+    font-size: calc(80vw/70 * 11);
+    line-height: calc((80vw/70 * 11) - 5px);
+    white-space: nowrap;
+    text-align: justify;
+}
+}
 @media (max-width: 768px) { /* Tablet and mobile view */
+    .title-container {
+        display: flex;
+        flex-direction: row;
+        max-width: 100vw;
+        margin: 30px 0px 0px 15px;
+    }
     .text-column-about{
         text-align: justify; /* Justifies the text */
         max-width:100%;
         width:100%;
     }
-    .digital {
-        font-size: calc(70vw / 20 * 7);
-        line-height: calc((70vw / 20 * 7) - 20px);
-    }
-    .artist {
-        font-size: calc(70vw / 15.5 * 6);
-        line-height: calc((70vw / 15.5 * 6) - 20px);
-    }
-
-.ux-ui-designer { 
-    font-size: calc(80vw/70* 13.3);
-    line-height: calc((80vw/70 * 13.3) - 5px);
-    white-space: nowrap;
-}
-.web-designer { 
-    font-size: calc(80vw/70 * 14);
-    line-height: calc((80vw/70 * 14) - 5px);
-    white-space: nowrap;
-}
-.graphic-designer { 
-    font-size: calc(80vw/70 * 10.75);
-    line-height: calc((80vw/70 * 10.75) - 5px);
-    white-space: nowrap;
-}
-.motion-designer { 
-    font-size: calc(80vw/70 * 11.5);
-    line-height: calc((80vw/70 * 11.5) - 5px);
-    white-space: nowrap;
-}
-.wordpress-designer { 
-    font-size: calc(80vw/70 * 9.18);
-    line-height: calc((80vw/70 * 9.18) - 5px);
-    white-space: nowrap;
-}
     .title-container {
         display: flex;
         flex-direction: row; /* Keep columns in a row */
@@ -174,8 +247,11 @@
     }
 }
 @media (min-width:769px) {
-.title-left-row,
+.title-left-row {
+    text-align: justify;
+}
 .title-right-row {
-    padding-right: 25px;
+    padding-left: 15px;
+    text-align: justify;
 }
 }
