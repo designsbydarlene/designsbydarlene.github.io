@@ -7,18 +7,22 @@
 }
 
 .title-left-column {
-    flex: 0 0 30%;
+    flex: 30%;
     /* 30% width on desktop and tablet */
     border-right: .5px solid var(--black);
     padding: 0px 30px 0px 0px;
+    box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+
 }
 
 .title-right-column {
-    flex: 0 0 calc(70% - 60px);
+    flex: 70%;
     /* 70% width on desktop and tablet */
     justify-content: center;
     text-align: end;
     padding: 0px 0px 0px 30px;
+    box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+
 }
 
 .text-column-about{
@@ -31,13 +35,12 @@
 }
 
 .title-right-row {
-    max-width: 100%;
     padding-bottom: 10px;
 }
 
 .digital {
     font-size: calc(30vw/19.5 * 7.5);
-    line-height: calc((30vw/20.4 * 7.5) - 20px);
+    line-height: calc((30vw/25.4 * 7.5) - 20px);
     text-align: right;
     letter-spacing: 1vw;
 }
@@ -48,33 +51,33 @@
     text-align: justify;
 }
 .ux-ui-designer { 
-    font-size: calc(56vw/82 * 9.28);
-    line-height: calc((56vw/82 * 9.28));
+    font-size: calc(63vw/82 * 9.28);
+    line-height: calc((60vw/82 * 9.28));
     white-space: nowrap;
     text-align: justify;
 }
 .web-designer { 
-    font-size: calc(56vw/82 * 9.28);
-    line-height: calc((56vw/82 * 9.28));
+    font-size: calc(63vw/82 * 9.28);
+    line-height: calc((60vw/82 * 9.28));
     white-space: nowrap;
     text-align: justify;
 }
 .graphic-designer { 
-    font-size: calc(56vw/82 * 9.28);
-    line-height: calc((56vw/82 * 9.28));
+    font-size: calc(63vw/82 * 9.28);
+    line-height: calc((60vw/82 * 9.28));
     white-space: nowrap;
     text-align: justify;
 }
 .motion-designer { 
-    font-size: calc(56vw/82 * 9.28);
-    line-height: calc((56vw/82 * 9.28));
+    font-size: calc(63vw/82 * 9.28);
+    line-height: calc((60vw/82 * 9.28));
     white-space: nowrap;
     text-align: justify;
 }
 .wordpress-designer { 
-    font-size: calc(56vw/82 * 9.28);
-    line-height: calc((56vw/82 * 9.28));
-    white-space: nowrap;
+    font-size: calc(63vw/82 * 9.28);
+    line-height: calc((60vw/82 * 9.28));
+    white-space: ;
     text-align: justify;
 }
 .title-image-border {
@@ -105,7 +108,6 @@
     /* For absolute positioning of image */
     overflow: hidden;
     /* Prevent overflow of image */
-    width: calc(100% - 65px);
 }
 /* Color overlay styling using ::before */
 .title-right-img::after {
@@ -147,7 +149,7 @@
 .title-image-aspect-ratio {
     max-width: 100%;
     /* 6:4 aspect ratio */
-    aspect-ratio: 6 / 11;
+    aspect-ratio: 6 / 10;
 
     object-fit: cover;
     /* Maintain aspect ratio and cover */
@@ -171,7 +173,7 @@
 .title-right-img {
     max-width: 100%;
     /* 6:4 aspect ratio */    
-    aspect-ratio: 6 / 9;
+    aspect-ratio: 6 / 8;
     object-fit: cover;
     border: 0.5px solid var(--black);
     /* Maintain aspect ratio and cover */
