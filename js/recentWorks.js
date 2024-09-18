@@ -89,11 +89,11 @@ const recentWorksHTML = `
         <div class="cat-column border-right">
             <a href="#">
                 <div class="image-container">
-                    <img src="./images/categories/web-thumbnail.webp" alt="Image description" class="scale-image">
+                    <img src="./images/categories/web-thumbnail-4.webp" alt="Image description" class="scale-image">
                 </div>
                 <div class="text-content">
-                    <h3 class="font-40">AMERICAN HOME APPLIANCE</h3>
-                    <p class="cat-p">New logo design, enhanced color scheme, improved user-experience.</p>
+                    <h3 class="font-40">PATRICK FURNITURE & MATTRESS</h3>
+                    <p>New contemporary style, color scheme, quality images.</p>
                 </div>
             </a>
         </div>
@@ -103,6 +103,17 @@ const recentWorksHTML = `
             <p>Drag or scroll to navigate.</p>
         </div>
         <div class="cat-column border-left">
+            <a href="#">
+                <div class="image-container">
+                    <img src="./images/categories/web-thumbnail.webp" alt="Image description" class="scale-image">
+                </div>
+                <div class="text-content">
+                    <h3 class="font-40">AMERICAN HOME APPLIANCE</h3>
+                    <p class="cat-p">New logo design, enhanced color scheme, improved user-experience.</p>
+                </div>
+            </a>
+        </div>
+        <div class="cat-column">
             <a href="#">
                 <div class="image-container">
                     <img src="./images/categories/web-thumbnail-2.webp" alt="Image description" class="scale-image">
@@ -121,17 +132,6 @@ const recentWorksHTML = `
                 <div class="text-content">
                     <h3 class="font-40">WESTON'S APPLIANCE</h3>
                     <p class="cat-p">Reimagining current website, improve usability, adding CTAs.</p>
-                </div>
-            </a>
-        </div>
-        <div class="cat-column">
-            <a href="#">
-                <div class="image-container">
-                    <img src="./images/categories/web-thumbnail-4.webp" alt="Image description" class="scale-image">
-                </div>
-                <div class="text-content">
-                    <h3 class="font-40">PATRICK FURNITURE & MATTRESS</h3>
-                    <p>New contemporary style, color scheme, quality images.</p>
                 </div>
             </a>
         </div>
