@@ -1,3 +1,22 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const titlePlaceholder = document.getElementById('recent-works-placeholder');
+
+    // Function to load title container content
+    const loadTitleContainers = async () => {
+        try {
+            // Load the second title container
+            let response2 = await fetch('./index/recent-works.html');
+            let content2 = await response2.text();
+            titlePlaceholder.insertAdjacentHTML('beforeend', content2);
+        } catch (error) {
+            console.error('Error loading title containers:', error);
+        }
+    };
+
+    // Call the function to load content
+    loadTitleContainers();
+});
+
 // Drag effect
 document.addEventListener('DOMContentLoaded', function() {
     const scrollContainer = document.querySelector('.cat-scroll-container');
@@ -75,68 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// HTML snippet to be dynamically loaded
-const recentWorksHTML = `
-    <!-- Recent Work -->
-    <div class="cat-scroll-container-header hide-desktop-tablet">
-        <div class="cat-column-mobile">
-            <h1 class="font-50">RECENT WORKS.</h1>
-            <p class="font-30">Latest design projects -- web, graphics, and more.</p>
-            <p>Drag or scroll to navigate.</p>
-        </div>
-    </div>
-    <div class="cat-scroll-container">
-        <div class="cat-column border-right">
-            <a href="#">
-                <div class="image-container">
-                    <img src="./images/categories/web-thumbnail-4.webp" alt="Image description" class="scale-image">
-                </div>
-                <div class="text-content">
-                    <h3 class="font-40">PATRICK FURNITURE & MATTRESS</h3>
-                    <p>New contemporary style, color scheme, quality images.</p>
-                </div>
-            </a>
-        </div>
-        <div class="cat-column-first hide-mobile mr-20">
-            <h1 class="font-50">RECENT WORKS.</h1>
-            <p class="font-30">Latest design projects -- web, graphics, and more.</p>
-            <p>Drag or scroll to navigate.</p>
-        </div>
-        <div class="cat-column border-left">
-            <a href="#">
-                <div class="image-container">
-                    <img src="./images/categories/web-thumbnail.webp" alt="Image description" class="scale-image">
-                </div>
-                <div class="text-content">
-                    <h3 class="font-40">AMERICAN HOME APPLIANCE</h3>
-                    <p class="cat-p">New logo design, enhanced color scheme, improved user-experience.</p>
-                </div>
-            </a>
-        </div>
-        <div class="cat-column">
-            <a href="#">
-                <div class="image-container">
-                    <img src="./images/categories/web-thumbnail-2.webp" alt="Image description" class="scale-image">
-                </div>
-                <div class="text-content">
-                    <h3 class="font-40">MATTRESS CITY</h3>
-                    <p class="cat-p">Establishing brand, new logo, custom icons, ease-of-use shopping experience.</p>
-                </div>
-            </a>
-        </div>
-        <div class="cat-column">
-            <a href="#">
-                <div class="image-container">
-                    <img src="./images/categories/web-thumbnail-3.webp" alt="Image description" class="scale-image">
-                </div>
-                <div class="text-content">
-                    <h3 class="font-40">WESTON'S APPLIANCE</h3>
-                    <p class="cat-p">Reimagining current website, improve usability, adding CTAs.</p>
-                </div>
-            </a>
-        </div>
-    </div>
-`;
+
 
 // Function to load the recent works into the container
 function loadRecentWorks() {

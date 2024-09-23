@@ -334,7 +334,7 @@
         line-height: calc((74vw / 70* 10.5));
         text-align: left;
         white-space: nowrap;
-        padding: 0px 0px 20px;
+        padding: 0px 0px 0px;
     }
 }
 
