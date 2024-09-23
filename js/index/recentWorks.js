@@ -1,35 +1,60 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const titlePlaceholder = document.getElementById('recent-works-placeholder');
+    const recentWorksPlaceholder = document.getElementById('recent-works-placeholder');
 
-    // Function to load title container content
-    const loadTitleContainers = async () => {
+    // Function to load recent works content and initialize drag functionality
+    const loadRecentWorks = async () => {
         try {
-            // Load the second title container
-            let response2 = await fetch('./index/recent-works.html');
-            let content2 = await response2.text();
-            titlePlaceholder.insertAdjacentHTML('beforeend', content2);
+            console.log('Loading recent works...');
+            let response = await fetch('./index/recent-works.html');
+            let content = await response.text();
+            recentWorksPlaceholder.insertAdjacentHTML('beforeend', content);
+            initDragFunctionality();
         } catch (error) {
-            console.error('Error loading title containers:', error);
+            console.error('Error loading recent works:', error);
         }
     };
 
-    // Call the function to load content
-    loadTitleContainers();
-});
+    // Function to initialize drag functionality
+    const initDragFunctionality = () => {
+        const scrollContainer = recentWorksPlaceholder.querySelector('.cat-scroll-container');
+        if (!scrollContainer) {
+            console.error('Scroll container not found!');
+            return;
+        }
+        console.log('Scroll container found:', scrollContainer);
 
-// Drag effect
-document.addEventListener('DOMContentLoaded', function() {
-    const scrollContainer = document.querySelector('.cat-scroll-container');
-
-    if (scrollContainer) {
-        // Variables for drag functionality
         let startX, isDragging = false;
 
-        // Touch dragging for mobile
+        // Mouse drag functionality
+        scrollContainer.addEventListener('mousedown', (event) => {
+            startX = event.clientX;
+            isDragging = true;
+            scrollContainer.style.cursor = 'grabbing';
+            event.preventDefault(); // Prevent text selection and other behaviors
+        });
+
+        scrollContainer.addEventListener('mousemove', (event) => {
+            if (!isDragging) return;
+            const distanceX = startX - event.clientX;
+            scrollContainer.scrollLeft += distanceX;
+            startX = event.clientX;
+        });
+
+        scrollContainer.addEventListener('mouseup', () => {
+            isDragging = false;
+            scrollContainer.style.cursor = 'grab';
+        });
+
+        scrollContainer.addEventListener('mouseleave', () => {
+            isDragging = false;
+            scrollContainer.style.cursor = 'grab';
+        });
+
+        // Touch drag functionality for mobile
         scrollContainer.addEventListener('touchstart', (event) => {
             startX = event.touches[0].clientX;
-            isDragging = true; // Start dragging
-        });
+            isDragging = true;
+        }, { passive: true });
 
         scrollContainer.addEventListener('touchmove', (event) => {
             if (!isDragging) return;
@@ -37,70 +62,18 @@ document.addEventListener('DOMContentLoaded', function() {
             const distanceX = startX - touch.clientX;
             scrollContainer.scrollLeft += distanceX;
             startX = touch.clientX;
-        });
+            event.preventDefault(); // Prevent scrolling the page during touch drag
+        }, { passive: false });
 
         scrollContainer.addEventListener('touchend', () => {
-            isDragging = false; // End dragging
+            isDragging = false;
         });
-
-        // Mouse drag scrolling for desktop
-        let mouseStartX;
-
-        scrollContainer.addEventListener('mousedown', (event) => {
-            mouseStartX = event.clientX;
-            isDragging = true; // Start dragging
-            scrollContainer.style.cursor = 'grabbing'; // Change cursor to grabbing
-        });
-
-        scrollContainer.addEventListener('mousemove', (event) => {
-            if (!isDragging) return; // Prevent dragging if not clicked
-            const distanceX = mouseStartX - event.clientX;
-            scrollContainer.scrollLeft += distanceX;
-            mouseStartX = event.clientX;
-        });
-
-        scrollContainer.addEventListener('mouseup', () => {
-            isDragging = false; // End dragging
-            scrollContainer.style.cursor = 'grab'; // Change cursor back
-        });
-
-        scrollContainer.addEventListener('mouseleave', () => {
-            isDragging = false; // End dragging if mouse leaves the container
-            scrollContainer.style.cursor = 'grab'; // Change cursor back
-        });
-
+        
         // Prevent text selection during drag
         scrollContainer.addEventListener('dragstart', (event) => {
             event.preventDefault();
         });
+    };
 
-        // Set cursor style for better UX
-        scrollContainer.style.cursor = 'grab';
-    }
+    loadRecentWorks();
 });
-
-// Image hover effect
-document.addEventListener('DOMContentLoaded', function () {
-    const images = document.querySelectorAll('.cat-image');
-
-    images.forEach(image => {
-        image.addEventListener('mouseenter', function () {
-            image.style.transform = 'scale(1.1)'; // Scale the image up
-        });
-
-        image.addEventListener('mouseleave', function () {
-            image.style.transform = 'scale(1)'; // Scale the image back down
-        });
-    });
-});
-
-
-
-// Function to load the recent works into the container
-function loadRecentWorks() {
-    const container = document.getElementById('recent-works-container');
-    container.innerHTML = recentWorksHTML; // Set the HTML of the container
-}
-
-// Call the function to load recent works
-loadRecentWorks();
