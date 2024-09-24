@@ -900,22 +900,23 @@
     }
 
     .text-container p {
-        font-size: 24px; /* Adjust the text size */
+        font-size: 50px; /* Adjust the text size */
         color: #000;
         z-index: 1; /* Make sure the text stays above the GIF */
     }
 
     .overlay-gif {
-        position: absolute;
-        top: -30px; /* Adjust as needed */
-        left: -65px; /* Adjust as needed */
-        width: 400px; /* Adjust as needed */
-        height: 100px; /* Adjust as needed */
-        opacity: 0; /* Hide the GIF initially */
-        z-index: 10; /* Place the GIF above the text */
-        pointer-events: none; /* Ensure the text is still clickable if necessary */
+        position: absolute;          /* Position the GIF absolutely */
+        top: 0;                     /* Align to the top of the text container */
+        left: 0;                    /* Align to the left of the text container */
+        width: 100%;                /* Make the width 100% of the text container */
+        height: 100%;               /* Make the height 100% of the text container */
+        opacity: 0;                 /* Hide the GIF initially */
+        z-index: 10;                /* Place the GIF above the text */
+        pointer-events: none;       /* Ensure the text is still clickable if necessary */
         transition: opacity 0.3s ease; /* Smooth transition */
     }
+    
 
     .text-container {
         position: relative; /* Ensure the container positions children correctly */
