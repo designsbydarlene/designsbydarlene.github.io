@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover to See GIF</title>
+    <style>
+        .text-container {
+            height: 100px;
+            position: relative;
+            display: inline-block; /* Keeps the container size relative to the content */
+        }
+
+        .text-container p {
+            font-size: 24px; /* Adjust the text size */
+            color: #000;
+            z-index: 1; /* Make sure the text stays above the GIF */
+        }
+
+        .overlay-gif {
+            position: absolute;
+            top: -30px; /* Adjust as needed */
+            left: -65px; /* Adjust as needed */
+            width: 400px; /* Adjust as needed */
+            height: 100px; /* Adjust as needed */
+            opacity: 0; /* Hide the GIF initially */
+            z-index: 2; /* Place the GIF above the text */
+            pointer-events: none; /* Ensure the text is still clickable if necessary */
+            transition: opacity 0.3s ease; /* Smooth transition */
+        }
+
+        .text-container:hover .overlay-gif {
+            opacity: 1; /* Show the GIF when hovering over the text */
+        }
+    </style>
+</head>
+<body>
+    <div class="text-container">
+        <p>Hover over this text to see the GIF!</p>
+        <img id="overlay-gif" class="overlay-gif" src="./../../images/circle.gif" alt="GIF">
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const gifElement = document.getElementById('overlay-gif');
+
+            // Check if gifElement exists
+            if (!gifElement) {
+                console.error('GIF element not found!'); // Log the error if not found
+                return; // Exit if the element is not found
+            }
+
+            const gifSrc = './../../images/circle.gif'; // Your GIF URL
+
+            // Reset the GIF source to ensure it reloads each time it hovers
+            gifElement.addEventListener('mouseenter', function() {
+                gifElement.src = gifSrc + '?t=' + new Date().getTime(); // Append a timestamp to force reload
+            });
+
+            gifElement.addEventListener('mouseleave', function() {
+                gifElement.style.opacity = 0; // Hide the GIF when the mouse leaves
+            });
+
+            // Show the GIF when mouse enters the text container
+            const textContainer = document.querySelector('.text-container');
+            textContainer.addEventListener('mouseenter', function() {
+                gifElement.style.opacity = 1; // Show the GIF when hovering over the text
+            });
+
+            // Hide the GIF when mouse leaves the text container
+            textContainer.addEventListener('mouseleave', function() {
+                gifElement.style.opacity = 0; // Hide the GIF when the mouse leaves
+            });
+        });
+    </script>
+</body>
+</html>

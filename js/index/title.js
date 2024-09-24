@@ -8,25 +8,31 @@ document.addEventListener('DOMContentLoaded', () => {
             let response2 = await fetch('./index/title.html');
             let content2 = await response2.text();
             titlePlaceholder.insertAdjacentHTML('beforeend', content2);
+
+            // Call the function to attach hover events after content has been loaded
+            attachHoverEvents();
         } catch (error) {
             console.error('Error loading title containers:', error);
         }
     };
 
+    const attachHoverEvents = () => {
+        const textContainer = document.querySelector('.text-container');
+        const gifElement = document.getElementById('overlay-gif');
+        const gifSrc = 'https://designsbydarlene.github.io/images/circle.gif'; // Your GIF URL
+
+        if (textContainer && gifElement) {
+            textContainer.addEventListener('mouseenter', function() {
+                gifElement.src = gifSrc + '?t=' + new Date().getTime(); // Reload GIF with a unique URL
+                gifElement.style.display = 'block'; // Show the GIF
+            });
+
+            textContainer.addEventListener('mouseleave', function() {
+                gifElement.style.display = 'none'; // Hide the GIF
+            });
+        }
+    };
+
     // Call the function to load content
     loadTitleContainers();
-});
-document.addEventListener('DOMContentLoaded', function() {
-    const gifElement = document.getElementById('hover-gif');
-    
-    gifElement.addEventListener('mouseenter', function() {
-        const currentSrc = 'https://designsbydarlene.github.io/images/circle.gif'; // Your original GIF source
-        const newSrc = currentSrc + '?t=' + new Date().getTime(); // Append a timestamp to force reload
-
-        // Set the src to a unique URL to reload the GIF
-        gifElement.src = ''; // Clear the src to reset the GIF
-        setTimeout(() => {
-            gifElement.src = newSrc; // Set the new source with a timestamp
-        }, 100); // Short delay to ensure the clear takes effect
-    });
 });

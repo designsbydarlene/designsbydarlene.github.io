@@ -894,30 +894,32 @@
     }
     
     .text-container {
-        height:100px;
+        height: 100px;
         position: relative;
         display: inline-block; /* Keeps the container size relative to the content */
     }
-    
+
     .text-container p {
         font-size: 24px; /* Adjust the text size */
         color: #000;
         z-index: 1; /* Make sure the text stays above the GIF */
     }
-    
+
     .overlay-gif {
         position: absolute;
-        top: -30px;
-        left: -65px;
-        width: 400px;
-        height: 100px;
+        top: -30px; /* Adjust as needed */
+        left: -65px; /* Adjust as needed */
+        width: 400px; /* Adjust as needed */
+        height: 100px; /* Adjust as needed */
         opacity: 0; /* Hide the GIF initially */
-        z-index: 2; /* Place the GIF above the text */
+        z-index: 10; /* Place the GIF above the text */
         pointer-events: none; /* Ensure the text is still clickable if necessary */
         transition: opacity 0.3s ease; /* Smooth transition */
     }
-    
+
+    .text-container {
+        position: relative; /* Ensure the container positions children correctly */
+    }
     .text-container:hover .overlay-gif {
         opacity: 1; /* Show the GIF when hovering over the text */
     }
-    
