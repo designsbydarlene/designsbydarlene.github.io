@@ -1,5 +1,8 @@
 /*******************************************
 *************** Categories ****************/
+:root {
+--bg-image-categories: url('../../images/bg-image.jpg');
+}
 .categories-row {
     display: flex;
     justify-content: space-between; /* Space out items evenly */
@@ -35,7 +38,9 @@
     transform: scaleY(2);
     font-size: 50px; /* Adjust font size as needed */
     color: transparent; /* Make text transparent */
-    background: url('https://images.unsplash.com/photo-1616410731303-6affae095a0a?q=80&w=1402&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center; /* Use background of the body */
+    background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), var(--bg-image-categories);
+    background-repeat: no-repeat;
+    background-position: center; /* Use background of the body */
     background-size: cover; /* Cover the text */
     -webkit-background-clip: text; /* For Safari */
     background-clip: text; /* Standard */
@@ -57,7 +62,9 @@
     transform: scaleY(1);
     font-size: 50px; /* Adjust font size as needed */
     color: transparent; /* Make text transparent */
-    background: url('https://images.unsplash.com/photo-1616410731303-6affae095a0a?q=80&w=1402&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center; /* Use background of the body */
+    background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), var(--bg-image-categories);
+    background-repeat: no-repeat;
+    background-position: center; /* Use background of the body */
     background-size: cover; /* Cover the text */
     -webkit-background-clip: text; /* For Safari */
     background-clip: text; /* Standard */

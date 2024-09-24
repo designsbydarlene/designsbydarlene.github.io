@@ -16,3 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Call the function to load content
     loadTitleContainers();
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const gifElement = document.getElementById('hover-gif');
+    
+    gifElement.addEventListener('mouseenter', function() {
+        const currentSrc = '../images/circle.gif'; // Your original GIF source
+        const newSrc = currentSrc + '?t=' + new Date().getTime(); // Append a timestamp to force reload
+        gifElement.src = newSrc; // Reset the src with a unique URL to reload the GIF
+    });
+});

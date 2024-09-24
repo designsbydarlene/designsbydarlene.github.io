@@ -1,73 +1,108 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&Playfair+Display:ital,wght@0,400..900;1,400..900');
+
 @font-face {
     font-family: 'Picaflor';
     src: url('../font/Picaflor-48pt.woff2') format('woff2'),
-         url('../font/Picaflor-48pt.woff') format('woff');
-    font-weight: 900; /* Bold weight */
+        url('../font/Picaflor-48pt.woff') format('woff');
+    font-weight: 900;
+    /* Bold weight */
     font-style: normal;
 }
+
 @font-face {
     font-family: 'Picaflor-36';
     src: url('../font/Picaflor-24pt.woff2') format('woff2'),
-         url('../font/Picaflor-24pt.woff') format('woff');
-    font-weight: 900; /* Bold weight */
+        url('../font/Picaflor-24pt.woff') format('woff');
+    font-weight: 900;
+    /* Bold weight */
     font-style: normal;
-}@font-face {
+}
+
+@font-face {
     font-family: 'Instrument';
     src: url('../font/InstrumentSerif-Regular.ttf') format('ttf'),
-         url('../font/InstrumentSerif-Regular.woff') format('woff'),
-         url('../font/InstrumentSerif-Regular.woff2') format('woff2');
-    font-weight: 400; /* Bold weight */
+        url('../font/InstrumentSerif-Regular.woff') format('woff'),
+        url('../font/InstrumentSerif-Regular.woff2') format('woff2');
+    font-weight: 400;
+    /* Bold weight */
     font-style: normal;
-}@font-face {
+}
+
+@font-face {
     font-family: 'Aostora';
     src: url('../font/BalenySerifFree-Regular.woff') format('woff'),
-         url('../font/BalenySerifFree-Regular.woff2') format('woff2');
-    font-weight: 400; /* Bold weight */
+        url('../font/BalenySerifFree-Regular.woff2') format('woff2');
+    font-weight: 400;
+    /* Bold weight */
     font-style: normal;
 }
 
 :root {
-    --primary: #cac8c6; /* neutral brown */
-    --darkgray: #333333; /* dark gray */
-    --black: #202020; /* dark gray */
---midgray: #454545; /* light gray */
---lightgray: #666666; /* light gray */
---lightergray: #999999; /* light gray */
+    --primary: #cac8c6;
+    /* neutral brown */
+    --darkgray: #333333;
+    /* dark gray */
+    --black: #202020;
+    /* dark gray */
+    --midgray: #454545;
+    /* light gray */
+    --lightgray: #666666;
+    /* light gray */
+    --lightergray: #999999;
+    /* light gray */
+    --bg-image: url('../images/bg-image.jpg');
+    --overlay-color: rgba(183, 177, 171, 0.666);
 }
+
 body {
     font-family: 'Instrument', serif;
     color: var(--black);
-    margin: 0; /* Reset default margin */
-    overflow-x: hidden; /* Prevent horizontal scroll on mobile */
+    margin: 0;
+    /* Reset default margin */
+    overflow-x: hidden;
+    /* Prevent horizontal scroll on mobile */
 }
 
 body::before {
     content: '';
-    position: fixed; /* Change to fixed to ensure it covers the viewport during scroll */
+    position: fixed;
+    /* Change to fixed to ensure it covers the viewport during scroll */
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('https://images.unsplash.com/photo-1616410731303-6affae095a0a?q=80&w=1402&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Add your image path here */
-    background-size: cover; /* Ensure the image covers the entire area */
-    background-repeat: no-repeat; /* Prevent repeating */
-    background-position: center; /* Center the image */
-    z-index: -12; /* Place it behind the content */
+    background-image: var(--bg-image);
+    /* Add your image path here */
+    background-size: cover;
+    /* Ensure the image covers the entire area */
+    background-repeat: no-repeat;
+    /* Prevent repeating */
+    background-position: center;
+    /* Center the image */
+    z-index: -12;
+    /* Place it behind the content */
 }
 
 body::after {
     content: '';
-    position: fixed; /* Change to fixed for full viewport coverage */
+    position: fixed;
+    /* Change to fixed for full viewport coverage */
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(183, 177, 171, 0.666); /* Change to desired overlay color with 0.5 opacity */
-    z-index: -11; /* Place it behind the content */
+    background-color: var(--overlay-color);
+    /* Change to desired overlay color with 0.5 opacity */
+    z-index: -11;
+    /* Place it behind the content */
 }
 
-h1, h2, h3, h3, h5, h6 {
+h1,
+h2,
+h3,
+h3,
+h5,
+h6 {
     font-family: "Aostora", serif;
     text-transform: uppercase;
     font-weight: 900;
@@ -78,19 +113,22 @@ h1, h2, h3, h3, h5, h6 {
 
 @media (max-width: 768px) {
     .hide-mobile {
-        display: none; /* Or flex/inline depending on the context */
+        display: none;
+        /* Or flex/inline depending on the context */
     }
 }
 
 /* Hide on tablet (min-width: 768px and max-width: 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
     .hide-tablet {
-        display: none; /* Or flex/inline depending on the context */
+        display: none;
+        /* Or flex/inline depending on the context */
     }
 }
 
 @media (min-width: 1025px) {
     .hide-desktop {
-        display: none; /* Or flex/inline depending on the context */
+        display: none;
+        /* Or flex/inline depending on the context */
     }
 }

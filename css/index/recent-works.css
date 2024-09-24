@@ -1,7 +1,10 @@
 
 /*******************************************
 ************** Recent Works ****************/
-
+:root {
+    --bg-image: url('../../images/bg-image.jpg');
+}
+.pr { padding-right:20px;}
 /* Container styling */
 .cat-scroll-container {
     margin: 30px;
@@ -108,7 +111,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('https://images.unsplash.com/photo-1616410731303-6affae095a0a?q=80&w=1402&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-image: var(--bg-image);
     background-size: cover;
     /* Ensure the overlay image covers the entire container */
     background-position: center;
@@ -178,6 +181,14 @@
             margin-right: 40px;
             padding: 0px 20px;
         }
+        .cat-column.special {       
+             flex: 0 0 calc(33% - 20px);
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+            margin-right: 40px;
+            padding: 0px 20px 0px 20px;
+            }
     .cat-column {
         flex: 0 0 calc(33% - 40px);
         /* 3 columns on desktop */
@@ -234,8 +245,9 @@
 
 @media (min-width: 769px) and (max-width: 1200px) { /* Tablet, Small Desktop */
     .cat-column-first {
-        margin: auto 40px auto 0px;
+        margin: auto 20px auto;
         text-align: center;
+        padding:0;
         justify-content: center;
     }
     .font-50 {
@@ -261,12 +273,6 @@
         /* Space between columns */
         margin-bottom: 20px;
         /* Space below columns */
-    }
-
-    .cat-column-first {
-        flex: 0 0 33%;
-        margin: auto 0;
-        padding: 0px 20px;
     }
     .cat-column-custom {
         flex: 0 0 calc(33% - 20px);
@@ -325,3 +331,22 @@
     }
 }
 
+.cat-column-last {
+    padding: 0px 20px;
+    min-width: 355px;
+    margin: auto 0;
+    justify-content: center;
+    text-align: center;
+}
+
+.cat-column-special-border-right {     
+    
+
+    margin-bottom: 2px;
+    width: fit-content;
+    border-right: .5px solid var(--darkgray);
+   box-sizing: border-box;
+   position: relative;
+   overflow: hidden;
+   padding: 0px 10px 0px 10px;
+   }

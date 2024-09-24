@@ -1,3 +1,6 @@
+:root {
+    --bg-image: url('../../images/bg-image.jpg');
+}
 .title-container {
     display: flex;
     flex-direction: row;
@@ -168,7 +171,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('https://images.unsplash.com/photo-1616410731303-6affae095a0a?q=80&w=1402&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-image: var(--bg-image);
     background-size: cover;
     /* Ensure the overlay image covers the entire container */
     background-position: center;
@@ -210,7 +213,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('https://images.unsplash.com/photo-1616410731303-6affae095a0a?q=80&w=1402&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-image: var(--bg-image);
     background-size: cover;
     background-position: center;
     opacity: 0.1;
@@ -514,8 +517,10 @@
             /* Transparent text color */
             background-color: var(--black);
             /* Ensure the background color is black */
-            background: url('https://images.unsplash.com/photo-1616410731303-6affae095a0a?q=80&w=1402&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center;
-            background-size: cover;
+ background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), var(--bg-image-categories);
+    background-repeat: no-repeat;
+    background-position: center; /* Use background of the body */
+              background-size: cover;
             -webkit-background-clip: text;
             background-clip: text;
             margin-right: ;
@@ -538,8 +543,11 @@
             /* Transparent text color */
             background-color: var(--black);
             /* Ensure the background color is black */
-            background: url('https://images.unsplash.com/photo-1616410731303-6affae095a0a?q=80&w=1402&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center;
-            background-size: cover;
+
+ background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), var(--bg-image-categories);
+    background-repeat: no-repeat;
+    background-position: center; /* Use background of the body */
+                          background-size: cover;
             -webkit-background-clip: text;
             background-clip: text;
             margin-right: ;
@@ -608,8 +616,11 @@
             /* Transparent text color */
             background-color: var(--black);
             /* Ensure the background color is black */
-            background: url('https://images.unsplash.com/photo-1616410731303-6affae095a0a?q=80&w=1402&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center;
-            background-size: cover;
+
+ background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), var(--bg-image-categories);
+    background-repeat: no-repeat;
+    background-position: center; /* Use background of the body */
+                          background-size: cover;
             -webkit-background-clip: text;
             background-clip: text;
             margin-right: ;
@@ -644,8 +655,11 @@
             /* Transparent text color */
             background-color: var(--black);
             /* Ensure the background color is black */
-            background: url('https://images.unsplash.com/photo-1616410731303-6affae095a0a?q=80&w=1402&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center;
-            background-size: cover;
+
+ background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), var(--bg-image-categories);
+    background-repeat: no-repeat;
+    background-position: center; /* Use background of the body */
+                          background-size: cover;
             -webkit-background-clip: text;
             background-clip: text;
             margin-right: ;
@@ -680,8 +694,11 @@
             /* Transparent text color */
             background-color: var(--black);
             /* Ensure the background color is black */
-            background: url('https://images.unsplash.com/photo-1616410731303-6affae095a0a?q=80&w=1402&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center;
-            background-size: cover;
+
+ background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), var(--bg-image-categories);
+    background-repeat: no-repeat;
+    background-position: center; /* Use background of the body */
+                          background-size: cover;
             -webkit-background-clip: text;
             background-clip: text;
             margin-right: ;
@@ -716,8 +733,11 @@
             /* Transparent text color */
             background-color: var(--black);
             /* Ensure the background color is black */
-            background: url('https://images.unsplash.com/photo-1616410731303-6affae095a0a?q=80&w=1402&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center;
-            background-size: cover;
+
+ background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), var(--bg-image-categories);
+    background-repeat: no-repeat;
+    background-position: center; /* Use background of the body */
+                          background-size: cover;
             -webkit-background-clip: text;
             background-clip: text;
             margin-right: ;
@@ -748,8 +768,11 @@
             /* Transparent text color */
             background-color: var(--black);
             /* Ensure the background color is black */
-            background: url('https://images.unsplash.com/photo-1616410731303-6affae095a0a?q=80&w=1402&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center;
-            background-size: cover;
+
+ background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), var(--bg-image-categories);
+    background-repeat: no-repeat;
+    background-position: center; /* Use background of the body */
+                          background-size: cover;
             -webkit-background-clip: text;
             background-clip: text;
             margin-right: ;
@@ -780,8 +803,11 @@
             /* Transparent text color */
             background-color: var(--black);
             /* Ensure the background color is black */
-            background: url('https://images.unsplash.com/photo-1616410731303-6affae095a0a?q=80&w=1402&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center;
-            background-size: cover;
+
+ background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), var(--bg-image-categories);
+    background-repeat: no-repeat;
+    background-position: center; /* Use background of the body */
+                          background-size: cover;
             -webkit-background-clip: text;
             background-clip: text;
             margin-right: ;
@@ -812,8 +838,11 @@
             /* Transparent text color */
             background-color: var(--black);
             /* Ensure the background color is black */
-            background: url('https://images.unsplash.com/photo-1616410731303-6affae095a0a?q=80&w=1402&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center;
-            background-size: cover;
+
+ background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), var(--bg-image-categories);
+    background-repeat: no-repeat;
+    background-position: center; /* Use background of the body */
+              background-size: cover;
             -webkit-background-clip: text;
             background-clip: text;
             margin-right: ;
@@ -863,3 +892,32 @@
             padding-left: 60px;
         }
     }
+    
+    .text-container {
+        height:100px;
+        position: relative;
+        display: inline-block; /* Keeps the container size relative to the content */
+    }
+    
+    .text-container p {
+        font-size: 24px; /* Adjust the text size */
+        color: #000;
+        z-index: 1; /* Make sure the text stays above the GIF */
+    }
+    
+    .overlay-gif {
+        position: absolute;
+        top: -30px;
+        left: -65px;
+        width: 400px;
+        height: 100px;
+        opacity: 0; /* Hide the GIF initially */
+        z-index: 2; /* Place the GIF above the text */
+        pointer-events: none; /* Ensure the text is still clickable if necessary */
+        transition: opacity 0.3s ease; /* Smooth transition */
+    }
+    
+    .text-container:hover .overlay-gif {
+        opacity: 1; /* Show the GIF when hovering over the text */
+    }
+    
