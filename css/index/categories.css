@@ -1,7 +1,7 @@
 /*******************************************
 *************** Categories ****************/
 :root {
---bg-image-categories: url('../../images/bg-image.jpg');
+--bg-image-categories: url('./../../images/bg-image.jpg');
 }
 .categories-row {
     display: flex;

@@ -1,4 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const textContainers = document.querySelectorAll('.text-container-recent');
+    const gifSrc = 'https://designsbydarlene.github.io/images/circle.gif'; // Your GIF URL
+
+    // Loop through all text containers and attach hover events
+    textContainers.forEach((textContainer) => {
+        const gifElement = textContainer.querySelector('.overlay-gif-recent');
+        if (gifElement) {
+            textContainer.addEventListener('mouseenter', function() {
+                // Clear the src briefly to force reload
+                gifElement.style.display = 'block'; // Show the GIF
+                gifElement.src = ''; // Temporarily clear the src
+                setTimeout(() => {
+                    gifElement.src = gifSrc + '?t=' + new Date().getTime(); // Reload GIF with a unique URL
+                }, 50); // Brief delay before resetting the src
+            });
+
+            textContainer.addEventListener('mouseleave', function() {
+                gifElement.style.display = 'none'; // Hide the GIF
+            });
+        }
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
     const recentWorksPlaceholder = document.getElementById('recent-works-placeholder');
 
     // Function to load recent works content and initialize drag functionality
@@ -76,23 +101,4 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     loadRecentWorks();
-});
-document.addEventListener('DOMContentLoaded', () => {
-    const textContainers = document.querySelectorAll('.text-container');
-    const gifSrc = 'https://designsbydarlene.github.io/images/circle-2.gif'; // Your GIF URL
-
-    // Loop through all text containers and attach hover events
-    textContainers.forEach((textContainer) => {
-        const gifElement = textContainer.querySelector('.overlay-gif');
-        if (gifElement) {
-            textContainer.addEventListener('mouseenter', function() {
-                gifElement.src = gifSrc + '?t=' + new Date().getTime(); // Reload GIF with a unique URL
-                gifElement.style.display = 'block'; // Show the GIF
-            });
-
-            textContainer.addEventListener('mouseleave', function() {
-                gifElement.style.display = 'none'; // Hide the GIF
-            });
-        }
-    });
 });

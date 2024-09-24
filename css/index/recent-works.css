@@ -1,9 +1,6 @@
 
 /*******************************************
 ************** Recent Works ****************/
-:root {
-    --bg-image: url('../../images/bg-image.jpg');
-}
 .pr { padding-right:20px;}
 /* Container styling */
 .cat-scroll-container {
@@ -111,7 +108,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: var(--bg-image);
+    background-image: url('../../images/bg-image.jpg');
     background-size: cover;
     /* Ensure the overlay image covers the entire container */
     background-position: center;
@@ -168,7 +165,7 @@
         box-sizing: border-box;
         position: relative;
         overflow: hidden;
-        margin: auto 20px auto 0px;
+        margin: auto 10px auto 10px;
         text-align: center;
         justify-content: center;
         padding: 0px 10px;
@@ -178,8 +175,8 @@
             box-sizing: border-box;
             position: relative;
             overflow: hidden;
-            margin-right: 40px;
-            padding: 0px 20px;
+            margin: 0;
+            padding: 0px 20px 0px 0px;
         }
         .cat-column.special {       
              flex: 0 0 calc(33% - 20px);
@@ -356,7 +353,7 @@
     /* Ensure the container positions children correctly */
 }
 
-.text-container-recent:hover .overlay-gif {
+.text-container-recent:hover .overlay-gif-recent {
     opacity: 1;
     /* Show the GIF when hovering over the text */
 }
@@ -388,11 +385,11 @@
     display: inline-block;
     float: left;
     /* Float the large letter to the left */
-    font-family: 'Picaflor-36', serif;
+    font-family: 'Baleny', serif;
 }
 
 
-.text-container {
+.text-container-recent {
     padding: 0px 0px 20px 0px;
     text-align: center;
     height: auto;
@@ -401,13 +398,13 @@
     /* Keeps the container size relative to the content */
 }
 
-.text-container p {
+.text-container-recent p {
     /* Adjust the text size */
     z-index: 1;
     /* Make sure the text stays above the GIF */
 }
 
-.overlay-gif {
+.overlay-gif-recent {
     position: absolute;
     /* Position the GIF absolutely */
     top: -50px !important;
