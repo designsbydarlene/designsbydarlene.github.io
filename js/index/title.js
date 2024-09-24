@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const attachHoverEvents = () => {
         const textContainer = document.querySelector('.text-container');
         const gifElement = document.getElementById('overlay-gif');
-        const gifSrc = 'https://designsbydarlene.github.io/images/circle.gif'; // Your GIF URL
+        const gifSrc = 'https://designsbydarlene.github.io/images/circle-2.gif'; // Your GIF URL
 
         if (textContainer && gifElement) {
             textContainer.addEventListener('mouseenter', function() {

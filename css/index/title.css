@@ -894,23 +894,23 @@
     }
     
     .text-container {
-        height: 100px;
+        text-align: center;
+        height: 150px;
         position: relative;
         display: inline-block; /* Keeps the container size relative to the content */
     }
 
     .text-container p {
-        font-size: 50px; /* Adjust the text size */
-        color: #000;
+        font-size: 24px; /* Adjust the text size */
         z-index: 1; /* Make sure the text stays above the GIF */
     }
 
     .overlay-gif {
         position: absolute;          /* Position the GIF absolutely */
-        top: -10px;
-        left: -20px;
-        width: calc(100% + 20px);
-        height: calc(100% + 20px);
+        top: -20px;
+        left: -40px;
+        width: calc(100% + 80px);
+        height: calc(100% + 10px);
         opacity: 0;                 /* Hide the GIF initially */
         z-index: 10;                /* Place the GIF above the text */
         pointer-events: none;       /* Ensure the text is still clickable if necessary */
@@ -923,4 +923,31 @@
     }
     .text-container:hover .overlay-gif {
         opacity: 1; /* Show the GIF when hovering over the text */
+    }
+
+    .letter.custom { margin: 0;}
+
+    .cutout-letter-custom {
+        font-size: 60px;
+        /* Large H1-sized font */
+        line-height: .8;
+        /* Allow the letter to span multiple lines */
+        color: transparent;
+        /* Transparent text color */
+        background-color: var(--black);
+        /* Ensure the background color is black */
+
+background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), var(--bg-image-categories);
+background-repeat: no-repeat;
+background-position: center; /* Use background of the body */
+                      background-size: cover;
+        -webkit-background-clip: text;
+        background-clip: text;
+        margin-right: ;
+        /* Space between the letter and the rest of the text */
+        padding: 5px 10px 10px;
+        display: inline-block;
+        float: left;
+        /* Float the large letter to the left */
+        font-family: 'Picaflor-36', serif;
     }
