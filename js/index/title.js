@@ -17,20 +17,23 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const attachHoverEvents = () => {
-        const textContainer = document.querySelector('.text-container');
-        const gifElement = document.getElementById('overlay-gif');
+        const textContainers = document.querySelectorAll('.text-container');
         const gifSrc = 'https://designsbydarlene.github.io/images/circle-2.gif'; // Your GIF URL
 
-        if (textContainer && gifElement) {
-            textContainer.addEventListener('mouseenter', function() {
-                gifElement.src = gifSrc + '?t=' + new Date().getTime(); // Reload GIF with a unique URL
-                gifElement.style.display = 'block'; // Show the GIF
-            });
+        // Loop through all text containers and attach hover events
+        textContainers.forEach((textContainer) => {
+            const gifElement = textContainer.querySelector('.overlay-gif');
+            if (gifElement) {
+                textContainer.addEventListener('mouseenter', function() {
+                    gifElement.src = gifSrc + '?t=' + new Date().getTime(); // Reload GIF with a unique URL
+                    gifElement.style.display = 'block'; // Show the GIF
+                });
 
-            textContainer.addEventListener('mouseleave', function() {
-                gifElement.style.display = 'none'; // Hide the GIF
-            });
-        }
+                textContainer.addEventListener('mouseleave', function() {
+                    gifElement.style.display = 'none'; // Hide the GIF
+                });
+            }
+        });
     };
 
     // Call the function to load content

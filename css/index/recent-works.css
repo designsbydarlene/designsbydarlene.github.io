@@ -339,9 +339,7 @@
     text-align: center;
 }
 
-.cat-column-special-border-right {     
-    
-
+.cat-column-special-border-right {    
     margin-bottom: 2px;
     width: fit-content;
     border-right: .5px solid var(--darkgray);
@@ -350,3 +348,87 @@
    overflow: hidden;
    padding: 0px 10px 0px 10px;
    }
+
+
+
+.text-container-recent {
+    position: relative;
+    /* Ensure the container positions children correctly */
+}
+
+.text-container-recent:hover .overlay-gif {
+    opacity: 1;
+    /* Show the GIF when hovering over the text */
+}
+
+.letter.custom {
+    margin: 0;
+}
+
+.cutout-letter-custom {
+    font-size: 60px;
+    /* Large H1-sized font */
+    line-height: .8;
+    /* Allow the letter to span multiple lines */
+    color: transparent;
+    /* Transparent text color */
+    background-color: var(--black);
+    /* Ensure the background color is black */
+
+    background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), var(--bg-image-categories);
+    background-repeat: no-repeat;
+    background-position: center;
+    /* Use background of the body */
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin-right: ;
+    /* Space between the letter and the rest of the text */
+    padding: 5px 10px 10px;
+    display: inline-block;
+    float: left;
+    /* Float the large letter to the left */
+    font-family: 'Picaflor-36', serif;
+}
+
+
+.text-container {
+    padding: 0px 0px 20px 0px;
+    text-align: center;
+    height: auto;
+    position: relative;
+    display: inline-block;
+    /* Keeps the container size relative to the content */
+}
+
+.text-container p {
+    /* Adjust the text size */
+    z-index: 1;
+    /* Make sure the text stays above the GIF */
+}
+
+.overlay-gif {
+    position: absolute;
+    /* Position the GIF absolutely */
+    top: -50px !important;
+    left: -40px;
+    width: calc(100% + 150px);
+    min-height: calc(100% + 80px);
+    opacity: 0;
+    /* Hide the GIF initially */
+    z-index: 10;
+    /* Place the GIF above the text */
+    pointer-events: none;
+    /* Ensure the text is still clickable if necessary */
+    transition: opacity 0.3s ease;
+    /* Smooth transition */
+}
+
+.container.text-center {
+    border-top: .5px solid var(--black);
+    border-bottom: .5px solid var(--black);
+}
+
+.container.text-center p:first-child {
+    margin: 20px 0px 0px;
+}
