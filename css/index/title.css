@@ -981,7 +981,33 @@
 .letter.custom {
     margin: 0;
 }
-@media (max-width:1199px) {
+@media (max-width:769px) {
+.cutout-letter-custom {
+    font-size: 15px;
+    /* Large H1-sized font */
+    line-height: 20px;
+    /* Allow the letter to span multiple lines */
+    color: transparent;
+    /* Transparent text color */
+    background-color: var(--black);
+    /* Ensure the background color is black */
+    background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), var(--bg-image-index);
+    background-repeat: no-repeat;
+    background-position: center;
+    /* Use background of the body */
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* Space between the letter and the rest of the text */
+    padding: 10px 10px 5px 10px;
+    display: inline-block;
+    float: left;
+    /* Float the large letter to the left */
+    font-family: 'Baleny', serif;
+    transform: scaleY(1.5);
+}
+}
+@media (min-width:769px) and (max-width:1199px) {
 .cutout-letter-custom {
     font-size: 20px;
     /* Large H1-sized font */
