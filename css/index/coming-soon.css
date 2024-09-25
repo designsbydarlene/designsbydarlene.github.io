@@ -1,9 +1,12 @@
+.border-top {
+    border-top: .5px solid var(--black);
+}
 
 /*******************************************
 ************** Recent Works ****************/
 .pr { padding-right:20px;}
 /* Container styling */
-.cat-scroll-container {
+.coming-scroll-container {
     margin: 30px;
     /* Full width minus margin */
     scroll-behavior: auto;
@@ -15,7 +18,7 @@
     /* Enable smooth scrolling for mobile Safari */
 }
 
-.cat-scroll-container-header {
+.coming-scroll-container-header {
     margin: 20px 15px 20px;
     padding: 10px 0px;
     width: calc(100% - 30px);
@@ -31,13 +34,13 @@
 
 /* Scrollbar styling */
 /* Hide scrollbar in WebKit browsers (Chrome, Safari) */
-.cat-scroll-container::-webkit-scrollbar {
+.coming-scroll-container::-webkit-scrollbar {
     display: none;
     /* Hide the scrollbar */
 }
 
 /* Hide scrollbar for Firefox */
-.cat-scroll-container {
+.coming-scroll-container {
     scrollbar-width: none;
     /* Hide scrollbar in Firefox */
     -ms-overflow-style: none;
@@ -119,7 +122,7 @@
 }
 
 /* Text/Link content styling */
-.cat-column a {
+.coming-column a {
     color: var(--black);
     display: flex;
     flex-direction: column;
@@ -134,7 +137,7 @@
     /* Space between image and text */
 }
 
-.cat-p {
+.coming-p {
     font-size: 18px;
     letter-spacing: .5px;
 }
@@ -157,9 +160,12 @@
     padding-right: 20px;
 }
 
+.coming-column:first-child {
+    padding-top: 10px;
+}
 /* Responsive styles */
 @media (min-width: 1025px) { /* Larger Desktop */
-    .cat-column-first {
+    .coming-column-first {
         flex: 0 0 calc(33% - 40px);
         /* 3 columns on desktop */
         box-sizing: border-box;
@@ -170,7 +176,7 @@
         justify-content: center;
         padding: 0px 10px;
     }
-    .cat-column:first-child {
+    .coming-column:first-child {
             flex: 0 0 calc(33% - 20px);
             box-sizing: border-box;
             position: relative;
@@ -178,7 +184,7 @@
             margin: 0;
             padding: 0px 20px 0px 0px;
         }
-        .cat-column.special {       
+        .coming-column.special {       
              flex: 0 0 calc(33% - 20px);
             box-sizing: border-box;
             position: relative;
@@ -186,7 +192,7 @@
             margin-right: 40px;
             padding: 0px 20px 0px 20px;
             }
-    .cat-column {
+    .coming-column {
         flex: 0 0 calc(33% - 40px);
         /* 3 columns on desktop */
         box-sizing: border-box;
@@ -196,7 +202,7 @@
         padding: 0px 10px;
         /* Space between columns */
     }
-    .cat-column.border-left {
+    .coming-column.border-left {
         flex: 0 0 calc(33% - 30px);
         /* 3 columns on desktop */
         box-sizing: border-box;
@@ -225,9 +231,6 @@
 
 @media (min-width: 769px) { /* Desktop, Tablet */
 
-    .cat-scroll-container {
-        margin: 50px 30px;
-    }
     /* Desktop and tablet devices */
     .hide-desktop-tablet {
         display: none;
@@ -244,10 +247,10 @@
 }
 
 @media (min-width: 769px) and (max-width: 1200px) { /* Tablet, Small Desktop */
-    .cat-column-first {
+    .coming-column-first {
         margin: auto 20px auto;
         text-align: center;
-        padding: 0px 0px 0px 20px;
+        padding:0;
         justify-content: center;
     }
     .font-50 {
@@ -266,15 +269,15 @@
 
 @media (max-width: 1024px) { /* Tablet, Mobile  */
     /* Tablet */
-    .cat-column {
-        flex: 0 0 calc(33% - 20px);
+    .coming-column {
+        flex: 0 0 calc(33%);
         /* 2 columns with margin */
-        padding: 30px 10px;
+        padding: 0px 20px 0px 20px;
         /* Space between columns */
         margin-bottom: 20px;
         /* Space below columns */
     }
-    .cat-column-custom {
+    .coming-column-custom {
         flex: 0 0 calc(33% - 20px);
         /* 2 columns with margin */
         margin: 10px;
@@ -283,7 +286,7 @@
         /* Space below columns */
     }
 
-    .cat-column:last-child {
+    .coming-column:last-child {
         margin-right: 0;
         /* Remove right margin for the last column */
     }
@@ -292,10 +295,10 @@
 @media (max-width: 768px) { /* Mobile */
 
     /* Mobile */
-    .cat-scroll-container {
+    .coming-scroll-container {
         margin: 0px 15px 10px;
     }
-    .cat-column {
+    .coming-column {
         flex: 0 0 100%;
         margin-bottom: 2px;
         max-width: calc(100vw - 30px);
@@ -312,66 +315,4 @@
         display: none;
         /* Hide the element */
     }
-}
-
-
-@media (max-width: 768px) { /* Mobile */
-    .font-50 {
-        font-size: 50pt;
-        padding-bottom: 20px;
-        line-height: 40pt;
-        font-weight: bold;
-        padding-top: 30px;
-    }
-
-    .font-30 {
-        font-size: 30px;
-        line-height: 35px;
-        padding: 10px 0px 10px;
-    }
-}
-
-.cat-column-last {
-    padding: 0px 20px;
-    min-width: 355px;
-    margin: auto 0;
-    justify-content: center;
-    text-align: center;
-}
-
-.cat-column-special-border-right {    
-    margin-bottom: 2px;
-    width: fit-content;
-    border-right: .5px solid var(--darkgray);
-   box-sizing: border-box;
-   position: relative;
-   overflow: hidden;
-   padding: 0px 10px 0px 10px;
-   }
-
-
-   .text-container-2 {
-    height: fit-content;
-    position: relative;
-    display: inline-block;
-}
-
-.text-container-2 p {
-    z-index: 1;
-}
-
-.overlay-gif-2 {
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    width: calc(100% + 20px);
-    height: calc(100% + 20px);
-    opacity: 0;
-    z-index: 2;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-}
-
-.text-container-2:hover .overlay-gif-2 {
-    opacity: 1;
 }

@@ -692,8 +692,8 @@
 
 @media (min-width: 1000px) and (max-width: 1200px) {
     .cutout-letter {
-        font-size: 75px;
-        line-height: 80px;
+        font-size: 80px;
+        line-height: 90px;
         /* Allow the letter to span multiple lines */
         color: transparent;
         /* Transparent text color */
@@ -732,8 +732,8 @@
 
 @media (min-width: 1201px) and (max-width: 1365px) {
     .cutout-letter {
-        font-size: 75px;
-        line-height: 80px;
+        font-size: 80px;
+        line-height: 85px;
         /* Allow the letter to span multiple lines */
         color: transparent;
         /* Transparent text color */
@@ -758,8 +758,8 @@
     }
 
     .storybook-text {
-        font-size: 1.1rem;
-        line-height: 1.5rem;
+        font-size: 1.4rem;
+        line-height: 2rem;
         display: inline-block;
         /* Make the container inline-block for better wrapping behavior */
         align-items: flex-start;
@@ -795,8 +795,8 @@
     }
 
     .storybook-text {
-        font-size: 1.4rem;
-        line-height: 1.8rem;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
         display: inline-block;
         /* Make the container inline-block for better wrapping behavior */
         align-items: flex-start;
@@ -942,20 +942,23 @@
 
 .container.text-center {
     border-top: .5px solid var(--black);
-    border-bottom: .5px solid var(--black);
 }
 
 .container.text-center p:first-child {
-    margin: 20px 0px 0px;
+    margin: 0px 0px 0px;
 }
 
 @media (max-width: 768px) {
+    .container.text-center p:first-child {
+        margin: 20px 0px 0px;
+    }
     .text-center {
         text-align: center;
     }
 
     .container.text-center {
         margin-bottom: 20px;
+        border-bottom: .5px solid var(--black);
     }
     .text-container {
         margin-bottom: 20px;
