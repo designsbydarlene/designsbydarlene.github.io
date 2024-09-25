@@ -957,7 +957,9 @@
     .container.text-center {
         margin-bottom: 20px;
     }
-
+    .text-container {
+        margin-bottom: 20px;
+    }
 }
 
 @media (min-width: 769px) {
@@ -1043,7 +1045,7 @@
 
 .buttons-column-1 {
     border-right: .5px solid var(--black);
-    margin: 20px 0px 0px 0px;
+    margin: 20px 0px 20px 0px;
     padding-right:20px;
 }
 

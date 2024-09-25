@@ -6,7 +6,6 @@
 
 header {
     background-color: rgba(221, 219, 211, 0);
-    /* Change to desired overlay color with 0.5 opacity */
     width: 100%;
     padding: 10px 0;
     position: relative;
@@ -18,20 +17,17 @@ header {
 .header-row {
     display: flex;
     justify-content: center;
-    /* Centers the items in the row */
     align-items: center;
     min-width: 100%;
     margin: 0 auto;
     padding: 0 20px;
     position: relative;    
     z-index: 5;
-
 }
 
 .open-menu .header-row {
     display: flex;
     justify-content: center;
-    /* Centers the items in the row */
     align-items: center;
     min-width: 100%;
     margin: 0 auto;
@@ -45,9 +41,7 @@ header {
 
 .location {
     position: absolute;
-    /* Position location to avoid affecting centering */
     left: 50px;
-    /* Aligns it to the left */
     text-align: left;
 }
 
@@ -56,14 +50,12 @@ header {
     font-size: 16px;
     font-weight: bold;
     color: var(--darkgray);
-    /* Default text color */
     transition: color 0.3s ease;
 }
 
 .logo {
     padding: 10px 0px;    
     text-align: center;
-    /* Keeps the logo centered */
 }
 
 .logo img {
@@ -74,12 +66,9 @@ header {
 .hamburger-menu {
     cursor: pointer;
     position: absolute;
-    /* Position hamburger to avoid affecting centering */
     right: 15px;
-    /* Aligns it to the right */
     display: flex;
     justify-content: flex-end;
-    /* Aligns hamburger to the right */
 }
 
 .hamburger {
@@ -87,192 +76,45 @@ header {
     flex-direction: column;
     justify-content: space-around;
     width: 20px;
-    /* Width of the hamburger icon */
     height: 20px;
-    /* Height of the hamburger icon */
     transition: all 0.3s ease;
 }
 
 .hamburger:hover {
-    transform: scale(1.2); /* Scale up the hamburger on hover */
+    transform: scale(1.2);
 }
 
 .hamburger span {
     transform-origin: center;
-    /* Ensure rotation is around the center */
     display: block;
-    /* Ensure spans are block elements */
     width: 100%;
-    /* Make spans full width */
     height: 2px;
-    /* Set height of each span */
     background-color: var(--darkgray);
-    /* Default color */
     transition: all 0.3s ease;
 }
 
 @media(max-width:767px) {
-
-    /* Hamburger Open (Turning into Close Icon) */
     .hamburger.open span:nth-child(1) {
         transform: rotate(45deg) translate(0px, 9px);
-        /* Adjusted translate to center */
     }
 
     .hamburger.open span:nth-child(2) {
         opacity: 0;
-        /* Hide the middle bar */
     }
 
     .hamburger.open span:nth-child(3) {
         transform: rotate(-45deg) translate(0px, -10px);
-        /* Adjusted translate to center */
     }
 }
 
 @media(min-width:768px) {
-
-    /* Hamburger Open (Turning into Close Icon) */
     .hamburger.open span:nth-child(1) {
         transform: rotate(45deg) translate(1px, 5px);
-        /* Adjusted translate to center */
     }
-
 
     .hamburger.open span:nth-child(2) {
         opacity: 0;
-        /* Hide the middle bar */
     }
 
     .hamburger.open span:nth-child(3) {
-        transform: rotate(-45deg) translate(4px, -8px);
-        /* Adjusted translate to center */
-    }
-}
-
-/* Update the hamburger color when the menu is open */
-.open-menu .hamburger span {
-    background-color: var(--primary);
-    /* Change hamburger to primary color */
-}
-
-/* Fullscreen menu inside the header */
-.fullscreen-menu {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--darkgray); /* Change to dark gray */
-}
-
-.fullscreen-menu.open-menu {    
-    display: block;
-    z-index: 4; /* When opened, it comes into view */
-    }
-
-.fullscreen-menu .menu-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-.fullscreen-menu ul {
-    list-style-type: none;
-    text-align: center;
-    margin-top: -50px;
-}
-
-.fullscreen-menu li {
-    margin: 0px 0;
-}
-
-.fullscreen-menu a {
-    font-family: "Picaflor-36", serif;
-    text-transform: uppercase;
-    font-weight: 900;
-    letter-spacing: -2px; /* Initial letter spacing */
-    text-decoration: none;
-    font-size: 80px;
-    color: var(--primary); /* Primary color for menu links */
-    display: inline-block; /* Ensure the anchor is treated as a block */
-    overflow: hidden; /* Prevent overflow */
-    transition: letter-spacing 0.3s ease; /* Smooth transition for letter spacing */
-}
-
-.fullscreen-menu a:hover {
-    letter-spacing: 3px; /* Increase letter spacing on hover */
-}
-
-.fullscreen-menu a.active {
-    color: var(--lightgray);
-    /* Primary color for menu links */
-}
-
-body.open-menu header {
-    background-color: var(--midgray) !important; /* Change background to light gray */
-
-}
-body.open-menu {
-    overflow-y:hidden;
-}
-
-body.open-menu .location h6 {
-    color: var(--primary);
-    /* Update location text to primary color */
-}
-
-body.open-menu .logo img {
-    content: url('../images/logo/logo-inverted.png');
-    /* Update logo */
-}
-
-body.open-menu .hamburger span {
-    background-color: var(--primary);
-    /* Change hamburger to primary color */
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .location {
-        display: none;
-    }
-
-    .header-row {
-        justify-content: space-between;
-    }
-
-    .logo {
-        padding: 25px 0px 15px;       
-         margin-left: auto;
-        margin-right: auto;
-    }
-    
-}
-
-
-/* Responsive Styles */
-
-@media  (max-width:1024px) {
-.logo img {
-    max-height: 30px;
-}
-}
-@media (min-width: 769px) and (max-width:1024px) {
-.logo {
-    padding: 10px 0px 0px 0px;       
-     margin-left: auto;
-    margin-right: auto;
-}
-header {
-    height: 65px;
-}
-
-.open-menu .header-row {
-    color: var(--primary);
-    height: 65px;
-}
-}
+        transform: rotate(-45
