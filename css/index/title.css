@@ -48,12 +48,64 @@
     /* Ensure padding doesn't cause overflow */
 
 }
-
-.storybook-text {
-    padding: 0px 0px;
+.letter {
+    top: 1vw;
+    background-color: var(--black);
+    position: relative;
+    float: left;
+    margin-right: 15px;
+    display: inline-block;
+}
+.cutout-letter {
+    /* Allow the letter to span multiple lines */
+    color: transparent;
+    /* Transparent text color */
+    background-color: var(--black);
+    /* Ensure the background color is black */
+    background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), var(--bg-image-index);
+    background-repeat: no-repeat;
+    background-position: center;
+    /* Use background of the body */
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin-right: ;
+    /* Space between the letter and the rest of the text */
+    padding: 50px 10px 5px;
+    display: inline-block;
+    float: left;
+    /* Float the large letter to the left */
+    font-family: 'Baleny', serif;
+    transform: scaleY(1.5);
 }
 
 @media (min-width: 769px) {
+
+    .title-left-row {
+        text-align: justify;
+    }
+
+    .title-right-row {
+        padding-left: ;
+        text-align: justify;
+    }
+    .text-center {
+        text-align: start;
+    }
+    .cutout-letter {
+        font-size:7vw;
+        line-height:1;
+        padding: 30px 5px 5px;
+    }
+    .storybook-text {
+        padding: 0px 0px;
+        font-size: 2.1vw;
+        line-height: 1.6;
+        display: inline-block;
+        /* Make the container inline-block for better wrapping behavior */
+        align-items: flex-start;
+    }
+    
     .text-column-about {
         text-align: left;
         width: calc(100% - 20px);
@@ -137,6 +189,14 @@
     /* 6:4 aspect ratio */
     object-fit: cover;
     /* Maintain aspect ratio and cover */
+}
+
+@media (min-width:2678px) {
+.title-image-aspect-ratio {
+    min-width: 100%;
+    aspect-ratio: 6 / 4;
+    object-fit: cover;
+}
 }
 
 .title-right-img {
@@ -224,6 +284,16 @@
 }
 
 @media (max-width: 768px) {
+
+.storybook-text {
+    padding: 0px 0px;
+    font-size: 4vw;
+    line-height: 1;
+    display: inline-block;
+    /* Make the container inline-block for better wrapping behavior */
+    align-items: flex-start;
+}
+
     .about-text {
         font-size: 25px;
         line-height: 35px;
@@ -483,24 +553,6 @@
     }
 }
 
-@media (max-width:768px) {
-    .title-right-row {
-        padding: 20px 0px 0px;
-    }
-}
-
-@media (min-width:769px) {
-    .title-left-row {
-        text-align: justify;
-    }
-
-    .title-right-row {
-        padding-left: ;
-        text-align: justify;
-    }
-}
-
-
 .wrap {
     display: inline;
     /* Allow the text to flow naturally */
@@ -509,73 +561,6 @@
     max-width: calc(100% - 60px);
     /* Prevent text overflow */
 
-}
-
-@media (max-width:768px) {
-    .cutout-letter {
-        font-size: 120px;
-        /* Large H1-sized font */
-        line-height: 140px;
-        /* Allow the letter to span multiple lines */
-        color: transparent;
-        /* Transparent text color */
-        background-color: var(--black);
-        /* Ensure the background color is black */
-        background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), var(--bg-image-index);
-        background-repeat: no-repeat;
-        background-position: center;
-        /* Use background of the body */
-        background-size: cover;
-        -webkit-background-clip: text;
-        background-clip: text;
-        margin-right: ;
-        /* Space between the letter and the rest of the text */
-        padding: 25px 10px 5px;
-        display: inline-block;
-        float: left;
-        /* Float the large letter to the left */
-        font-family: 'Baleny', serif;
-        transform: scaleY(1.5);
-    }
-}
-
-@media (min-width:769px) {
-    .cutout-letter {
-        font-size: 120px;
-        /* Large H1-sized font */
-        line-height: 140px;
-        /* Allow the letter to span multiple lines */
-        color: transparent;
-        /* Transparent text color */
-        background-color: var(--black);
-        /* Ensure the background color is black */
-
-        background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), var(--bg-image-index);
-        background-repeat: no-repeat;
-        background-position: center;
-        /* Use background of the body */
-        background-size: cover;
-        -webkit-background-clip: text;
-        background-clip: text;
-        margin-right: ;
-        /* Space between the letter and the rest of the text */
-        padding: 25px 10px 10px;
-        display: inline-block;
-        float: left;
-        /* Float the large letter to the left */
-        font-family: 'Baleny', serif;
-        transform: scaleY(1.5);
-
-    }
-}
-
-.letter {
-    background-color: var(--black);
-    position: relative;
-    top: 10px;
-    float: left;
-    margin-right: 15px;
-    display: inline-block;
 }
 
 /* Adjust this for responsive behavior if needed */
@@ -617,297 +602,10 @@
         text-align: justify;
     }
 
-    .cutout-letter {
-        font-size: 75px;
-        /* Large H1-sized font */
-        line-height: 90px;
-        /* Allow the letter to span multiple lines */
-        color: transparent;
-        /* Transparent text color */
-        background-color: var(--black);
-        /* Ensure the background color is black */
-
-        background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), var(--bg-image-index);
-        background-repeat: no-repeat;
-        background-position: center;
-        /* Use background of the body */
-        background-size: cover;
-        -webkit-background-clip: text;
-        background-clip: text;
-        /* Space between the letter and the rest of the text */
-        padding: 25px 10px 10px;
-        display: inline-block;
-        float: left;
-        /* Float the large letter to the left */
-        font-family: 'Baleny', serif;
-    }
-
-    .storybook-text {
-        font-size: 1rem;
-        line-height: 1.5rem;
-        display: inline-block;
-        /* Make the container inline-block for better wrapping behavior */
-        align-items: flex-start;
-    }
-
-    .letter {
-        top: 5px;
-    }
-}
-
-@media (min-width: 890px) and (max-width: 999px) {
-    .cutout-letter {
-        font-size: 75px;
-        line-height: 80px;
-        color: transparent;
-        background-color: var(--black);
-        background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), var(--bg-image-index);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        -webkit-background-clip: text;
-        background-clip: text;
-        margin-right: ;
-        padding: 18px 10px 5px;
-        display: inline-block;
-        float: left;
-        font-family: 'Baleny', serif;
-        transform: scaleY(1.5);
-    }
-
-    .storybook-text {
-        font-size: 1.1rem;
-        line-height: 1.5rem;
-        display: inline-block;
-        /* Make the container inline-block for better wrapping behavior */
-        align-items: flex-start;
-    }
-
-    .letter {
-        top: 5px;
-    }
-}
-
-@media (min-width: 1000px) and (max-width: 1200px) {
-    .cutout-letter {
-        font-size: 80px;
-        line-height: 90px;
-        /* Allow the letter to span multiple lines */
-        color: transparent;
-        /* Transparent text color */
-        background-color: var(--black);
-        /* Ensure the background color is black */
-
-        background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), var(--bg-image-index);
-        background-repeat: no-repeat;
-        background-position: center;
-        /* Use background of the body */
-        background-size: cover;
-        -webkit-background-clip: text;
-        background-clip: text;
-        margin-right: ;
-        /* Space between the letter and the rest of the text */
-        padding: 18px 10px 5px;
-        display: inline-block;
-        float: left;
-        /* Float the large letter to the left */
-        font-family: 'Baleny', serif;
-        transform: scaleY(1.5);
-    }
-
-    .storybook-text {
-        font-size: 1.2rem;
-        line-height: 1.6rem;
-        display: inline-block;
-        /* Make the container inline-block for better wrapping behavior */
-        align-items: flex-start;
-    }
-
-    .letter {
-        top: 5px;
-    }
-}
-
-@media (min-width: 1201px) and (max-width: 1365px) {
-    .cutout-letter {
-        font-size: 80px;
-        line-height: 85px;
-        /* Allow the letter to span multiple lines */
-        color: transparent;
-        /* Transparent text color */
-        background-color: var(--black);
-        /* Ensure the background color is black */
-
-        background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), var(--bg-image-index);
-        background-repeat: no-repeat;
-        background-position: center;
-        /* Use background of the body */
-        background-size: cover;
-        -webkit-background-clip: text;
-        background-clip: text;
-        margin-right: ;
-        /* Space between the letter and the rest of the text */
-        padding: 20px 10px 5px;
-        display: inline-block;
-        float: left;
-        /* Float the large letter to the left */
-        font-family: 'Baleny', serif;
-        transform: scaleY(1.5);
-    }
-
-    .storybook-text {
-        font-size: 1.4rem;
-        line-height: 2rem;
-        display: inline-block;
-        /* Make the container inline-block for better wrapping behavior */
-        align-items: flex-start;
-    }
-}
-
-@media (min-width: 1366px) and (max-width: 1534px) {
-    .cutout-letter {
-        font-size: 115px;
-        /* Large H1-sized font */
-        line-height: 130px;
-        /* Allow the letter to span multiple lines */
-        color: transparent;
-        /* Transparent text color */
-        background-color: var(--black);
-        /* Ensure the background color is black */
-
-        background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), var(--bg-image-index);
-        background-repeat: no-repeat;
-        background-position: center;
-        /* Use background of the body */
-        background-size: cover;
-        -webkit-background-clip: text;
-        background-clip: text;
-        margin-right: ;
-        /* Space between the letter and the rest of the text */
-        padding: 25px 10px 5px;
-        display: inline-block;
-        float: left;
-        /* Float the large letter to the left */
-        font-family: 'Baleny', serif;
-        transform: scaleY(1.5);
-    }
-
-    .storybook-text {
-        font-size: 1.6rem;
-        line-height: 2.2rem;
-        display: inline-block;
-        /* Make the container inline-block for better wrapping behavior */
-        align-items: flex-start;
-    }
-}
-
-@media (min-width: 1535px) and (max-width: 1599px) {
-    .cutout-letter {
-        font-size: 100px;
-        /* Large H1-sized font */
-        line-height: 120px;
-        /* Allow the letter to span multiple lines */
-        color: transparent;
-        /* Transparent text color */
-        background-color: var(--black);
-        /* Ensure the background color is black */
-
-        background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), var(--bg-image-index);
-        background-repeat: no-repeat;
-        background-position: center;
-        /* Use background of the body */
-        background-size: cover;
-        -webkit-background-clip: text;
-        background-clip: text;
-        margin-right: ;
-        /* Space between the letter and the rest of the text */
-        padding: 25px 10px 10px;
-        display: inline-block;
-        float: left;
-        /* Float the large letter to the left */
-        font-family: 'Baleny', serif;
-        transform: scaleY(1.5);
-    }
-
-    .storybook-text {
-        font-size: 1.5rem;
-        line-height: 2.1rem;
-        display: inline-block;
-        /* Make the container inline-block for better wrapping behavior */
-        align-items: flex-start;
-    }
-}
-
-@media (min-width: 1600px) and (max-width: 1799px) {
-    .cutout-letter {
-        font-size: 100px;
-        /* Large H1-sized font */
-        line-height: 120px;
-        /* Allow the letter to span multiple lines */
-        color: transparent;
-        /* Transparent text color */
-        background-color: var(--black);
-        /* Ensure the background color is black */
-
-        background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), var(--bg-image-index);
-        background-repeat: no-repeat;
-        background-position: center;
-        /* Use background of the body */
-        background-size: cover;
-        -webkit-background-clip: text;
-        background-clip: text;
-        margin-right: ;
-        /* Space between the letter and the rest of the text */
-        padding: 25px 10px 10px;
-        display: inline-block;
-        float: left;
-        /* Float the large letter to the left */
-        font-family: 'Baleny', serif;
-        transform: scaleY(1.5);
-
-    }
-
-    .storybook-text {
-        font-size: 32px;
-        line-height: 45px;
-        display: inline-block;
-        /* Make the container inline-block for better wrapping behavior */
-        align-items: flex-start;
-    }
-}
-
-@media (min-width: 1800px) {
-    .storybook-text {
-        font-size: 35px;
-        line-height: 50px;
-        display: inline-block;
-        /* Make the container inline-block for better wrapping behavior */
-        align-items: flex-start;
-    }
-}
-
-@media (max-width: 768px) {
-    .storybook-text {
-        font-size: 30px;
-        line-height: 38px;
-        display: inline-block;
-        /* Make the container inline-block for better wrapping behavior */
-        align-items: flex-start;
-        padding: 20px 0px;
-    }
-
-    .letter {
-        top: 10px;
-    }
-
-    .story-text {
-        text-indent: -60px;
-        padding-left: 60px;
-    }
 }
 
 .text-container {
-    padding: 0px 0px 20px 0px;
+    padding: 0px 0px 0px 0px;
     text-align: center;
     height: auto;
     position: relative;
@@ -927,7 +625,7 @@
     top: 0px;
     left: -40px;
     width: calc(100% + 80px);
-    height: calc(100%);
+    height: calc(100% + 30px);
     opacity: 0;
     /* Hide the GIF initially */
     z-index: 10;
@@ -947,6 +645,15 @@
 }
 
 @media (max-width: 768px) {
+
+    .letter {
+        top: 10px;
+    }
+
+    .story-text {
+        text-indent: -60px;
+        padding-left: 60px;
+    }
     .container.text-center p:first-child {
         margin: 20px 0px 0px;
     }
@@ -962,13 +669,6 @@
         margin-bottom: 20px;
     }
 }
-
-@media (min-width: 769px) {
-    .text-center {
-        text-align: start;
-    }
-}
-
 .text-container {
     position: relative;
     /* Ensure the container positions children correctly */
@@ -983,10 +683,23 @@
     margin: 0;
 }
 @media (max-width:768px) {
+
+    .title-right-row {
+        padding: 20px 0px 0px;
+    }
+    .cutout-letter {
+        font-size: 12vw;
+        line-height: 1.1;
+        padding: 25px 15px 10px;
+    }
+    
+    .storybook-text {
+        padding-bottom: 20px;
+    }
 .cutout-letter-custom {
-    font-size: 15px;
+    font-size: 2.7vw;
     /* Large H1-sized font */
-    line-height: 20px;
+    line-height: 1;
     /* Allow the letter to span multiple lines */
     color: transparent;
     /* Transparent text color */
@@ -1000,7 +713,7 @@
     -webkit-background-clip: text;
     background-clip: text;
     /* Space between the letter and the rest of the text */
-    padding: 5px 10px 5px 10px;
+    padding: 15px 10px 10px;
     display: inline-block;
     float: left;
     /* Float the large letter to the left */
@@ -1008,11 +721,10 @@
     transform: scaleY(1.5);
 }
 }
-@media (min-width:769px) and (max-width:1199px) {
 .cutout-letter-custom {
-    font-size: 20px;
+    font-size: 2.2vw;
     /* Large H1-sized font */
-    line-height: 30px;
+    line-height: 1;
     /* Allow the letter to span multiple lines */
     color: transparent;
     /* Transparent text color */
@@ -1026,39 +738,18 @@
     -webkit-background-clip: text;
     background-clip: text;
     /* Space between the letter and the rest of the text */
-    padding: 8px 15px 5px 10px;
+    padding: 20px 20px 15px;
     display: inline-block;
     float: left;
     /* Float the large letter to the left */
     font-family: 'Baleny', serif;
     transform: scaleY(1.5);
 }
-}
-@media (min-width:1200px) {
-.cutout-letter-custom {
-    font-size: 40px;
-    /* Large H1-sized font */
-    line-height: 60px;
-    /* Allow the letter to span multiple lines */
-    color: transparent;
-    /* Transparent text color */
-    background-color: var(--black);
-    /* Ensure the background color is black */
-    background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), var(--bg-image-index);
-    background-repeat: no-repeat;
-    background-position: center;
-    /* Use background of the body */
-    background-size: cover;
-    -webkit-background-clip: text;
-    background-clip: text;
-    /* Space between the letter and the rest of the text */
-    padding: 11px 15px 5px 10px;
-    display: inline-block;
-    float: left;
-    /* Float the large letter to the left */
-    font-family: 'Baleny', serif;
-    transform: scaleY(1.5);
-}
+
+@media (min-width:2200px) {
+    .cutout-letter-custom {
+    padding: 30px 20px 20px;
+    }
 }
 .buttons-row {
     display: flex;

@@ -7,11 +7,12 @@
 .pr { padding-right:20px;}
 /* Container styling */
 .coming-scroll-container {
-    margin: 30px;
+    padding: 5px 0px;
+    margin: 20px 0px;
     /* Full width minus margin */
     scroll-behavior: auto;
     /* Smooth scroll effect */
-    display: flex;
+    display: contents;
     overflow-x: auto;
     /* Allow horizontal scrolling */
     -webkit-overflow-scrolling: touch !important;
@@ -19,7 +20,7 @@
 }
 
 .coming-scroll-container-header {
-    margin: 20px 15px 20px;
+    margin: 20px 15px 0px;
     padding: 10px 0px;
     width: calc(100% - 30px);
     /* Full width minus margin */
@@ -142,18 +143,6 @@
     letter-spacing: .5px;
 }
 
-.font-40 {
-    transform: scaleY(1.4);
-    font-weight: 900;
-    /* SemiBold */
-    font-style: bold;
-    /* Italic */
-    font-family: 'Aostora', serif;
-    font-size: 15pt;
-    padding: 10px 0px;
-    line-height: 15pt;
-    letter-spacing: 0px;
-}
 
 /* Margin and padding */
 .mr-20 {
@@ -161,71 +150,64 @@
 }
 
 .coming-column:first-child {
-    padding-top: 10px;
 }
 /* Responsive styles */
 @media (min-width: 1025px) { /* Larger Desktop */
     .coming-column-first {
-        flex: 0 0 calc(33% - 40px);
+        flex: 0 0 calc(50% - 20px);
         /* 3 columns on desktop */
         box-sizing: border-box;
         position: relative;
         overflow: hidden;
         margin: auto 10px auto 10px;
-        text-align: center;
-        justify-content: center;
+        text-align: left;
+        justify-content: start;
         padding: 0px 10px;
+        margin: 20px 0px;
     }
     .coming-column:first-child {
-            flex: 0 0 calc(33% - 20px);
+            flex: 0 0 calc(50% - 20px);
             box-sizing: border-box;
             position: relative;
             overflow: hidden;
+            text-align: left;
+            justify-content: start;
             margin: 0;
             padding: 0px 20px 0px 0px;
         }
         .coming-column.special {       
-             flex: 0 0 calc(33% - 20px);
+             flex: 0 0 calc(50% - 20px);
             box-sizing: border-box;
             position: relative;
+            text-align: left;
+            justify-content: start;
             overflow: hidden;
             margin-right: 40px;
             padding: 0px 20px 0px 20px;
             }
     .coming-column {
-        flex: 0 0 calc(33% - 40px);
+        flex: 0 0 calc(50% - 20px);
         /* 3 columns on desktop */
         box-sizing: border-box;
         position: relative;
+        text-align: left;
+        justify-content: start;
         overflow: hidden;
         margin-left: 20px;
         padding: 0px 10px;
         /* Space between columns */
     }
     .coming-column.border-left {
-        flex: 0 0 calc(33% - 30px);
+        flex: 0 0 calc(50% - 20px);
         /* 3 columns on desktop */
         box-sizing: border-box;
         position: relative;
         overflow: hidden;
+        text-align: left;
+        justify-content: start;
         margin: 0px 0px;
-        padding-left: 20px;
+        padding: 0px 20px;
         /* Space between columns */
-    }
-}
-
-@media (min-width: 1201px) { /* Small Desktop, Desktop */
-    .font-50 {
-        font-size: 25pt;
-        padding-bottom: ;
-        line-height: 40pt;
-        font-weight: bold;
-    }
-
-    .font-30 {
-        font-size: 40px;
-        line-height: 45px;
-        padding-bottom: 10px;
     }
 }
 
@@ -249,46 +231,26 @@
 @media (min-width: 769px) and (max-width: 1200px) { /* Tablet, Small Desktop */
     .coming-column-first {
         margin: auto 20px auto;
-        text-align: center;
+        text-align: left;
         padding:0;
         justify-content: center;
-    }
-    .font-50 {
-        font-size: 25pt;
-        white-space: nowrap;
-        padding-bottom: ;
-        line-height: 40pt;
-        font-weight: bold;
-    }
-
-    .font-30 {
-        font-size: 26px;
-        padding-bottom: 10px;
     }
 }
 
 @media (max-width: 1024px) { /* Tablet, Mobile  */
     /* Tablet */
     .coming-column {
-        flex: 0 0 calc(33%);
+        text-align: left;
+        justify-content: start;
+        flex: 0 0 calc(50% - 20px);
         /* 2 columns with margin */
-        padding: 0px 20px 0px 20px;
+        padding: 0px 20px 0px 0px;
         /* Space between columns */
         margin-bottom: 20px;
         /* Space below columns */
     }
-    .coming-column-custom {
-        flex: 0 0 calc(33% - 20px);
-        /* 2 columns with margin */
-        margin: 10px;
-        /* Space between columns */
-        margin-bottom: 20px;
-        /* Space below columns */
-    }
-
     .coming-column:last-child {
-        margin-right: 0;
-        /* Remove right margin for the last column */
+        padding: 0px 0px 0px 20px;
     }
 }
 
@@ -303,16 +265,86 @@
         margin-bottom: 2px;
         max-width: calc(100vw - 30px);
         margin: 0px 15px 20px 0px;
-        padding: 0;
+        padding: 0px 15px 0px;
     }
 }
 
 /* Hide elements for mobile  */
 @media (max-width: 768px) { /* Mobile */
-
+    .coming-column.border-left {
+        width:100%;
+        /* 3 columns on desktop */
+        box-sizing: border-box;
+        position: relative;
+        overflow: hidden;
+        margin: 0px 15px;
+        padding-left: 0px;
+        /* Space between columns */
+    }
     /* Mobile devices */
     .hide-mobile {
         display: none;
         /* Hide the element */
     }
+
+.letter.custom.header {
+    margin: 0px 15px;
+    display: ;
+}
+}
+@media (min-width: 769px) {
+.text-container-coming {
+    max-width: calc(66% - 40px);
+    /* 3 columns on desktop */
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    margin: auto 10px auto 10px;
+    text-align: center;
+    justify-content: center;
+    padding: 0px 10px;
+}
+}
+.cutout-letter-coming {    
+    margin: 1rem 0 .2rem 0;
+    font-size: 8vw;
+    line-height: 1.2;
+    /* Large H1-sized font */
+    /* Allow the letter to span multiple lines */
+    color: transparent;
+    /* Transparent text color */
+    background-color: var(--black);
+    /* Ensure the background color is black */
+    background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), var(--bg-image-index);
+    background-repeat: no-repeat;
+    background-position: center;
+    /* Use background of the body */
+    background-size: cover;
+    -webkit-background-clip: text;
+    padding: 1vw 1vw 1.1vw 1vw;
+    background-clip: text;
+    /* Space between the letter and the rest of the text */
+    display: inline-block;
+    float: left;
+    /* Float the large letter to the left */
+    font-family: 'Baleny', serif;
+    transform: scaleY(1.5);
+    letter-spacing: -2.5px;
+}
+
+@media (min-width: 769px) {
+    .coming-row {
+        display: flex;
+        flex-direction: row;
+        width: 100%; /* Make sure it spans the full width of the parent */
+        flex-wrap: wrap; /* Allow contents to start on new rows if needed */
+    }
+.coming-row:last-child {
+    padding: 20px 0px 0px 0px; /* Optional: space between rows */
+}
+}
+
+.coming-row {
+    min-width: 100%; /* Make sure it spans the full width of the parent */
+    margin: 20px 0px; /* Optional: space between rows */
 }

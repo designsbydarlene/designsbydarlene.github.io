@@ -2,6 +2,7 @@
 /*******************************************
 ************** Recent Works ****************/
 .pr { padding-right:20px;}
+
 /* Container styling */
 .cat-scroll-container {
     margin: 30px;
@@ -16,7 +17,7 @@
 }
 
 .cat-scroll-container-header {
-    margin: 20px 15px 20px;
+    margin: 20px 15px 0px;
     padding: 10px 0px;
     width: calc(100% - 30px);
     /* Full width minus margin */
@@ -139,19 +140,6 @@
     letter-spacing: .5px;
 }
 
-.font-40 {
-    transform: scaleY(1.4);
-    font-weight: 900;
-    /* SemiBold */
-    font-style: bold;
-    /* Italic */
-    font-family: 'Aostora', serif;
-    font-size: 15pt;
-    padding: 10px 0px;
-    line-height: 15pt;
-    letter-spacing: 0px;
-}
-
 /* Margin and padding */
 .mr-20 {
     padding-right: 20px;
@@ -208,25 +196,10 @@
     }
 }
 
-@media (min-width: 1201px) { /* Small Desktop, Desktop */
-    .font-50 {
-        font-size: 25pt;
-        padding-bottom: ;
-        line-height: 40pt;
-        font-weight: bold;
-    }
-
-    .font-30 {
-        font-size: 40px;
-        line-height: 45px;
-        padding-bottom: 10px;
-    }
-}
-
 @media (min-width: 769px) { /* Desktop, Tablet */
 
     .cat-scroll-container {
-        margin: 50px 30px;
+        margin: 20px 30px;
     }
     /* Desktop and tablet devices */
     .hide-desktop-tablet {
@@ -245,22 +218,11 @@
 
 @media (min-width: 769px) and (max-width: 1200px) { /* Tablet, Small Desktop */
     .cat-column-first {
-        margin: auto 20px auto;
+        margin: auto 0px auto;
         text-align: center;
         padding: 0px 0px 0px 20px;
         justify-content: center;
-    }
-    .font-50 {
-        font-size: 25pt;
-        white-space: nowrap;
-        padding-bottom: ;
-        line-height: 40pt;
-        font-weight: bold;
-    }
-
-    .font-30 {
-        font-size: 26px;
-        padding-bottom: 10px;
+        flex:0 0 calc(33% - 20px);
     }
 }
 
@@ -269,7 +231,7 @@
     .cat-column {
         flex: 0 0 calc(33% - 20px);
         /* 2 columns with margin */
-        padding: 30px 10px;
+        padding: 0px 10px;
         /* Space between columns */
         margin-bottom: 20px;
         /* Space below columns */
@@ -315,21 +277,6 @@
 }
 
 
-@media (max-width: 768px) { /* Mobile */
-    .font-50 {
-        font-size: 50pt;
-        padding-bottom: 20px;
-        line-height: 40pt;
-        font-weight: bold;
-        padding-top: 30px;
-    }
-
-    .font-30 {
-        font-size: 30px;
-        line-height: 35px;
-        padding: 10px 0px 10px;
-    }
-}
 
 .cat-column-last {
     padding: 0px 20px;

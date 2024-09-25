@@ -9,3 +9,64 @@ main {
     overflow: auto;
     /* Allow scrolling if content exceeds viewport */
 }
+
+.font-50 {
+    font-size: 2.8vw;
+    line-height: 1.5;
+    font-weight: bold;
+}
+
+.font-40 {
+    transform: scaleY(1.4);
+    font-weight: 900;
+    /* SemiBold */
+    font-style: bold;
+    /* Italic */
+    font-family: 'Aostora', serif;
+    font-size: 1.5vw;
+    padding: 10px 0px;
+    line-height: .8;
+    letter-spacing: 0px;
+}
+
+.font-30 {
+    font-size: 1.8vw;
+    line-height: 1;
+    padding-bottom: 10px;
+}
+p {
+    font-size: 1.4vw;
+    line-height: 1.5;
+}
+@media (max-width: 768px) {
+   
+.font-50 {
+    font-size: 8vw;
+    line-height: 1.5;
+    font-weight: bold;
+}
+
+.font-40 {
+    transform: scaleY(1.4);
+    font-weight: 900;
+    /* SemiBold */
+    font-style: bold;
+    /* Italic */
+    font-family: 'Aostora', serif;
+    font-size: 4vw;
+    padding: 10px 0px;
+    line-height: .8;
+    letter-spacing: 0px;
+}
+
+.font-30 {
+    font-size: 5vw;
+    line-height: 1;
+    padding-bottom: 10px;
+}
+p {
+    font-size: 4vw;
+    line-height: 1.5;
+} 
+}
+.pt-1 { padding-top: 10px;}
