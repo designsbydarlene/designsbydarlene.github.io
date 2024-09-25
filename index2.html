@@ -5,19 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hover to See GIF</title>
     <style>
-        .text-container-2 {
+    :root {
+         --gif-circle-1-index: url('https://designsbydarlene.github.io/images/circle-2.gif');
+    --gif-circle-2-index: url('https://designsbydarlene.github.io/images/circle.gif');
+    }
+        .text-container {
             height: 100px;
             position: relative;
             display: inline-block;
         }
 
-        .text-container-2 p {
+        .text-container p {
             font-size: 24px;
             color: #000;
             z-index: 1;
         }
 
-        .overlay-gif-2 {
+        .overlay-gif {
             position: absolute;
             top: -30px;
             left: -65px;
@@ -29,40 +33,82 @@
             transition: opacity 0.3s ease;
         }
 
-        .text-container-2:hover .overlay-gif-2 {
+        .text-container:hover .overlay-gif {
             opacity: 1;
         }
     </style>
 </head>
 <body>
-    <div class="text-container-2">
-        <p>Hover over this text to see the GIF!</p>
-        <img id="overlay-gif-2" class="overlay-gif-2" src="https://designsbydarlene.github.io/images/circle.gif" alt="GIF">
+  
+    <div class="container text-center">
+        <div class="buttons-row">
+            <div class="buttons-column buttons-column-1">
+                <p>Open to New Creative Opportunities</p>
+                <p class="small-font">Let's collaborate on your next design project!</p>
+                <div class="text-container">
+                    <div class="letter custom hover-trigger">
+                        <span class="cutout-letter-custom">VIEW RESUME</span>
+                    </div>
+                    <img id="overlay-gif" class="overlay-gif" alt="GIF" style="display: none;">
+                </div>
+            </div>
+            <div class="buttons-column buttons-column">
+                <p>Designs That Inspire</p>
+                <p class="small-font">View my portfolio of innovative designs.</p>
+                <div class="text-container">
+                    <div class="letter custom hover-trigger">
+                        <span class="cutout-letter-custom">ALL DESIGNS</span>
+                    </div>
+                    <img id="overlay-gif" class="overlay-gif" alt="GIF" style="display: none;">
+                </div>
+            </div>
+        </div>
     </div>
 
     <script>
-        // Attach hover events to play the GIF on hover and reset it
-        const attachHoverEvents = () => {
-            const textContainers = document.querySelectorAll('.text-container-2');
-            
-            // Loop through all text containers and attach hover events
-            textContainers.forEach((textContainer) => {
-                const gifElement = textContainer.querySelector('.overlay-gif-2');
-                if (gifElement) {
-                    textContainer.addEventListener('mouseenter', function() {
-                        gifElement.src = gifElement.src.split('?')[0] + '?t=' + new Date().getTime(); // Reload GIF with a unique URL
-                        gifElement.style.display = 'block'; // Show the GIF
-                    });
+     
+// Access the CSS variable in JavaScript and apply it to the img src
+document.addEventListener('DOMContentLoaded', () => {
+    const gifElement = document.getElementById('overlay-gif');
 
-                    textContainer.addEventListener('mouseleave', function() {
-                        gifElement.style.display = 'none'; // Hide the GIF
-                    });
-                }
-            });
-        };
+    // Access the --gif-circle-1-index from the :root
+    const rootStyles = getComputedStyle(document.documentElement);
+    let gifSrc = rootStyles.getPropertyValue('--gif-circle-1-index').trim();
 
-        // Call the function to attach hover events after DOM is loaded
-        document.addEventListener('DOMContentLoaded', attachHoverEvents);
+    // Remove "url()" part from the variable if it has it
+    gifSrc = gifSrc.replace(/^url\(['"]?/, '').replace(/['"]?\)$/, '');
+
+    // Set the img src dynamically
+    gifElement.src = gifSrc;
+});
+
+    const attachHoverEvents = () => {
+        const textContainers = document.querySelectorAll('.text-container');
+    
+        // Access the --gif-url from the :root element
+        const rootStyles = getComputedStyle(document.documentElement);
+        let gifSrc = rootStyles.getPropertyValue('--gif-circle-1-index').trim();
+    
+        // Remove the "url()" part from the variable value (if present)
+        gifSrc = gifSrc.replace(/^url\(['"]?/, '').replace(/['"]?\)$/, '');
+    
+        // Loop through all text containers and attach hover events
+        textContainers.forEach((textContainer) => {
+            const gifElement = textContainer.querySelector('.overlay-gif');
+            if (gifElement) {
+                textContainer.addEventListener('mouseenter', function() {
+                    gifElement.src = gifSrc + '?t=' + new Date().getTime(); // Reload GIF with a unique URL
+                    gifElement.style.display = 'block'; // Show the GIF
+                });
+    
+                textContainer.addEventListener('mouseleave', function() {
+                    gifElement.style.display = 'none'; // Hide the GIF
+                });
+            }
+        });
+    };
+    
+
     </script>
 </body>
 </html>

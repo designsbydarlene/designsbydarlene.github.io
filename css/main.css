@@ -31,8 +31,8 @@
     /* light gray */
     --lightergray: #999999;
     /* light gray */
-    --bg-image-main: url('../images/bg-image.jpg');
-    --bg-image-index: url('../../images/bg-image.jpg');
+    --bg-image-main: url('https://images.unsplash.com/photo-1603484477859-abe6a73f9366?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    --bg-image-index: url('https://images.unsplash.com/photo-1603484477859-abe6a73f9366?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     --gif-circle-1-index: url('https://designsbydarlene.github.io/images/circle-2.gif');
     --gif-circle-2-index: url('https://designsbydarlene.github.io/images/circle.gif');
     --overlay-color: rgba(183, 177, 171, 0.666);
