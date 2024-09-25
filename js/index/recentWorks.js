@@ -1,18 +1,14 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const textContainers = document.querySelectorAll('.text-container-recent');
-    const gifSrc = 'https://designsbydarlene.github.io/images/circle.gif'; // Your GIF URL
-
+// Attach hover events to play the GIF on hover and reset it
+const attachHoverEvents = () => {
+    const textContainers = document.querySelectorAll('.text-container-2');
+    
     // Loop through all text containers and attach hover events
     textContainers.forEach((textContainer) => {
-        const gifElement = textContainer.querySelector('.overlay-gif-recent');
+        const gifElement = textContainer.querySelector('.overlay-gif-2');
         if (gifElement) {
             textContainer.addEventListener('mouseenter', function() {
-                // Clear the src briefly to force reload
+                gifElement.src = gifElement.src.split('?')[0] + '?t=' + new Date().getTime(); // Reload GIF with a unique URL
                 gifElement.style.display = 'block'; // Show the GIF
-                gifElement.src = ''; // Temporarily clear the src
-                setTimeout(() => {
-                    gifElement.src = gifSrc + '?t=' + new Date().getTime(); // Reload GIF with a unique URL
-                }, 50); // Brief delay before resetting the src
             });
 
             textContainer.addEventListener('mouseleave', function() {
@@ -20,13 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
-});
+};
 
-
+// Function to load recent works content and initialize drag functionality
 document.addEventListener('DOMContentLoaded', () => {
     const recentWorksPlaceholder = document.getElementById('recent-works-placeholder');
 
-    // Function to load recent works content and initialize drag functionality
     const loadRecentWorks = async () => {
         try {
             console.log('Loading recent works...');
@@ -34,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let content = await response.text();
             recentWorksPlaceholder.insertAdjacentHTML('beforeend', content);
             initDragFunctionality();
+            attachHoverEvents(); // Ensure hover events are attached after loading content
         } catch (error) {
             console.error('Error loading recent works:', error);
         }

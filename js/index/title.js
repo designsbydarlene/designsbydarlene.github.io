@@ -15,11 +15,31 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Error loading title containers:', error);
         }
     };
+// Access the CSS variable in JavaScript and apply it to the img src
+document.addEventListener('DOMContentLoaded', () => {
+    const gifElement = document.getElementById('overlay-gif');
+
+    // Access the --gif-circle-1-index from the :root
+    const rootStyles = getComputedStyle(document.documentElement);
+    let gifSrc = rootStyles.getPropertyValue('--gif-circle-1-index').trim();
+
+    // Remove "url()" part from the variable if it has it
+    gifSrc = gifSrc.replace(/^url\(['"]?/, '').replace(/['"]?\)$/, '');
+
+    // Set the img src dynamically
+    gifElement.src = gifSrc;
+});
 
     const attachHoverEvents = () => {
         const textContainers = document.querySelectorAll('.text-container');
-        const gifSrc = 'https://designsbydarlene.github.io/images/circle-2.gif'; // Your GIF URL
-
+    
+        // Access the --gif-url from the :root element
+        const rootStyles = getComputedStyle(document.documentElement);
+        let gifSrc = rootStyles.getPropertyValue('--gif-circle-1-index').trim();
+    
+        // Remove the "url()" part from the variable value (if present)
+        gifSrc = gifSrc.replace(/^url\(['"]?/, '').replace(/['"]?\)$/, '');
+    
         // Loop through all text containers and attach hover events
         textContainers.forEach((textContainer) => {
             const gifElement = textContainer.querySelector('.overlay-gif');
@@ -28,13 +48,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     gifElement.src = gifSrc + '?t=' + new Date().getTime(); // Reload GIF with a unique URL
                     gifElement.style.display = 'block'; // Show the GIF
                 });
-
+    
                 textContainer.addEventListener('mouseleave', function() {
                     gifElement.style.display = 'none'; // Hide the GIF
                 });
             }
         });
     };
+    
 
     // Call the function to load content
     loadTitleContainers();

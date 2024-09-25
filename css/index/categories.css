@@ -1,8 +1,5 @@
 /*******************************************
 *************** Categories ****************/
-:root {
---bg-image-categories: url('./../../images/bg-image.jpg');
-}
 .categories-row {
     display: flex;
     justify-content: space-between; /* Space out items evenly */
@@ -38,7 +35,7 @@
     transform: scaleY(2);
     font-size: 50px; /* Adjust font size as needed */
     color: transparent; /* Make text transparent */
-    background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), var(--bg-image-categories);
+    background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), var(--bg-image-index);
     background-repeat: no-repeat;
     background-position: center; /* Use background of the body */
     background-size: cover; /* Cover the text */
@@ -62,7 +59,7 @@
     transform: scaleY(1);
     font-size: 50px; /* Adjust font size as needed */
     color: transparent; /* Make text transparent */
-    background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), var(--bg-image-categories);
+    background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), var(--bg-image-index);
     background-repeat: no-repeat;
     background-position: center; /* Use background of the body */
     background-size: cover; /* Cover the text */

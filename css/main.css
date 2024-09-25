@@ -31,7 +31,10 @@
     /* light gray */
     --lightergray: #999999;
     /* light gray */
-    --bg-image: url('../images/bg-image.jpg');
+    --bg-image-main: url('../images/bg-image.jpg');
+    --bg-image-index: url('../../images/bg-image.jpg');
+    --gif-circle-1-index: url('https://designsbydarlene.github.io/images/circle-2.gif');
+    --gif-circle-2-index: url('https://designsbydarlene.github.io/images/circle.gif');
     --overlay-color: rgba(183, 177, 171, 0.666);
 }
 
@@ -52,7 +55,7 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: var(--bg-image);
+    background-image: var(--bg-image-main);
     /* Add your image path here */
     background-size: cover;
     /* Ensure the image covers the entire area */

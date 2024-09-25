@@ -5,60 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hover to See GIF</title>
     <style>
-        .text-container {
+        .text-container-2 {
             height: 100px;
             position: relative;
-            display: inline-block; /* Keeps the container size relative to the content */
+            display: inline-block;
         }
 
-        .text-container p {
-            font-size: 24px; /* Adjust the text size */
+        .text-container-2 p {
+            font-size: 24px;
             color: #000;
-            z-index: 1; /* Make sure the text stays above the GIF */
+            z-index: 1;
         }
 
-        .overlay-gif {
+        .overlay-gif-2 {
             position: absolute;
-            top: -30px; /* Adjust as needed */
-            left: -65px; /* Adjust as needed */
-            width: 400px; /* Adjust as needed */
-            height: 100px; /* Adjust as needed */
-            opacity: 0; /* Hide the GIF initially */
-            z-index: 2; /* Place the GIF above the text */
-            pointer-events: none; /* Ensure the text is still clickable if necessary */
-            transition: opacity 0.3s ease; /* Smooth transition */
+            top: -30px;
+            left: -65px;
+            width: 400px;
+            height: 100px;
+            opacity: 0;
+            z-index: 2;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
         }
 
-        .text-container:hover .overlay-gif {
-            opacity: 1; /* Show the GIF when hovering over the text */
+        .text-container-2:hover .overlay-gif-2 {
+            opacity: 1;
         }
     </style>
 </head>
 <body>
-    <div class="text-container">
+    <div class="text-container-2">
         <p>Hover over this text to see the GIF!</p>
-        <img id="overlay-gif" class="overlay-gif" src="https://designsbydarlene.github.io/images/circle.gif" alt="GIF">
+        <img id="overlay-gif-2" class="overlay-gif-2" src="https://designsbydarlene.github.io/images/circle.gif" alt="GIF">
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const gifSrc = 'https://designsbydarlene.github.io/images/circle.gif'; // Your GIF URL
-            const textContainer = document.querySelector('.text-container');
-            const gifElement = document.getElementById('overlay-gif');
-
-            textContainer.addEventListener('mouseenter', function() {
+        // Attach hover events to play the GIF on hover and reset it
+        const attachHoverEvents = () => {
+            const textContainers = document.querySelectorAll('.text-container-2');
+            
+            // Loop through all text containers and attach hover events
+            textContainers.forEach((textContainer) => {
+                const gifElement = textContainer.querySelector('.overlay-gif-2');
                 if (gifElement) {
-                    gifElement.src = gifSrc + '?t=' + new Date().getTime(); // Reload GIF with a unique URL
-                    gifElement.style.opacity = 1; // Fade in the new GIF
+                    textContainer.addEventListener('mouseenter', function() {
+                        gifElement.src = gifElement.src.split('?')[0] + '?t=' + new Date().getTime(); // Reload GIF with a unique URL
+                        gifElement.style.display = 'block'; // Show the GIF
+                    });
+
+                    textContainer.addEventListener('mouseleave', function() {
+                        gifElement.style.display = 'none'; // Hide the GIF
+                    });
                 }
             });
+        };
 
-            textContainer.addEventListener('mouseleave', function() {
-                if (gifElement) {
-                    gifElement.style.opacity = 0; // Hide the GIF immediately
-                }
-            });
-        });
+        // Call the function to attach hover events after DOM is loaded
+        document.addEventListener('DOMContentLoaded', attachHoverEvents);
     </script>
 </body>
 </html>
