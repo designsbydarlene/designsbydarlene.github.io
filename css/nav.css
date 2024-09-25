@@ -117,4 +117,130 @@ header {
     }
 
     .hamburger.open span:nth-child(3) {
-        transform: rotate(-45
+        transform: rotate(-45deg) translate(4px, -8px);
+    }
+}
+
+.open-menu .hamburger span {
+    background-color: var(--primary);
+}
+
+/* Fullscreen menu inside the header */
+.fullscreen-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--darkgray);
+    overflow-y: auto; /* Enable scrolling if content exceeds screen height */
+}
+
+.fullscreen-menu.open-menu {    
+    display: block;
+    z-index: 4;
+}
+
+.fullscreen-menu .menu-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-y: auto;
+    padding: 280px 0px 280px 0px;
+}
+
+.fullscreen-menu ul {
+    list-style-type: none;
+    text-align: center;
+    margin-top: -50px;
+    padding: 0 20px;
+}
+
+.fullscreen-menu li {
+    margin: 0px 0;
+}
+
+.fullscreen-menu a {
+    font-family: "Baleny", serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: -2px;
+    text-decoration: none;
+    font-size: 80px;
+    line-height: 120px;
+    color: var(--primary);
+    display: inline-block;
+    overflow: hidden;
+    transition: letter-spacing 0.3s ease;
+    transform: scaleY(1.5);
+}
+
+.fullscreen-menu a:hover {
+    letter-spacing: 3px;
+}
+
+.fullscreen-menu a.active {
+    color: var(--lightgray);
+}
+
+body.open-menu header {
+    background-color: var(--midgray) !important;
+}
+
+body.open-menu {
+    overflow-y: hidden; /* Prevent body scrolling when menu is open */
+}
+
+body.open-menu .location h6 {
+    color: var(--primary);
+}
+
+body.open-menu .logo img {
+    content: url('../images/logo/logo-inverted.png');
+}
+
+body.open-menu .hamburger span {
+    background-color: var(--primary);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .location {
+        display: none;
+    }
+
+    .header-row {
+        justify-content: space-between;
+    }
+
+    .logo {
+        padding: 25px 0px 15px;       
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width:1024px) {
+    .logo img {
+        max-height: 30px;
+    }
+}
+
+@media (min-width: 769px) and (max-width:1024px) {
+    .logo {
+        padding: 10px 0px 0px 0px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    header {
+        height: 65px;
+    }
+
+    .open-menu .header-row {
+        color: var(--primary);
+        height: 65px;
+    }
+}
