@@ -1037,7 +1037,9 @@
     display: flex;
     width: 100%;
 }
-
+.px-5 {
+    padding: 0px 5px;
+    display: inline;}
 .buttons-column {
     flex: 1; /* Each column will take up equal space */
     box-sizing: border-box; /* Include padding in width calculation */
