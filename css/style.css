@@ -54,7 +54,7 @@ body {
 	align-items: flex-start;
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 0.5rem 1rem;
+	padding: 0;
 	gap: 1rem;
 	position: relative;
 	z-index: 2; /* Make sure header text stays on top */
@@ -361,7 +361,7 @@ footer.footer {
 
 @media (max-width: 1215px) {
 	.main-div {
-		padding: 15px;
+		padding: 1.5em;
 	}
 }
 
