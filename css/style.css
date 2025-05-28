@@ -170,7 +170,6 @@ nav {
 	background: transparent;
 	z-index: 999; /* higher than grid and header text */
 	max-width: 1200px !important;
-	width: 100vw;
 }
 
 nav a {
@@ -393,11 +392,9 @@ footer.footer {
 	}
 }
 
-@media (max-width: 501px) {
+@media (max-width: 600px) {
 	nav {
-		overflow-x: scroll;
-		position: relative; /* ensures absolute children like dropdowns align */
-		padding: 15px 0px 15px 0px;
+		display: none;
 	}
 }
 @media (max-width: 767px) {
