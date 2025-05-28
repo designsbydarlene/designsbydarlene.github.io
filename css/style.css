@@ -303,7 +303,7 @@ nav a.active::after {
 	font-weight: 400;
 	color: var(--text-dark);
 	text-align: left;
-	background: #fff;
+	background: #e7e6e4;
 	z-index: 2;
 	position: relative;
 }
@@ -352,7 +352,7 @@ footer.footer {
 }
 
 .footer-logo {
-	max-width: 80px;
+	max-width: 100px;
 	height: auto;
 	padding-top: 15px;
 }
@@ -395,7 +395,7 @@ footer.footer {
 
 @media (max-width: 501px) {
 	nav {
-		overflow-x: visible;
+		overflow-x: scroll;
 		position: relative; /* ensures absolute children like dropdowns align */
 		padding: 15px 0px 15px 0px;
 	}
