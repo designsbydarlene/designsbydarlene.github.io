@@ -199,7 +199,7 @@ nav a::after, #menu li::after {
 	transform-origin: center;
 	height: 3px;
 	width: 100%;
-    padding-top: 1em;
+    padding-top: 0em;
 	background-color: var(--text-dark);
 	transition: transform 0.3s ease-in-out;
 }
@@ -553,10 +553,10 @@ footer.footer {
 }
 
 #menu li {
-    padding: .25em 0em;
+    padding: .5em 0em;
     color: var(--text-dark);
 }
-
+.portfolio-trigger.visited { font-weight: bold;}
 #menu li a {
     text-decoration: none;
     color: var(--text-dark);
