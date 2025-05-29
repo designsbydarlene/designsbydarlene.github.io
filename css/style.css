@@ -76,6 +76,13 @@ body {
 	margin-bottom: 5px !important;
 }
 @media (min-width: 768px) {
+
+.footer-right {
+	flex: 1 1 30%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
 	.header-right {
 		padding-top: 15px;
 	}    
@@ -172,7 +179,7 @@ nav {
 	max-width: 1200px !important;
 }
 
-nav a {
+nav a, #menu li {
 	text-transform: uppercase;
 	text-decoration: none;
 	color: var(--text-dark);
@@ -183,7 +190,7 @@ nav a {
 	height: fit-content;
 }
 
-nav a::after {
+nav a::after, #menu li::after {
 	content: "";
 	position: absolute;
 	left: 50%;
@@ -192,6 +199,7 @@ nav a::after {
 	transform-origin: center;
 	height: 3px;
 	width: 100%;
+    padding-top: 1em;
 	background-color: var(--text-dark);
 	transition: transform 0.3s ease-in-out;
 }
@@ -265,12 +273,13 @@ nav a.active::after {
 	}
 }
 @media (min-width: 901px) {
-	.grid {
-		column-count: 3;
-		column-gap: 1rem;
-		padding: 1em 0px;
-		margin: 0 auto;
-		max-width: 1200px;
+	.grid {        
+        column-count: 3;
+        column-gap: 1rem;
+        padding: 1em 0px;
+        margin: 0 auto;
+        max-width: 1200px;
+        width: calc(100vw - 3.2em);
 	}
 }
 .card {
@@ -343,13 +352,6 @@ footer.footer {
 	margin-bottom: 0.25rem;
 }
 
-.footer-right {
-	flex: 1 1 30%;
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-}
-
 .footer-logo {
 	max-width: 100px;
 	height: auto;
@@ -360,7 +362,7 @@ footer.footer {
 
 @media (max-width: 1215px) {
 	.main-div {
-		padding: 1.5em;
+		padding: 2em 1.5em;
 	}
 }
 
@@ -393,10 +395,21 @@ footer.footer {
 }
 
 @media (max-width: 600px) {
+    .header-left h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5px !important;
+    margin-top: .5em;
+}
 	nav {
 		display: none;
 	}
 }
+
+@media (min-width: 601px) {
+    #menuToggle,#menuToggle span  { display: none; }  
+    
+}
+
 @media (max-width: 767px) {
 	footer.footer {
 		flex-direction: column;
@@ -435,4 +448,169 @@ footer.footer {
 		justify-content: flex-start;
 		z-index: 100;
 	}
+}
+
+.nav-menu {
+    padding: 2em 1.5em 0em;
+}
+
+@media (max-width: 600px) {
+
+#menuToggle {
+  display: block;
+  position: absolute;
+  z-index: 10;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+
+  cursor: pointer;
+
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+
+  -webkit-touch-callout: none;
+}
+
+/*
+         * Just a quick hamburger
+         */
+#menuToggle span {
+    
+  display: block;
+  width: 30px;
+  height: 2px;
+  margin-bottom: 7px;
+  position: relative;
+  background: var(--text-dark);
+  border-radius: 3px;
+  z-index: 10;
+  transform-origin: 4px 0px;
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+/*
+         * Transform all the slices of hamburger
+         * into a crossmark.
+         */
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+         * But let's hide the middle one.
+         */
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+         * Ohyeah and the last one should go the other direction
+         */
+#menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(2px, -1px);
+}
+/*
+         * Make this absolute positioned
+         * at the top left of the screen
+         */
+#menu {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#menu li {
+    padding: .25em 0em;
+    color: var(--text-dark);
+}
+
+#menu li a {
+    text-decoration: none;
+    color: var(--text-dark);
+}
+a.mobile-drop-first { padding-top:1em !important;}
+/*
+         * And let's slide it in from the left
+         */
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
+
+.onclick-menu:focus {
+  /* clicking on label should toggle the menu */
+  pointer-events: none;
+}
+    .onclick-menu.active .onclick-menu-content {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        max-width: calc(100% - 1.5em) !important;
+        background: #dadada;
+        padding: 1.5em;
+    }
+.onclick-menu:focus .onclick-menu-content {
+  /*  opacity is 1 in opened state (see below) */
+  opacity: 1;
+  visibility: visible;
+  display: inherit;
+  /* don't let pointer-events affect descendant elements */
+  pointer-events: auto;
+}
+.onclick-menu-content {
+  /* use opacity to fake immediate toggle */
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  padding: 1em 0em;
+  transition: visibility 0.5s;
+}
+.onclick-menu-content li {
+    padding: 1em;
+  list-style: none;
+}
+.portfolio-trigger {
+  display: inline-block;
+  padding-bottom: 4px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.onclick-menu.active .portfolio-trigger {
+  border-bottom: 2px solid black;
+}
+
 }

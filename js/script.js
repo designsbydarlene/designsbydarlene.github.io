@@ -1,4 +1,4 @@
-	document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
 		const toggles = document.querySelectorAll(".dropdown-toggle");
 
 		toggles.forEach(toggle => {
@@ -8,3 +8,10 @@
 				dropdown.classList.toggle("open");
 			});
 		});
+    });
+document.querySelector('.portfolio-trigger').addEventListener('click', function(e) {
+  e.preventDefault(); // prevent page jump
+  e.stopPropagation();
+  this.parentElement.classList.toggle('active');
+});
+

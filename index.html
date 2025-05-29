@@ -8,6 +8,46 @@
   <link rel="icon" href="./../logo.svg" type="image/svg+xml">
 </head>
 <body>
+<div class="nav-menu" role="navigation">
+  <div id="menuToggle">
+    <!--
+        A fake / hidden checkbox is used as click reciever,
+        so you can use the :checked selector on it.
+        -->
+    <input type="checkbox" />
+
+    <!--
+        Some spans to act as a hamburger.
+
+        They are acting like a real hamburger,
+        not that McDonalds stuff.
+        -->
+    <span></span>
+    <span></span>
+    <span></span>
+
+    <!--
+        Too bad the menu has to be inside of the button
+        but hey, it's pure CSS magic.
+        -->
+    <ul id="menu">
+      <li class=""><div tabindex="0" class="onclick-menu">
+  <a href="#" class="portfolio-trigger">PORTFOLIO</a>
+  <ul class="onclick-menu-content">
+            <li><a class="mobile-drop" href="#">WEB</a></li>
+            <li><a class="mobile-drop" href="#">GRAPHIC</a></li>
+            <li><a class="mobile-drop" href="#">UX/UI</a></li>
+            <li><a class="mobile-drop" href="#">ILLUSTRATION</a></li>
+            <li><a class="mobile-drop" href="#">MOTION</a></li>
+          </ul>
+        </div>
+      </li>
+      <li><a href="#">Info</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="https://www.upwork.com/freelancers/~0143d43bc4b88f142a" target="_blank">Show me more</a></li>
+    </ul>
+  </div>
+</div>
 
 <div class="main-div">
 	<div id="desktop" class="sticky-wrapper">
@@ -53,9 +93,8 @@
 
 	<div id="mobile" class="sticky-wrapper">
 		<nav>
-			<div class="dropdown"><a href="#" class="active">Overview</a></div>
 			<div class="dropdown">
-				<a href="#">Portfolio</a>
+				<a class="active" href="#">Portfolio</a>
 				<div class="dropdown-content">
 					<a class="dropdown-link" href="#">Web</a>
 					<a href="#">Graphic</a>
