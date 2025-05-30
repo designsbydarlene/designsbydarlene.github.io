@@ -48,17 +48,6 @@ body {
 	z-index: 3; /* Ensures nav/header appear above overlay */
 }
 
-.header-content {
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 0;
-	gap: 1rem;
-	position: relative;
-	z-index: 2; /* Make sure header text stays on top */
-}
 
 .header-left,
 .header-right {
@@ -279,7 +268,6 @@ nav a.active::after {
         padding: 1em 0px;
         margin: 0 auto;
         max-width: 1200px;
-        width: calc(100vw - 3.2em);
 	}
 }
 .card {
@@ -406,6 +394,18 @@ footer.footer {
 }
 
 @media (min-width: 601px) {
+	
+.header-content {
+	display: flex;
+	padding: 2em 0em 0em;
+	justify-content: space-between;
+	align-items: flex-start;
+	max-width: 1200px;
+	margin: 0 auto;
+	gap: 1rem;
+	position: relative;
+	z-index: 2; /* Make sure header text stays on top */
+}
     #menuToggle,#menuToggle span  { display: none; }  
     
 }
@@ -451,12 +451,22 @@ footer.footer {
 	}
 }
 
+
+@media (max-width: 600px) {
+.header-content {
+	display: flex;
+	padding: 0em 0em 0em;
+	justify-content: space-between;
+	align-items: flex-start;
+	max-width: 1200px;
+	margin: 0 auto;
+	gap: 1rem;
+	position: relative;
+	z-index: 2; /* Make sure header text stays on top */
+}
 .nav-menu {
     padding: 2em 1.5em 0em;
 }
-
-@media (max-width: 600px) {
-
 #menuToggle {
   display: block;
   position: absolute;
