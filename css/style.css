@@ -362,7 +362,7 @@ footer.footer {
 
 @media (max-width: 1215px) {
 	.main-div {
-		padding: 2em 1.5em;
+		padding: 0em 1.5em;
 	}
 }
 
@@ -402,6 +402,10 @@ footer.footer {
 }
 	nav {
 		display: none;
+	}
+	
+	.main-div {
+		padding: 2em 1.5em;
 	}
 }
 
