@@ -245,29 +245,40 @@ nav a.active::after {
 
 /* Grid content will start below the sticky header */
 @media (max-width: 767px) {
-    
 	.grid {
 		column-count: 1;
+		max-width: calc(100% - 2.1px) !important;
 		column-gap: 1rem;
 		padding: 15px 0px;
-		margin: 0 auto;
 	}
 }
 @media (min-width: 768px) and (max-width: 900px) {
 	.grid {
 		column-count: 2;
+				max-width: calc(100% - 2.1px) !important;
 		column-gap: 1rem;
 		padding: 15px 0px;
-		margin: 0 auto;
 	}
 }
-@media (min-width: 901px) {
+@media (min-width: 901px) and (max-width: 1199px) {
 	.grid {        
         column-count: 3;
         column-gap: 1rem;
         padding: 1em 0px;
-        margin: 0 auto;
-        max-width: 1200px;
+        max-width: calc(100% - 2.1px) !important;
+	}
+}
+	
+@media (min-width: 1200px) {
+	body {
+		padding: 0em 1em;
+	}
+	.grid {        
+        column-count: 3;
+        column-gap: 1rem;
+        padding: 1em 0px;
+		margin: 0 auto;
+        max-width: calc(1200px - 6.1px) !important;
 	}
 }
 .card {
@@ -356,8 +367,8 @@ footer.footer {
 
 @media (min-width: 901px) {
 	#desktop.sticky-wrapper {
-		display: ;
-	}
+		}
+
 	header#mobile,
 	#mobile.sticky-wrapper {
 		display: none;
@@ -400,7 +411,7 @@ footer.footer {
 	padding: 2em 0em 0em;
 	justify-content: space-between;
 	align-items: flex-start;
-	max-width: 1200px;
+	max-width: 1194px;
 	margin: 0 auto;
 	gap: 1rem;
 	position: relative;
