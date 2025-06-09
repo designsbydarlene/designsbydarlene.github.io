@@ -90,6 +90,7 @@ body {
 }
 .btn {
 	transition: all 0.3s ease;
+	text-decoration: none;
 	background: rgba(255, 255, 255, 0.15);
 	backdrop-filter: blur(15px);
 	-webkit-backdrop-filter: blur(15px);
@@ -418,7 +419,7 @@ footer.footer {
 	align-items: flex-start;
 	max-width: 1194px;
 	margin: 0 auto;
-	gap: 1rem;
+	gap: 1.5rem;
 	position: relative;
 	z-index: 2; /* Make sure header text stays on top */
 }
