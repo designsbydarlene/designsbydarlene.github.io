@@ -751,6 +751,11 @@ footer.footer {
 	/* adjust to vertically align with your content */
 }
 
+.rotated-label#illustration {
+	margin-top: 5.3em;
+	/* adjust to vertically align with your content */
+}
+
 
 /** Modal **/
 /* Modal overlay */
