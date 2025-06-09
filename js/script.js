@@ -15,37 +15,41 @@ document.querySelector('.portfolio-trigger').addEventListener('click', function(
   this.parentElement.classList.toggle('active');
 });
 
-  // Open modal
-  document.querySelectorAll('.open-modal').forEach(button => {
-    button.addEventListener('click', function (e) {
-      e.preventDefault();
-      const modalId = this.getAttribute('data-modal');
-      document.getElementById(modalId).style.display = 'block';
-    });
+/* modals */
+// Open modal
+document.querySelectorAll('.open-modal').forEach(button => {
+  button.addEventListener('click', function (e) {
+    e.preventDefault();
+    const modalId = this.getAttribute('data-modal');
+    document.getElementById(modalId).style.display = 'block';
   });
+});
 
-  // Close modal
-  document.querySelectorAll('.modal .close').forEach(button => {
-    button.addEventListener('click', function () {
-      this.closest('.modal').style.display = 'none';
-    });
+// Close modal
+document.querySelectorAll('.modal .close').forEach(button => {
+  button.addEventListener('click', function () {
+    this.closest('.modal').style.display = 'none';
   });
+});
 
-  // Close when clicking outside modal content
-  window.addEventListener('click', function (event) {
-    document.querySelectorAll('.modal').forEach(modal => {
-      if (event.target === modal) {
-        modal.style.display = 'none';
-      }
-    });
+// Close modal when clicking outside
+window.addEventListener('click', function (event) {
+  document.querySelectorAll('.modal').forEach(modal => {
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
   });
+});
 
-  // Thumbnail image click logic
-  document.querySelectorAll('.modal-thumbnail-grid .thumb').forEach(thumb => {
-    thumb.addEventListener('click', function () {
-      const mainImg = document.getElementById('main-modal-image');
+// Image switching logic per modal
+document.querySelectorAll('.modal-thumbnail-grid .thumb').forEach(thumb => {
+  thumb.addEventListener('click', function () {
+    const targetId = this.getAttribute('data-target');
+    const mainImg = document.getElementById(targetId);
+    if (mainImg) {
       mainImg.src = this.src;
       mainImg.alt = this.alt;
-    });
+    }
   });
+});
 
