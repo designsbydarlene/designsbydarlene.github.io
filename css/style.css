@@ -214,7 +214,7 @@ nav a.active::after {
 	width: max-content;
 	background-color: #fff;
 	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-	z-index: 9999;
+	z-index: 5;
 	overflow: visible; /* or 'hidden' or 'auto' based on content needs */
 }
 
@@ -587,6 +587,7 @@ footer.footer {
     padding: .5em 0em;
     color: var(--text-dark);
 }
+.visited {font-weight: bold;}
 .portfolio-trigger.visited { font-weight: bold;}
 #menu li a {
     text-decoration: none;

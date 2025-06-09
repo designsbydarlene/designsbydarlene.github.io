@@ -33,9 +33,10 @@
         but hey, it's pure CSS magic.
         -->
 			<ul id="menu">
+				<li><a class="visited" href="./index.html" title="Home">Home</a></li>
 				<li class="">
 					<div tabindex="0" class="onclick-menu">
-						<a href="#" class="portfolio-trigger visited">PORTFOLIO</a>
+						<a href="#" class="portfolio-trigger">PORTFOLIO</a>
 						<ul class="onclick-menu-content">
 							<li><a class="mobile-drop" href="./web.html" title="Web Design">Web Design</a></li>
 							<li><a class="mobile-drop" href="./graphic.html" title="Graphic & Brand Design">Graphic &
@@ -71,8 +72,9 @@
 				</div>
 			</header>
 			<nav>
+				<div class="dropdown"><a class="active" href="./index.html" title="Home">Home</a></div>
 				<div class="dropdown portfolio-dropdown">
-					<a href="#" class="dropdown-toggle active">Portfolio</a>
+					<a href="#" title="Portfolio" class="dropdown-toggle">Portfolio</a>
 					<div class="dropdown-content">
 						<a href="./web.html" title="Web Design">Web Design</a>
 						<a href="./graphic.html" title="Graphic & Brand Design">Graphic & Brand Design</a>
@@ -103,8 +105,9 @@
 
 		<div id="mobile" class="sticky-wrapper">
 			<nav>
+				<div class="dropdown active"><a class="active" href="./index.html" title="Home">Home</a></div>
 				<div class="dropdown">
-					<a class="active" href="#">Portfolio</a>
+					<a class="" href="./index.html" title="Portfolio">Portfolio</a>
 					<div class="dropdown-content">
 						<a class="dropdown-link" href="./web.html" title="Web Design">Web</a>
 						<a href="./graphic.html" title="Graphic Design">Graphic</a>
@@ -122,9 +125,9 @@
 		<section class="grid">
 			<div class="card">
 				<a href="./web.html" title="Web Design">
-				<img src="https://raw.githubusercontent.com/designsbydarlene/designsbydarlene.github.io/refs/heads/main/images/web-design-thumbnail.webp"
-					alt="Web Design">
-				<span>WEB DESIGN</span></a>
+					<img src="https://raw.githubusercontent.com/designsbydarlene/designsbydarlene.github.io/refs/heads/main/images/web-design-thumbnail.webp"
+						alt="Web Design">
+					<span>WEB DESIGN</span></a>
 			</div>
 			<div class="card">
 				<img src="https://raw.githubusercontent.com/designsbydarlene/designsbydarlene.github.io/refs/heads/main/images/illustration-thumbnail.webp"
@@ -164,7 +167,7 @@
 				</ul>
 			</div>
 			<div class="footer-right">
-				<img src="./../images/logo.svg" alt="Logo" class="footer-logo">
+            <a href="#" title="Home"><img src="./../images/logo.svg" alt="Logo" class="footer-logo"></a>
 			</div>
 		</footer>
 	</div>
