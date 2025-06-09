@@ -733,9 +733,20 @@ footer.footer {
 	white-space: nowrap;
 	width: 12px !important;
 	margin-right: 2rem;
+	/* adjust to vertically align with your content */
+}
+
+
+.rotated-label#web {
 	margin-top: 5.9em;
 	/* adjust to vertically align with your content */
 }
+
+.rotated-label#graphic {
+	margin-top: 11em;
+	/* adjust to vertically align with your content */
+}
+
 
 /** Modal **/
 /* Modal overlay */
@@ -845,4 +856,14 @@ footer.footer {
   .modal-thumbnail-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+.dropdown-content::before {
+  content: "";
+  position: absolute;
+  top: -15px; /* invisible buffer above the menu */
+  left: 0;
+  height: 15px;
+  width: 100%;
+  background: transparent;
+  pointer-events: auto;
 }

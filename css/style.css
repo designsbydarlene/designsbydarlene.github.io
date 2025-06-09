@@ -646,3 +646,13 @@ a.mobile-drop-first { padding-top:1em !important;}
 }
 
 }
+.dropdown-content::before {
+  content: "";
+  position: absolute;
+  top: -15px; /* invisible buffer above the menu */
+  left: 0;
+  height: 15px;
+  width: 100%;
+  background: transparent;
+  pointer-events: auto;
+}
