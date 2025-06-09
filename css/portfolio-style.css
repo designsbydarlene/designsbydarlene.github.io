@@ -871,3 +871,5 @@ footer.footer {
   background: transparent;
   pointer-events: auto;
 }
+
+a.link { color: black !important; text-decoration: underline; }
