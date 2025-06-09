@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="./css/portfolio-style.css"> <!-- Link to CSS -->
+  <link rel="icon" href="./../logo.svg" type="image/svg+xml">
+</head>
+
+<body>
+  <div class="nav-menu" role="navigation">
+    <div id="menuToggle">
+      <!--
+        A fake / hidden checkbox is used as click reciever,
+        so you can use the :checked selector on it.
+        -->
+      <input type="checkbox" />
+
+      <!--
+        Some spans to act as a hamburger.
+
+        They are acting like a real hamburger,
+        not that McDonalds stuff.
+        -->
+      <span></span>
+      <span></span>
+      <span></span>
+
+      <!--
+        Too bad the menu has to be inside of the button
+        but hey, it's pure CSS magic.
+        -->
+      <ul id="menu">
+        <li><a href="./index.html" title="Home">Home</a></li>
+        <li class="">
+          <div tabindex="0" class="onclick-menu">
+            <a href="./index.html" class="portfolio-trigger visited">PORTFOLIO</a>
+            <ul class="onclick-menu-content">
+              <li><a class="mobile-drop" href="./web.html" title="Web Design">Web Design</a></li>
+              <li><a class="mobile-drop" href="./graphic.html" title="Graphic & Brand Design">Graphic &
+                  Brand Design</a></li>
+              <li><a class="mobile-drop" href="#" title="UX/UI Design"><strong>UX/UI Design</strong></a></li>
+              <li><a class="mobile-drop" href="./illustration" title="Illustration">Illustration</a></li>
+              <li><a class="mobile-drop" href="./motion.html" title="Motion Design">Motion Design</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="./resume.html" title="Resume">Resume</a></li>
+        <li><a href="./contact.html" title="Contact">Contact</a></li>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="main-div">
+    <div id="desktop" class="sticky-wrapper">
+      <header>
+        <div class="header-content">
+
+          <div class="header-left">
+            <h1>Elevating Brands with Award-Winning Design</h1>
+            <a href="mailto:agbayani.darlene@gmail.com" class="btn" title="Send Email">Get in Contact</a>
+          </div>
+          <div class="header-right">
+            <p>With 9 years of expertise in web, graphic, and UX/UI design, a Master's in Computer
+              Science, and top-ranked designs at my agency, I craft visually compelling and
+              user-centric experiences that stand out.</p>
+          </div>
+        </div>
+      </header>
+      <nav>
+        <div class="dropdown"><a class="" href="./index.html" title="Home">Home</a></div>
+        <div class="dropdown portfolio-dropdown">
+          <a href="#" title="Portfolio" class="dropdown-toggle active">Portfolio</a>
+          <div class="dropdown-content">
+            <a href="./web.html" title="Web Design">Web Design</a>
+            <a href="./graphic.html" title="Graphic & Brand Design">Graphic & Brand Design</a>
+            <a href="#" title="UX/UI Design"><strong>UX/UI Design</strong></a>
+            <a href="./illustration" title="Illustration">Illustration</a>
+            <a href="./motion.html" title="Motion Design">Motion Design</a>
+          </div>
+        </div>
+        <div class="dropdown"><a href="./about.html" title="About">About</a></div>
+        <div class="dropdown"><a href="./resume.html" title="Resume">Resume</a></div>
+        <div class="dropdown"><a href="./contact.html" title="Contact">Contact</a></div>
+      </nav>
+    </div>
+    <header id="mobile">
+      <div class="header-content">
+        <div class="header-left">
+          <h1>Elevating Brands with Award-Winning Design</h1>
+          <a href="mailto:agbayani.darlene@gmail.com" class="btn" title="Send Email">Get in Contact</a>
+        </div>
+        <div class="header-right">
+          <p>With 9 years of expertise in web, graphic, and UX/UI design, a Master's in Computer Science (HCI
+            focus), and top-ranked designs at my agency, I craft visually compelling and user-centric
+            experiences that stand out.</p>
+        </div>
+      </div>
+    </header>
+
+    <div id="mobile" class="sticky-wrapper">
+      <nav>
+        <div class="dropdown"><a href="./index.html" title="Home">Home</a></div>
+        <div class="dropdown">
+          <a href="#" title="Portfolio" class="dropdown-toggle">Portfolio</a>
+          <div class="dropdown-content">
+            <a href="./web.html" title="Web Design">Web Design</a>
+            <a href="./graphic.html" title="Graphic Design">Graphic Design</a>
+            <a href="#" title="UX/UI Design"><strong>UX/UI Design</strong></a>
+            <a href="./illustration.html" title="Illustration">Illustration</a>
+            <a href="./motion.html" title="Motion Design">Motion Design</a>
+          </div>
+        </div>
+        <div class="dropdown"><a href="./about.html" title="About">About</a></div>
+        <div class="dropdown"><a href="./resume.html" title="Resume">Resume</a></div>
+        <div class="dropdown"><a href="./contact.html" title="Contact">Contact</a></div>
+      </nav>
+    </div>
+    <section class="grid-outer">
+
+      <div class="grid-with-label">
+        <div class="rotated-label" id="ux">UX/UI Design.</div>
+        <section class="grid">
+          <div class="card">
+            <a href="#" class="open-modal" data-modal="electrolux-modal" title="Web Design">
+              <img
+                src="https://raw.githubusercontent.com/designsbydarlene/designsbydarlene.github.io/refs/heads/main/images/hotel-store-thumbnail.webp"
+                alt="GotSport Travel Hotel Booking">
+              <span>Hotel Bookings Re-Imagined</span>
+            </a>
+          </div>
+
+          <div class="card">
+            <a href="#" class="open-modal" data-modal="award-modal" title="Web Design">
+
+              <img
+                src="https://raw.githubusercontent.com/designsbydarlene/designsbydarlene.github.io/refs/heads/main/images/sharpify-mockup-thumbnail.webp"
+                alt="Sharpify Interface Mockup">
+              <span>Trading Upwards</span></a>
+          </div>
+          <div class="card">
+
+            <a href="#" class="open-modal" data-modal="compton-modal" title="Web Design">
+              <img
+                src="https://raw.githubusercontent.com/designsbydarlene/designsbydarlene.github.io/refs/heads/main/images/gotsport-mobile-hotel-thumbnail.webp"
+                alt="GotSport Travel Mobile Hotel Booking">
+              <span>Bookings On The Go</span></a>
+          </div>
+        </section>
+      </div>
+
+      <footer class="footer">
+        <div class="footer-left">
+          <a href="tel:18084995911" title="Call">808.499.5911</a><br>
+          <a href="mailto:darlene.agbayani@gmail.com">darlene.agbayani@gmail.com</a>
+          </p>
+          <ul class="footer-services">
+            <li><a href="./about.html" title="About">About</a></li>
+            <li><a href="./resume.html" title="Resume">Resume</a></li>
+            <li><a href="./web.html" title="Web Design">Web Design</a></li>
+            <li><a href="./graphic.html" title="Graphic & Brand Design">Graphic & Brand Design</a></li>
+            <li><a href="./ux-ui.html" title="UX/UI Design">UX/UI Design</a></li>
+            <li><a href="./illustration" title="Illustration">Illustration</a></li>
+            <li><a href="./motion.html" title="Motion Design">Motion Design</a></li>
+          </ul>
+        </div>
+        <div class="footer-right">
+          <a href="./index.html" title="Home"><img src="./../images/logo.svg" alt="Logo" class="footer-logo"></a>
+        </div>
+      </footer>
+  </div>
+
+  <!-- Modal -->
+  <!-- ELECTROLUX MODAL -->
+  <div id="electrolux-modal" class="modal">
+    <div class="modal-inner">
+      <button class="close" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <h2>Trade Show-Stopper</h2>
+        <p>"Trade Show-Stopper." is a web design created for presentation at the Nationwide Marketing Group semi-annual
+          tradeshow. Our team had recently added Electrolux, Profile, and Vintec appliance brands, and this site served
+          as a showcase for how dealers and clients could market these products to their customers. I focused on clean
+          layouts, bold imagery, and clear messaging to help convey product quality and versatility in a professional,
+          approachable way.</p>
+      </div>
+
+      <!-- Thumbnail grid -->
+      <div class="modal-thumbnail-grid">
+        <img
+          src="https://raw.githubusercontent.com/designsbydarlene/designsbydarlene.github.io/refs/heads/main/images/electrolux-full-page.webp"
+          alt="Full Home Page" class="thumb" data-target="main-image-electrolux">
+        <img
+          src="https://raw.githubusercontent.com/designsbydarlene/designsbydarlene.github.io/refs/heads/main/images/electrolux-category-page.webp"
+          alt="Category Page" class="thumb" data-target="main-image-electrolux">
+        <img
+          src="https://raw.githubusercontent.com/designsbydarlene/designsbydarlene.github.io/refs/heads/main/images/electrolux-color-scheme.webp"
+          alt="Electrolux Color Scheme" class="thumb" data-target="main-image-electrolux">
+      </div>
+
+      <!-- Full-size image -->
+      <div class="modal-image-display">
+        <img id="main-image-electrolux"
+          src="https://raw.githubusercontent.com/designsbydarlene/designsbydarlene.github.io/refs/heads/main/images/electrolux-full-page.webp"
+          alt="Full Home Page">
+      </div>
+    </div>
+  </div>
+
+  <!-- AWARD MODAL -->
+  <div id="award-modal" class="modal">
+    <div class="modal-inner">
+      <button class="close" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <h2>Best Of Award 2024</h2>
+        <p>This website earned the "Design of the Year" award in 2024 at my agency, standing out as the top project
+          among a talented team of eight designers. Voted on by the entire company—including leadership, marketing, and
+          development teams—this project was recognized for its innovation, impact, and exceptional attention to detail.
+          The design successfully balanced visual storytelling with usability, setting a new standard for our team’s
+          creative output. It remains one of the most celebrated pieces in my portfolio and a defining moment in my
+          design career.</p>
+      </div>
+
+      <!-- Thumbnail grid -->
+      <div class="modal-thumbnail-grid">
+        <img
+          src="https://raw.githubusercontent.com/designsbydarlene/designsbydarlene.github.io/refs/heads/main/images/white-rose-full-page.webp"
+          alt="White Rose Full Home Page" class="thumb" data-target="main-image-award">
+        <img
+          src="https://raw.githubusercontent.com/designsbydarlene/designsbydarlene.github.io/refs/heads/main/images/white-rose-category.webp"
+          alt="Category Section" class="thumb" data-target="main-image-award">
+        <img
+          src="https://raw.githubusercontent.com/designsbydarlene/designsbydarlene.github.io/refs/heads/main/images/white-rose-color-scheme.webp"
+          alt="Color Scheme" class="thumb" data-target="main-image-award">
+      </div>
+
+      <!-- Full-size image -->
+      <div class="modal-image-display">
+        <img id="main-image-award"
+          src="https://raw.githubusercontent.com/designsbydarlene/designsbydarlene.github.io/refs/heads/main/images/white-rose-full-page.webp"
+          alt="Best of Award">
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- COMPTON MODAL -->
+  <div id="compton-modal" class="modal">
+    <div class="modal-inner">
+      <button class="close" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <h2>Luxurious Appliance Design</h2>
+        <p>This luxury appliance website for Compton & Son Appliance introduced a custom brand slider concept that I’m
+          especially proud of. Designed to elevate the user experience, the slider seamlessly showcases high-end
+          appliance brands while maintaining a clean, modern aesthetic. The layout was tailored to reflect the
+          sophistication of the products, using refined typography, spacious design, and rich imagery. This project
+          reflects my dedication to blending usability with bold visual concepts, and the brand slider has since become
+          a standout feature in my portfolio.
+
+        </p>
+      </div>
+
+      <!-- Thumbnail grid -->
+      <div class="modal-thumbnail-grid">
+        <img
+          src="https://raw.githubusercontent.com/designsbydarlene/designsbydarlene.github.io/refs/heads/main/images/compton-full-page.webp"
+          alt="Compton Full Home Page" class="thumb" data-target="main-image-compton">
+        <img
+          src="https://raw.githubusercontent.com/designsbydarlene/designsbydarlene.github.io/refs/heads/main/images/compton-trade-show-page.webp"
+          alt="Custom Tradeshow Page" class="thumb" data-target="main-image-compton">
+        <img
+          src="https://raw.githubusercontent.com/designsbydarlene/designsbydarlene.github.io/refs/heads/main/images/compton-color-scheme.webp"
+          alt="Color Scheme" class="thumb" data-target="main-image-compton">
+      </div>
+
+      <!-- Full-size image -->
+      <div class="modal-image-display">
+        <img id="main-image-compton"
+          src="https://raw.githubusercontent.com/designsbydarlene/designsbydarlene.github.io/refs/heads/main/images/compton-full-page.webp"
+          alt="Compton & Son Appliance Full Home Page">
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Link to JS -->
+  <script src="./js/script.js"></script>
+
+</body>
+
+</html>

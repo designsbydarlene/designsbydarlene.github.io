@@ -746,6 +746,10 @@ footer.footer {
 	margin-top: 11em;
 	/* adjust to vertically align with your content */
 }
+.rotated-label#ux {
+	margin-top: 7em;
+	/* adjust to vertically align with your content */
+}
 
 
 /** Modal **/
