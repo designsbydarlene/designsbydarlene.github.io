@@ -333,14 +333,16 @@ footer.footer {
 	gap: 2rem;
 }
 
+.footer-services li a { text-decoration: none !important; }
 .footer-left p {
 	margin: 10px 0 1rem 0;
 	line-height: 1.5;
 }
 
+.footer-left { margin-top: 10px; }
+
 .footer-left a {
 	color: var(--text-dark);
-	text-decoration: underline;
 }
 
 .footer-services {
