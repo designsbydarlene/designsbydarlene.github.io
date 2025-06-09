@@ -293,6 +293,7 @@ nav a.active::after {
 	z-index: 1;
 }
 
+.card a { text-decoration: none; }
 .card img {
 	filter: grayscale(0%);
 	z-index: 1;
@@ -634,7 +635,7 @@ a.mobile-drop-first { padding-top:1em !important;}
 }
 .portfolio-trigger {
   display: inline-block;
-  padding-bottom: 4px;
+  padding-bottom: 0px;
   text-decoration: none;
   color: inherit;
 }
