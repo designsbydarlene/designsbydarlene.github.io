@@ -335,7 +335,7 @@ content will start below the sticky header */
 	text-decoration: none;
 }
 
-.card img {
+.card img, .card video {
 	filter: grayscale(0%);
 	z-index: 1;
 	width: 100%;
@@ -753,6 +753,10 @@ footer.footer {
 
 .rotated-label#illustration {
 	margin-top: 5.3em;
+	/* adjust to vertically align with your content */
+}
+.rotated-label#motion {
+	margin-top: 7em;
 	/* adjust to vertically align with your content */
 }
 
