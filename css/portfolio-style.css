@@ -282,6 +282,11 @@ content will start below the sticky header */
 		column-gap: 1rem;
 		padding: 15px 0px;
 	}
+	.grid#about {
+		column-count: 1;
+		column-gap: 1rem;
+		padding: 15px 0px;
+	}
 
 	.grid-outer {
 		max-width: calc(100% - 2.1px) !important;
@@ -292,6 +297,11 @@ content will start below the sticky header */
 @media (min-width: 901px) and (max-width: 1199px) {
 	.grid {
 		column-count: 2;
+		column-gap: 1rem;
+		padding: 1em 0px;
+	}
+	.grid#about {
+		column-count: 1;
 		column-gap: 1rem;
 		padding: 1em 0px;
 	}
@@ -309,6 +319,12 @@ content will start below the sticky header */
 
 	.grid {
 		column-count: 2;
+		column-gap: 1rem;
+		padding: 1em 0px;
+		margin: 0 auto;
+	}
+	.grid#about {
+		column-count: 1;
 		column-gap: 1rem;
 		padding: 1em 0px;
 		margin: 0 auto;
@@ -757,6 +773,10 @@ footer.footer {
 }
 .rotated-label#motion {
 	margin-top: 7em;
+	/* adjust to vertically align with your content */
+}
+.rotated-label#about {
+	margin-top: 3.5em;
 	/* adjust to vertically align with your content */
 }
 
