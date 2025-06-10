@@ -882,3 +882,20 @@ footer.footer {
 }
 
 a.link { color: black !important; text-decoration: underline; }
+
+#pdf-render {
+      width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+    }
+    .controls {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    button {
+      padding: 0.5em 1em;
+      font-size: 1rem;
+      cursor: pointer;
+    }

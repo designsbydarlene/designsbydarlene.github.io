@@ -7,6 +7,8 @@
   <title>Portfolio</title>
   <link rel="stylesheet" href="./css/portfolio-style.css"> <!-- Link to CSS -->
   <link rel="icon" href="./../logo.svg" type="image/svg+xml">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
 </head>
 
 <body>
@@ -127,7 +129,7 @@
         <section class="grid">
 
           <div class="card">
-            <a href="#" class="open-modal" data-modal="tiger-modal" title="Holiday Cheer">
+            <a href="#" class="open-modal" data-modal="holiday-modal" title="Holiday Cheer">
               <video autoplay muted loop playsinline>
   <source src="https://raw.githubusercontent.com/designsbydarlene/designsbydarlene.github.io/refs/heads/main/images/gotsport-holiday-thumbnail.mp4" type="video/mp4">
   Your browser does not support the video tag.
@@ -138,7 +140,7 @@
           </div>
           <div class="card">
 
-            <a href="#" class="open-modal" data-modal="paisley-modal" title="Paisley Power">
+            <a href="#" class="open-modal" data-modal="n2k-modal" title="Paisley Power">
               <img
                 src="https://raw.githubusercontent.com/designsbydarlene/designsbydarlene.github.io/refs/heads/main/images/girl-on-paper-bag-thumbnail.webp"
                 alt="Girl With Paisley Bandana">
@@ -147,11 +149,11 @@
 
           <div class="card">
 
-            <a href="#" class="open-modal" data-modal="tote-modal" title="Girl On Tote">
+            <a href="#" class="open-modal" data-modal="ppt-modal" title="Girl On Tote">
               <img
-                src="https://raw.githubusercontent.com/designsbydarlene/designsbydarlene.github.io/refs/heads/main/images/illustration-thumbnail.webp"
+                src="https://raw.githubusercontent.com/designsbydarlene/designsbydarlene.github.io/refs/heads/main/images/motion-graphics-thumbnail.webp"
                 alt="Girl With Silk Bandana">
-              <span>A Bold Beauty</span></a>
+              <span>Animate To Impress</span></a>
           </div>
         </section>
       </div>
@@ -179,73 +181,45 @@
 
   <!-- Modal -->
   <!-- ELECTROLUX MODAL -->
-  <div id="tap-modal" class="modal">
+  <div id="holiday-modal" class="modal">
     <div class="modal-inner">
       <button class="close" aria-label="Close modal">&times;</button>
       <div class="modal-header">
-        <h2>Designing for Growth</h2>
-        <p>This project is a complete UX/UI redesign for a local tree service company looking to modernize their online presence. The goal was to create a clean, intuitive experience that builds trust and makes it easy for users to request services, learn about offerings, and navigate with ease.
-The design features a streamlined layout, refreshed visual identity, and improved content hierarchy—all optimized for mobile responsiveness.
-Below are a few screenshots showcasing the redesign in action.
-<br><br>
-
-          View My Process: <a class="link" href="https://www.figma.com/design/7rPtaGNLK58kZ60mAWN1AK/JD-MARKETING-TEST-PROJECT---DARLENE-AGBAYANI--Copy-?node-id=3-7&t=Iw7uqkb3jPBDf93W-1" target="_blank" title="Figma Project for Taproot Tree Service">Figma Project</a>
-
+        <h2>Holiday Cheer</h2>
+        <p>A festive social media animation designed for the holiday season, featuring a stylized wreath in motion. This piece blends brand colors with a touch of seasonal warmth, creating an engaging and on-brand visual to spread cheer across digital platforms.
 </p>
-      </div>
-
-      <!-- Thumbnail grid -->
-      <div class="modal-thumbnail-grid">
-        <img
-          src="https://raw.githubusercontent.com/designsbydarlene/designsbydarlene.github.io/refs/heads/main/images/tap-full-page.webp"
-          alt="Full Home Page" class="thumb" data-target="main-image-tap">
-        <img
-          src="https://raw.githubusercontent.com/designsbydarlene/designsbydarlene.github.io/refs/heads/main/images/taproot-promo.webp"
-          alt="Category Page" class="thumb" data-target="main-image-tap">
-        <img
-          src="https://raw.githubusercontent.com/designsbydarlene/designsbydarlene.github.io/refs/heads/main/images/tap-reviews.webp"
-          alt="Electrolux Color Scheme" class="thumb" data-target="main-image-tap">
       </div>
 
       <!-- Full-size image -->
       <div class="modal-image-display">
-        <img id="main-image-tap"
-          src="https://raw.githubusercontent.com/designsbydarlene/designsbydarlene.github.io/refs/heads/main/images/tap-full-page.webp"
-          alt="Full Home Page">
+        <video style="max-width: 100%;" id="main-image-tap" autoplay muted loop playsinline>
+  <source src="https://raw.githubusercontent.com/designsbydarlene/designsbydarlene.github.io/refs/heads/main/images/gotsport-holiday-frameless.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
       </div>
     </div>
   </div>
 
   <!-- AWARD MODAL -->
-  <div id="tote-modal" class="modal">
+  <div id="ppt-modal" class="modal">
     <div class="modal-inner">
       <button class="close" aria-label="Close modal">&times;</button>
       <div class="modal-header">
-        <h2>A Bold Beauty</h2>
-        <p>This independent digital artwork is a personal expression of my creativity and love for visual storytelling. With a background in the beauty industry, I often draw inspiration from bold femininity, fashion, and elegance. A Bold Beauty blends those influences into a stylized piece that reflects both my artistic roots and my design evolution.
+        <h2>Animate To Impress</h2>
+        <p>A conceptual presentation design for GotSport, created as a test project to showcase how animation can elevate corporate storytelling. The layout, pacing, and transitions were tailored to reflect the company’s energetic, tech-forward identity while maintaining professionalism and clarity.
 
 </p>
       </div>
 
-      <!-- Thumbnail grid -->
-      <div class="modal-thumbnail-grid">
-        <img
-          src="https://raw.githubusercontent.com/designsbydarlene/designsbydarlene.github.io/refs/heads/main/images/girl-bandana-thumbnail.webp"
-          alt="Girl Bandana Digital" class="thumb" data-target="main-image-travel-desktop">
-        <img style="object-position: bottom center;"
-          src="https://raw.githubusercontent.com/designsbydarlene/designsbydarlene.github.io/refs/heads/main/images/illustration-thumbnail.webp"
-          alt="Girl Printed On Tote" class="thumb" data-target="main-image-travel-desktop">
-        <img
-          src="https://raw.githubusercontent.com/designsbydarlene/designsbydarlene.github.io/refs/heads/main/images/girl-bandana-shirt-thumbnail.webp"
-          alt="Girl On Shirt" class="thumb" data-target="main-image-travel-desktop">
-      </div>
+      <!-- Thumbnail grid --><div class="controls">
+  <button id="prev">⬅️ Previous</button>
+  <span id="page-num">1</span> / <span id="page-count">--</span>
+  <button id="next">Next ➡️</button>
+</div>
 
-      <!-- Full-size image -->
-      <div class="modal-image-display">
-        <img id="main-image-travel-desktop"
-          src="https://raw.githubusercontent.com/designsbydarlene/designsbydarlene.github.io/refs/heads/main/images/girl-bandana-thumbnail.webp"
-          alt="Girl Bandana Digital">
-      </div>
+<canvas id="pdf-canvas"></canvas>
+
     </div>
   </div>
 
