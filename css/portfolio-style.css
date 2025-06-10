@@ -464,7 +464,7 @@ footer.footer {
 		overflow-x: visible;
 		position: relative;
 		/* ensures absolute children like dropdowns align */
-		padding: 15px 0px 12px;
+		padding: 15px 0px 15px;
 	}
 }
 
