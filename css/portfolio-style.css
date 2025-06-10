@@ -282,7 +282,7 @@ content will start below the sticky header */
 		column-gap: 1rem;
 		padding: 15px 0px;
 	}
-	.grid#about {
+	.grid#about, .grid#resume {
 		column-count: 1;
 		column-gap: 1rem;
 		padding: 15px 0px;
@@ -300,7 +300,7 @@ content will start below the sticky header */
 		column-gap: 1rem;
 		padding: 1em 0px;
 	}
-	.grid#about {
+	.grid#about, .grid#resume {
 		column-count: 1;
 		column-gap: 1rem;
 		padding: 1em 0px;
@@ -328,6 +328,14 @@ content will start below the sticky header */
 		column-gap: 1rem;
 		padding: 1em 0px;
 		margin: 0 auto;
+	}
+
+	.grid#resume {
+		column-count: 1;
+		column-gap: 1rem;
+		padding: 1em 0px;
+		margin: 0;
+		width: 100%;
 	}
 
 	.grid-outer {
@@ -779,6 +787,15 @@ footer.footer {
 	margin-top: 3.5em;
 	/* adjust to vertically align with your content */
 }
+.rotated-label#resume {
+	margin-top: 4.4em;
+	/* adjust to vertically align with your content */
+}
+
+.rotated-label#contact {
+	margin-top: 4.4em;
+	/* adjust to vertically align with your content */
+}
 
 
 /** Modal **/
@@ -919,3 +936,100 @@ a.link { color: black !important; text-decoration: underline; }
       font-size: 1rem;
       cursor: pointer;
     }
+
+
+ .resume-section {
+    width: 100%;
+    padding: 0rem 0 1rem;
+    font-family: "Onest", serif;
+
+ 
+  }
+  .resume-section h2 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-transform: titlecase;
+    margin-bottom: 1rem;
+    font-family: "Cormorant Garamond", serif;
+	margin-top: 0px;
+  }
+  @media(max-width: 1100px) {
+  .resume-entry {
+    display: flex;
+	border-bottom: 0px solid black;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-family: "Cormorant Garamond", serif;
+  }
+  }
+  @media(min-width: 1101px) {
+  .resume-entry {
+    display: flex;
+	border-bottom: .5px solid black;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-family: "Cormorant Garamond", serif;
+  }
+  }
+  .resume-entry .left,
+  .resume-entry .right {
+    width: 100%;
+  }
+  .resume-entry .right {
+    font-style: italic;
+    margin-top: 0.25rem;
+    text-align: left;
+  }
+  @media (min-width: 600px) {
+    .resume-entry .left {
+      width: 68%;
+    }
+    .resume-entry .right {
+      width: 28%;
+    }
+    .resume-entry .right {
+      text-align: right;
+      margin-top: 0;
+    }
+  }
+  ul.skill-list, .description-list {
+    font-family: "Onest", sans-serif;
+    padding-left: 1rem;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 1.5rem;
+  }
+  ul.skill-list li, .description-list li {
+    margin-bottom: 0.5rem;
+  }
+   .contact-section {
+	margin-top: -15px;
+    width: 100%;
+    padding:  0;
+    font-family: "Cormorant Garamond", serif;
+  }
+  .contact-section h2 {
+    font-size: ;
+    margin-bottom: 1rem;
+    display: inline-block;
+  }
+  .contact-description {
+    font-family: "Onest", sans-serif;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    max-width: 100%;
+  }
+  .contact-info {
+    font-family: "Onest", sans-serif;
+    line-height: auto;
+    font-size: 1rem;
+  }
+  .contact-info a {
+    color: #000;
+    text-decoration: none;
+  }
+  .contact-info a:hover {
+    text-decoration: underline;
+  }
