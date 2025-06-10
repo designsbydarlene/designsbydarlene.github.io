@@ -394,7 +394,7 @@ footer.footer {
 	nav {
 		overflow-x: visible;
 		position: relative; /* ensures absolute children like dropdowns align */
-		padding: 15px 0px;
+		padding: 15px 0px 12px;
 	}
 }
 
